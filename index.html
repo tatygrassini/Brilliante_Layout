@@ -4,35 +4,49 @@
 			<meta charset=utf-8 />
 			<title>Brillante</title>
 			<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+			<script src="js/cufon-yui.js" type="text/javascript"></script>
+			<script src="js/frutiger.font.js" type="text/javascript"></script>
+			<script type="text/javascript">
+				Cufon.replace('h3');
+				Cufon.replace('h4');
+				Cufon.replace('.top-content a'); // Requires a selector engine for IE 6-7
+			</script>
 		</head>
 		<body>
 			<div id="header">
 				<div class="top">
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About us</a></li>
-						<li><a href="#">Servicios</a></li>
-						<li><a href="#">Portfolio</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-
-					<div class="block">
-						<p>Grab our feeds
-							<a href="#"><img src="css/img/rss.gif" width="22" height="21" alt="Grab our feeds" /></a>
-						</p>
+				
+					<div class="top-content">
 						
-						<form id="search">
-            	<input type="text" name="" class="search_input"  value="Search..." name="s" id="s" onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}"/>
-            	<input type="submit" name="" class="search_submit" value="Go" />
-            </form>
-					</div><!-- .block -->
+						<ul>
+							<li class="selected"><a href="#">Home</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Portfolio</a></li>
+							<li><a href="#">Blog</a></li>
+							<li class="last"><a href="#">Contact</a></li>
+						</ul>
+
+						<div class="block">
+							
+							<div class="feed">
+								<p><a href="#">Grab our feeds</a></p>
+							</div><!-- .feed -->
+							<form id="search">
+	            	<input type="text" name="" class="search_input"  value="Search..." name="s" id="s" onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}"/>
+	            	<input type="submit" name="" class="search_submit" value="Go" />
+	            </form>
+						</div><!-- .block -->
+					
+					</div><!-- .top-content -->
 				</div><!-- .top -->
 				
 				<div class="logo">
 					<a href="#"><img src="css/img/logo.jpg" width="196" height="42" alt="Brillante - A Brilliant Website Design" /></a>
-					<em>A very short description about the website goes here. And that’s it!</em>
+						<p>A very short description about the website goes here. And that’s it!</p>
+					
+
 				</div><!-- .logo -->
 				
 				<div class="featured">
@@ -55,39 +69,39 @@
 			
 			<div id="content">
 				<div class="main">
-					<h2>Latest from the blog</h2>
+					<h2 class="notext txt-latest">Latest from the blog</h2>
 						<div class="post">
 							<h3><a href="#">An example of a post goes here.</a></h3>
-							<p><strong>Posted in:</strong> <em><a href="#">Category One</a>, <a href="#">Category Two</a></em></p> <p class="date"><strong>Date:</strong> <em><a href="#">08 April 2010</a></em></p>
+							<p>Posted in: <em><a href="#">Category One</a>, <a href="#">Category Two</a></em></p> <p class="date">Date: <em><a href="#">08 April 2010</a></em></p>
 							<img src="css/img/post-img1.jpg" width="150" height="148" alt="" />
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sf sed dos eiusmod tempor incididunt ut labore et dolorea ab  magna aliqua. Utlo enim ad minim veniam, quis nostrudaw exercitation ullamco laboris nisi ut aliquip ex ea commodo!</p>
 								<div class="readMore">
-									<p><strong>Author:</strong> <em><a href="#">Mahmoud Khaled</a></em></p>
-									<p><strong>Reaction:</strong> <em><a href="#">10 comments</a>, <a href="#">5 Pingback</a></em></p>
+									<p>Author: <em><a href="#">Mahmoud Khaled</a></em></p>
+									<p>Reaction: <em><a href="#">10 comments</a>, <a href="#">5 Pingback</a></em></p>
 									<p class="button"><a href="#">Read more</a></p>
 								</div><!-- .author -->
 						</div><!-- .post -->
 						
 						<div class="post">
 							<h3><a href="#">Another Post From the Blog Here!</a></h3>
-							<p><strong>Posted in:</strong> <em><a href="#">Category One</a>, <a href="#">Category Two</a></em></p> <p class="date"><strong>Date:</strong> <em><a href="#">10 April 2010</a></em></p>
+							<p>Posted in: <em><a href="#">Category One</a>, <a href="#">Category Two</a></em></p> <p class="date">Date: <em><a href="#">10 April 2010</a></em></p>
 							<img src="css/img/post-img2.jpg" width="150" height="148" alt="" />
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sf sed dos eiusmod tempor incididunt ut labore et dolorea ab  magna aliqua. Utlo enim ad minim veniam, quis nostrudaw exercitation ullamco laboris nisi ut aliquip ex ea commodo!</p>
 								<div class="readMore">
-									<p><strong>Author:</strong> <em><a href="#">Mahmoud Khaled</a></em></p>
-									<p><strong>Reaction:</strong> <em><a href="#">3 comments</a>, <a href="#">10 Pingback</a></em></p>
+									<p>Author: <em><a href="#">Mahmoud Khaled</a></em></p>
+									<p>Reaction: <em><a href="#">3 comments</a>, <a href="#">10 Pingback</a></em></p>
 									<p class="button"><a href="#">Read more</a></p>
 								</div><!-- .author -->
 						</div><!-- .post -->
 						
 						<div class="post">
 							<h3><a href="#">It’s Brilliant. Yes, it is!</a></h3>
-							<p><strong>Posted in:</strong> <em><a href="#">Category One</a>, <a href="#">Category Two</a></em></p> <p class="date"><strong>Date:</strong> <em><a href="#">12 April 2010</a></em></p>
+							<p>Posted in: <em><a href="#">Category One</a>, <a href="#">Category Two</a></em></p> <p class="date">Date: <em><a href="#">12 April 2010</a></em></p>
 							<img src="css/img/post-img3.jpg" width="150" height="148" alt="" />
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sf sed dos eiusmod tempor incididunt ut labore et dolorea ab  magna aliqua. Utlo enim ad minim veniam, quis nostrudaw exercitation ullamco laboris nisi ut aliquip ex ea commodo!</p>
 								<div class="readMore">
-									<p><strong>Author:</strong> <em><a href="#">Mahmoud Khaled</a></em></p>
-									<p><strong>Reaction:</strong> <em><a href="#">No comments</a>, <a href="#">2 Pingback</a></em></p>
+									<p>Author: <em><a href="#">Mahmoud Khaled</a></em></p>
+									<p>Reaction: <em><a href="#">No comments</a>, <a href="#">2 Pingback</a></em></p>
 									<p class="button"><a href="#">Read more</a></p>
 								</div><!-- .author -->
 						</div><!-- .post -->
@@ -95,7 +109,7 @@
 				</div><!-- .main -->
 				
 				<div class="sidebar">
-					<h2>About the author</h2>
+					<h2 class="notext txt-author">About the author</h2>
 					
 					<div class="author">
 						<img src="css/img/author.jpg" width="109" height="109" alt="" />
@@ -104,14 +118,14 @@
 						<p>Sectetur adipisicing elit, sf sed dos eiusmod tempor incididunt utto po Web and graphics designer!</p>
 					</div><!-- .author -->
 					
-					<h2>Sponsors</h2>
+					<h2 class="notext txt-sponsors">Sponsors</h2>
 					
 					<div class="sponsors">
 						<a href="#"><img src="css/img/advertiseHere.gif" width="166" height="166" alt="" /></a>
 						<a href="#"><img src="css/img/advertiseHere.gif" width="166" height="166" alt="" /></a>
 					</div><!-- .sponsors -->
 					
-					<h2>Categories</h2>
+					<h2 class="notext txt-categories">Categories</h2>
 					
 					<ul class="cat">
 						<li><a href="#">Category Number One</a></li>
@@ -125,8 +139,10 @@
 			</div><!-- #content -->
 			
 			<div id="footer">
+			<div class="footer-content">
+				
 				<div class="links">
-					<h2>Links worth spreading</h2>
+					<h2 class="notext-footer txt-links">Links worth spreading</h2>
 					<ul>
 						<li><a href="#">Link Number One Goes Here</a></li>
 						<li><a href="#">Link Number Two Should Go Here</a></li>
@@ -139,7 +155,7 @@
 				</div><!-- .links -->
 				
 				<div class="flickr">
-					<h2>Watch us on flickr</h2>
+					<h2 class="notext-footer txt-flickr">Watch us on flickr</h2>
 					
 					<a href="#"><img src="css/img/flickr-th1.jpg" width="80" height="80" alt="" /></a>
 					<a href="#"><img src="css/img/flickr-th2.jpg" width="80" height="80" alt="" /></a>
@@ -150,7 +166,7 @@
 				</div><!-- .flickr -->
 				
 				<div class="twitter">
-					<h2>Tweet tweet!</h2>
+					<h2 class="notext-footer txt-twitter">Tweet tweet!</h2>
 					
 					<p><em>“Lorem ipsum dolor sitet ameto, is simply an example of a tweet. And probably some more blahs shoud actually go here which works as a tweet!”</em></p>
 					
@@ -159,6 +175,7 @@
 					
 					<h4><a href="#">Follow us on Twitter!</a></h4>
 				</div><!-- .twitter -->
+				</div><!-- .footer-content -->
 			</div><!-- #footer -->
 			
 			<div id="bottom">
@@ -174,5 +191,7 @@
 				<p>Copyright 2010 - <a href="#">Brilliante</a> - All rights reserved</p>
 			</div><!-- #bottom -->
 			
+			<script type="text/javascript"> Cufon.now(); </script>
+			<!-- Google Analytics and other scripts here -->
 		</body>
 	</html>

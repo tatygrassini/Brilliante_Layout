@@ -7,5 +7,301 @@ Grey Text = #646464
 
 */
 
-* { margin: 0; padding: 0; outline:0; }
+/* ----------------- Resets ----------------  */
+
+* { margin: 0; padding: 0; outline: 0; }
+
+img {
+  border: 0;
+}
+
+html {
+	background-color: #ededed;
+	width: 100%;
+	height: 100%;
+}
+
+body {  
+  font: 15px/25px Arial, sans-serif;
+  color: #1a1e27;
+}
+
+.notext, .notext-footer { font-size: 0; line-height: 0; text-indent: -4000px; background-repeat: no-repeat; }
+
+
+/* ----------------- Fonts ----------------  */
+
+h3 a {
+	color: #1a1e27;
+	font-size: 25px;
+	text-decoration: none;
+}
+
+h4 {
+	color: #646464;
+	font-size: 20px;
+}
+
+.author em {
+	font-size: 15px;
+	color: #646464;
+}
+
+.post p a {
+	font: italic 14px/20px Georgia, serif;
+	color: #646464;
+	text-decoration: none;
+}
+
+
+/* ----------------- Layout ----------------  */
+
+.top-content, .logo, .featured, #content, .footer-content, #bottom {
+	margin: 0 auto;
+	width: 950px;
+}
+
+.main {
+	width: 550px;
+	float: left;
+}
+
+.sidebar {
+	width: 350px;
+	float: right;
+}
+
+#content, .featured, #footer, #bottom {
+	clear: both;
+}
+
+#footer {
+	background: #1a1e27 url(img/footer-bg.jpg) repeat-x 0 0;
+}
+
+
+
+
+/* ----------------- Txt ----------------  */
+
+h2.notext { height: 32px; margin-bottom: 27px; }
+h2.notext-footer { height: 38px; }
+
+h2.txt-latest { background-image: url(img/txt-latest-from-blog.gif) }
+h2.txt-author { background-image: url(img/txt-about-author.gif) }
+h2.txt-sponsors { background-image: url(img/txt-sponsors.gif) }
+h2.txt-categories { background-image: url(img/txt-categories.gif) }
+
+h2.txt-links { background-image: url(img/txt-links.gif) }
+h2.txt-flickr { background-image: url(img/txt-flickr.gif) }
+h2.txt-twitter { background-image: url(img/txt-twitter.gif) }
+
+
+
+/* ----------------- Top ----------------  */
+
+.top {
+  background-color: #1a1e27;
+  color: #fff;
+  position: relative;
+  height: 70px;
+  border-bottom: 1px solid #fff;
+}
+
+.top-content ul {
+	height: 70px;
+	list-style: none;
+	display: inline;
+}
+
+.top-content li {
+  float: left;
+  margin-right: 13px;
+	display: inline;
+}
+
+.top-content li a {
+  display: block;
+	height: 70px;
+	line-height: 70px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+	.top-content .selected {
+		background: url(img/nav-arrow.gif) no-repeat center bottom;
+	}
+
+	.top-content .last {
+		margin-right: 0;
+	}
+
+
+.block {
+	float: right;
+}
+
+.feed {
+	display: inline;
+	height: 70px;
+	line-height: 70px;
+}
+
+.block .feed p {
+	display: inline;
+}
+
+.feed a img {
+}
+
+	.feed p {
+		letter-spacing: -0.5px;
+	}
+	
+	
+											/*TODO: fix the rss icon*/
+											
+	.feed a {
+		text-decoration: none;
+	  color: #fff;
+		background: url(img/rss.gif) no-repeat right top transparent;
+		padding-right: 34px;
+	}
+	
+#search {
+	float: right;
+	width: 169px;
+	background: url(img/search-bg.gif) no-repeat 0 0 transparent;
+	height: 38px;
+	padding-left: 35px;
+	margin-top: 14px;
+	margin-left: 17px;
+}
+
+	.search_input {
+		background: none repeat scroll 0 0 transparent;
+		border: 0 none;
+		color: #1a1e27;
+		display: inline;
+		font: italic 15px Arial, sans-serif;
+		height: 24px;
+		margin-top: 7px;
+		text-transform: lowercase;
+		width: 144px;
+		}
+
+	.search_submit {
+		display: inline;
+		background: url(img/search-arrow.gif) no-repeat scroll 0 0 transparent;
+		width: 15px;
+		height: 17px;
+		font-size: 0;
+		text-indent: -9999px;
+		border: 0;
+		cursor: pointer;
+		padding-top: 7px;
+		}
+
+
+
+/* ----------------- Logo ----------------  */
+
+.logo {
+	height: 148px;
+	overflow: hidden;
+}
+
+.logo img {
+	margin: 62px 22px auto 42px;
+	float: left;
+}
+
+.logo p {
+	margin-top: 67px;
+	width: 229px;
+	float: left;
+	font: italic 15px/17px Georgia, serif;
+	color: #646464;
+}
+
+
+
+
+/* ----------------- Featured ----------------  */
+
+.featured {
+	height: 248px;
+}
+
+.featured .img {
+	position: relative;
+	margin-left: 1px;
+}
+
+.featured .desc {
+	background-color: #1d1f25;
+	width: 349px;
+	height: 248px;
+}
+
+.featured .img, 
+.featured .desc {
+	float: left;
+}
+
+.featured .button a {
+	position: absolute;
+	left: 1px;
+	bottom: 20px;
+	background: url(img/hireUsButton.gif) no-repeat 0 0 transparent;
+	display: block;
+	text-indent: -9999px;
+	width: 107px;
+	height: 37px;
+}
+
+.desc h3 {
+	font-size: 30px;
+}
+
+.desc h3, .desc p {
+	color: #ededed;
+}
+
+
+
+/* ----------------- Content ----------------  */
+
+#content {
+	padding-top: 50px;
+}
+
+
+
+/* ----------------- Footer ----------------  */
+
+#footer {
+	overflow: hidden;
+	height: 288px;
+	border-top: 1px solid #fff;
+}
+
+.links, .flickr, .twitter {
+	float: left;
+	width: 270px;
+}
+
+/* ----------------- Bottom ----------------  */
+
+
+
+
+
+
+
+
+
+
+
 
