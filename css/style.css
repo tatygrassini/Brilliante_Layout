@@ -101,15 +101,14 @@ h2.txt-twitter { background-image: url(img/txt-twitter.gif) }
 /* ----------------- Top ----------------  */
 
 .top {
-  background-color: #1a1e27;
+  background: url(img/top-bg.gif) repeat-x 0 0 transparent;
   color: #fff;
   position: relative;
-  height: 70px;
-  border-bottom: 1px solid #fff;
+  height: 71px;
 }
 
 .top-content ul {
-	height: 70px;
+	height: 71px;
 	list-style: none;
 	display: inline;
 }
@@ -120,16 +119,16 @@ h2.txt-twitter { background-image: url(img/txt-twitter.gif) }
 	display: inline;
 }
 
-.top-content li a {
+.top-content li a:link, .top-content li a:visited {
   display: block;
-	height: 70px;
-	line-height: 70px;
+	height: 71px;
+	line-height: 71px;
   text-decoration: none;
   color: #fff;
   letter-spacing: -0.5px;
 }
 
-	.top-content .selected {
+	.top-content .selected, .top-content li a:hover {
 		background: url(img/nav-arrow.gif) no-repeat center bottom;
 	}
 
@@ -144,8 +143,8 @@ h2.txt-twitter { background-image: url(img/txt-twitter.gif) }
 
 .feed {
 	display: inline;
-	height: 70px;
-	line-height: 70px;
+	height: 71px;
+	line-height: 71px;
 }
 
 .block .feed p {
