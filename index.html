@@ -7,10 +7,13 @@
 
 			<script src="js/cufon-yui.js" type="text/javascript"></script>
 			<script src="js/frutiger.font.js" type="text/javascript"></script>
-			<script type="text/javascript">
+			<script type="text/javascript">			// TODO: put all this code in a func.js file
 				Cufon.replace('h3');
 				Cufon.replace('h4');
 				Cufon.replace('.top-content a'); // Requires a selector engine for IE 6-7
+				Cufon.replace('.cat a'); // Requires a selector engine for IE 6-7
+				Cufon.replace('.links a'); // Requires a selector engine for IE 6-7
+				Cufon.replace('.twitter p.cufon'); // Requires a selector engine for IE 6-7
 			</script>
 		</head>
 		<body>
@@ -57,11 +60,11 @@
 						
 					<div class="desc">
 						<h3>It’s Brilliant!</h3>
-						<p>Brilliante, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sf sed dos eiusmod lorem ipsum dolot sit amto. It is brillaint!</p>
+						<p>Brilliante, Lorem ipsum dolor sit amet, con-<br />sectetur adipisicing elit, sf sed dos eiusmod lorem ipsum dolot sit amto. It is brillaint!</p>
 						<div class="thumbs">
 							<a href="#"><img src="css/img/th1.jpg" width="73" height="61" alt="" /></a>
 							<a href="#"><img src="css/img/th2.jpg" width="73" height="61" alt="" /></a>
-							<a href="#"><img src="css/img/th3.jpg" width="73" height="61" alt="" /></a>
+							<a href="#"><img class="last" src="css/img/th3.jpg" width="73" height="61" alt="" /></a>
 						</div><!-- .thumbs -->
 					</div><!-- .desc -->
 				</div><!-- .featured -->
@@ -76,10 +79,10 @@
 							<img src="css/img/post-img1.jpg" width="150" height="148" alt="" />
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sf sed dos eiusmod tempor incididunt ut labore et dolorea ab  magna aliqua. Utlo enim ad minim veniam, quis nostrudaw exercitation ullamco laboris nisi ut aliquip ex ea commodo!</p>
 								<div class="readMore">
-									<p>Author: <em><a href="#">Mahmoud Khaled</a></em></p>
-									<p>Reaction: <em><a href="#">10 comments</a>, <a href="#">5 Pingback</a></em></p>
-									<p class="button"><a href="#">Read more</a></p>
-								</div><!-- .author -->
+									<p>Author: <em><a href="#">Mahmoud Khaled</a></em><br />
+									Reaction: <em><a href="#">10 comments</a>, <a href="#">5 Pingback</a></em></p>
+									<input type="submit" name="" class="readMoreButton" value="Read More" />
+								</div><!-- .readMore -->
 						</div><!-- .post -->
 						
 						<div class="post">
@@ -170,7 +173,7 @@
 					
 					<p><em>“Lorem ipsum dolor sitet ameto, is simply an example of a tweet. And probably some more blahs shoud actually go here which works as a tweet!”</em></p>
 					
-					<p>10 hours ago. From <a href="#">TweetDeck</a><br />
+					<p class="cufon">10 hours ago. From <a href="#">TweetDeck</a><br />
 					In reply to <a href="#">@MahmoudKhaled</a></p>
 					
 					<h4><a href="#">Follow us on Twitter!</a></h4>
@@ -180,11 +183,11 @@
 			
 			<div id="bottom">
 				<ul>
-					<li><a href="#">Home</a></li> | 
-					<li><a href="#">About Us</a></li> | 
-					<li><a href="#">Services</a></li> | 
-					<li><a href="#">Portfolio</a></li> | 
-					<li><a href="#">Blog</a></li> | 
+					<li class="selected"><a href="#">Home</a>&nbsp;|&nbsp;</li>
+					<li><a href="#">About Us</a>&nbsp;|&nbsp;</li>
+					<li><a href="#">Services</a>&nbsp;|&nbsp;</li>
+					<li><a href="#">Portfolio</a>&nbsp;|&nbsp;</li>
+					<li><a href="#">Blog</a>&nbsp;|&nbsp;</li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 				

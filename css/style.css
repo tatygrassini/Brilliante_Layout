@@ -92,9 +92,9 @@ h2.txt-author { background-image: url(img/txt-about-author.gif) }
 h2.txt-sponsors { background-image: url(img/txt-sponsors.gif) }
 h2.txt-categories { background-image: url(img/txt-categories.gif) }
 
-h2.txt-links { background-image: url(img/txt-links.gif) }
-h2.txt-flickr { background-image: url(img/txt-flickr.gif) }
-h2.txt-twitter { background-image: url(img/txt-twitter.gif) }
+h2.txt-links { background-image: url(img/txt-links.png) }
+h2.txt-flickr { background-image: url(img/txt-flickr.png) }
+h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 
 
 
@@ -172,7 +172,7 @@ h2.txt-twitter { background-image: url(img/txt-twitter.gif) }
 	float: right;
 	width: 169px;
 	background: url(img/search-bg.gif) no-repeat 0 0 transparent;
-	height: 38px;
+	height: 41px;
 	padding-left: 35px;
 	margin-top: 14px;
 	margin-left: 17px;
@@ -240,14 +240,43 @@ h2.txt-twitter { background-image: url(img/txt-twitter.gif) }
 
 .featured .desc {
 	background-color: #1d1f25;
-	width: 349px;
-	height: 248px;
+	width: 316px;
+	height: 208px;
+	padding: 21px 15px 19px;
 }
 
 .featured .img, 
 .featured .desc {
 	float: left;
 }
+
+.featured .thumbs {
+	padding: 20px 13px 19px;
+	border-top: 1px solid #393939;
+	height: 61px;
+}
+
+.featured .thumbs a img {
+	margin-right: 31px; /* PSD 38px */
+}
+
+.featured .thumbs a img.last {
+	margin-right: 0;
+}
+
+.featured .desc h3, .featured .desc p {
+	padding: 0 13px;
+}
+
+.featured .desc h3 {
+	margin-bottom: 7px; /*PSD 18px*/
+}
+
+.featured .desc p {
+	margin-bottom: 18px; /*PSD 25px*/
+	line-height: 23px;
+}
+
 
 .featured .button a {
 	position: absolute;
@@ -276,6 +305,52 @@ h2.txt-twitter { background-image: url(img/txt-twitter.gif) }
 	padding-top: 50px;
 }
 
+.post p.date {
+}
+
+.post img {
+	float: left;
+	margin: 0 11px 11px 0;
+}
+
+.readMore {
+	border-top: 1px solid #bdbdbd;
+	display: inline;
+}
+
+.readMoreButton {
+	text-indent: -9999px;
+	background: url(img/readMoreButton.gif) no-repeat;
+	width: 110px;
+	height: 29px;
+	float: right;
+	cursor: pointer;
+	border: none;
+}
+
+
+
+/* ----------------- Sidebar ----------------  */
+
+.cat li {
+	list-style: none;
+}
+
+.cat li a {
+	text-decoration: none;
+	color: #1a1e27;
+	background: url(img/cat-arrow.gif) no-repeat left center transparent;
+	padding-left: 23px;
+	font-size: 16px;
+	line-height: 42px;
+}
+
+.cat li a:hover {
+	text-decoration: underline;
+}
+
+
+
 
 
 /* ----------------- Footer ----------------  */
@@ -286,14 +361,92 @@ h2.txt-twitter { background-image: url(img/txt-twitter.gif) }
 	border-top: 1px solid #fff;
 }
 
+.footer-content {
+	padding-top: 28px;
+}
+
+.footer-content h2 {
+	margin-bottom: 17px; /*PSD 22px*/
+}
+
 .links, .flickr, .twitter {
 	float: left;
-	width: 270px;
+	width: 281px;
+	margin-right: 53px;
+}
+
+.twitter {
+	margin-right: 0;
+}
+
+.links li {
+	padding: 0;
+	margin: 0;
+}
+
+.links a {
+	text-decoration: none;
+	color: #ededed;
+	font-size: 15px;
+	line-height: 29px;
+}
+
+.flickr a img {
+	margin-right: 10px;
+}
+
+.twitter {
+	background: url(img/twitter.png) no-repeat scroll 100% bottom transparent;
+}
+
+
+.twitter p, .twitter a {
+	color: #ededed;
+}
+
+.twitter a {
+	text-decoration: none;
+}
+
+.twitter h4 a {
+	color: #818181;
+	font-size: 20px;
+	line-height: 15px; /*really?*/
+}
+
+.twitter em {
+	font: italic 15px/20px Georgia, serif;
 }
 
 /* ----------------- Bottom ----------------  */
 
+#bottom {
+	height: 70px;
+}
 
+#bottom ul {
+	float:left;
+}
+
+#bottom li {
+	float:left;
+	list-style:none;
+}
+
+#bottom li a {
+	text-decoration:none;
+	color: #1a1e27;
+}
+
+#bottom li.selected a, #bottom li a:hover, #bottom p a {
+	text-decoration:none;
+	color: #646464;
+}
+
+
+#bottom p {
+	float:right;
+}
 
 
 
