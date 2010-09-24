@@ -79,6 +79,10 @@ h4 {
 	background: #1a1e27 url(img/footer-bg.jpg) repeat-x 0 0;
 }
 
+#footer, #bottom {
+	border-top: 1px solid #fff;
+}
+
 
 
 
@@ -91,6 +95,13 @@ h2.txt-latest { background-image: url(img/txt-latest-from-blog.gif) }
 h2.txt-author { background-image: url(img/txt-about-author.gif) }
 h2.txt-sponsors { background-image: url(img/txt-sponsors.gif) }
 h2.txt-categories { background-image: url(img/txt-categories.gif) }
+
+h2.txt-latest,
+h2.txt-author,
+h2.txt-sponsors,
+h2.txt-categories {
+	margin-top: 50px;
+}
 
 h2.txt-links { background-image: url(img/txt-links.png) }
 h2.txt-flickr { background-image: url(img/txt-flickr.png) }
@@ -301,8 +312,12 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 
 /* ----------------- Content ----------------  */
 
-#content {
-	padding-top: 50px;
+.post {
+	margin-bottom: 25px;
+}
+
+.post h3 a {
+	margin-bottom: 25px;
 }
 
 .post p.date {
@@ -411,11 +426,10 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 .twitter h4 a {
 	color: #818181;
 	font-size: 20px;
-	line-height: 15px; /*really?*/
 }
 
 .twitter em {
-	font: italic 15px/20px Georgia, serif;
+	font: italic 15px Georgia, serif;
 }
 
 /* ----------------- Bottom ----------------  */
@@ -446,6 +460,10 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 
 #bottom p {
 	float:right;
+}
+
+#bottom ul, #bottom p {
+	line-height: 70px;
 }
 
 
