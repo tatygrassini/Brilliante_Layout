@@ -47,7 +47,7 @@ h4 {
 	color: #646464;
 }
 
-.post p a {
+.cat-date a, .readMore a {
 	font: italic 14px/20px Georgia, serif;
 	color: #646464;
 	text-decoration: none;
@@ -317,10 +317,16 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 }
 
 .post h3 a {
-	margin-bottom: 25px;
+	margin-top: 25px;
 }
 
-.post p.date {
+span.sep {
+	text-indent: -4000px; /* not working with any text there, why? */
+	background: url(img/sep.gif) no-repeat center top;
+}
+
+.cat-date {
+	margin-bottom: 15px;
 }
 
 .post img {
@@ -328,9 +334,21 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 	margin: 0 11px 11px 0;
 }
 
+.post-teaser {
+	margin: 0;
+	padding: 0 0 0 161px;
+}
+
+.post-teaser p {
+	margin-bottom: 9px;
+	line-height: 23px;
+}
+
 .readMore {
 	border-top: 1px solid #bdbdbd;
-	display: inline;
+	line-height: 17px;
+	padding-top: 9px;
+	position: relative;
 }
 
 .readMoreButton {
@@ -341,6 +359,9 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 	float: right;
 	cursor: pointer;
 	border: none;
+	position: absolute;
+	right: 0;
+	top: 15px;
 }
 
 
