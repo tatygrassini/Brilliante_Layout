@@ -88,7 +88,7 @@ h4 {
 
 /* ----------------- Txt ----------------  */
 
-h2.notext { height: 32px; margin-bottom: 27px; }
+h2.notext { height: 32px; margin-bottom: 25px; }
 h2.notext-footer { height: 38px; }
 
 h2.txt-latest { background-image: url(img/txt-latest-from-blog.gif) }
@@ -326,7 +326,7 @@ span.sep {
 }
 
 .cat-date {
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .post img {
@@ -335,7 +335,7 @@ span.sep {
 }
 
 .post-teaser {
-	margin: 0;
+	margin-bottom: 46px; /* PSD 50px */
 	padding: 0 0 0 161px;
 }
 
