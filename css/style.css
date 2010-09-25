@@ -112,63 +112,84 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 }
 
 .top-content ul {
-	height: 71px;
-	list-style: none;
-	display: inline;
+	display: block;
+	float: left;
+	width: 340px;
+	height: 42px;
+	background: url(img/nav.gif) no-repeat 0 0;
+	margin-top: 29px;
 }
 
 .top-content li {
-  float: left;
-  margin-right: 13px;
-	display: inline;
+	list-style: none;
+	float: left;
+	text-indent: -9999px;
 }
 
-.top-content li a:link, .top-content li a:visited {
-  display: block;
-	height: 71px;
-	line-height: 71px;
-  text-decoration: none;
-  color: #fff;
-  letter-spacing: -0.5px;
-}
-
-	.top-content .selected, .top-content li a:hover {
-		background: url(img/nav-arrow.gif) no-repeat center bottom;
+	#home { width: 43px; }
+	#about { width: 71px; }
+	#services { width: 61px; }
+	#portfolio { width: 65px; }
+	#blog { width: 39px; }
+	#contact { width: 61px; }
+	
+	.top-content li a {
+		display: block;
+		height: 42px;
 	}
 
-	.top-content .last {
-		margin-right: 0;
-	}
+		#home a:hover, .top-content li.selected {
+			background: url(img/nav.gif) 0 -42px no-repeat;
+		}
+	
+		#about a:hover {
+			background: url(img/nav.gif) -43px -42px no-repeat;
+		}
+	
+		#services a:hover {
+			background: url(img/nav.gif) -114px -42px no-repeat;
+		}
+	
+		#portfolio a:hover {
+			background: url(img/nav.gif) -175px -42px no-repeat;
+		}
+		
+		#blog a:hover {
+			background: url(img/nav.gif) -240px -42px no-repeat;
+		}
+		
+		#contact a:hover {
+			background: url(img/nav.gif) -279px -42px no-repeat;
+		}
 
 
 .block {
 	float: right;
 	height: 71px;
+	position: relative;
 }
 
-.feed {
-	display: inline;
+.block a {
+	position: absolute;
+	right: 221px;
+	display: block;
 	height: 71px;
 	line-height: 71px;
+	text-indent: -9999px;
+	background: url(img/feed.gif) no-repeat 0 0 transparent;
+	width: 127px;
+	height: 21px;
+	margin-top: 25px;
 }
+	
+	
 
-.feed p {
-	display: inline;
-	letter-spacing: -0.5px;
-}
-	
-	
-				/*TODO: fix the rss icon*/
-											
-				.feed a {
-					text-decoration: none;
-				  color: #fff;
-					background: url(img/rss.gif) no-repeat right top transparent;
-					padding-right: 34px;
-				}
 				
 	
 #search {
+	position: absolute;
+	top: 0;
+	right: 0;
 	float: right;
 	width: 169px;
 	background: url(img/search-bg.gif) no-repeat 0 0 transparent;

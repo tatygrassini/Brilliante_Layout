@@ -10,7 +10,6 @@
 			<script type="text/javascript">			// TODO: put all this code in a func.js file
 				Cufon.replace('h3');
 				Cufon.replace('h4');
-				Cufon.replace('.top-content a'); // Requires a selector engine for IE 6-7
 				Cufon.replace('.cat a'); // Requires a selector engine for IE 6-7
 				Cufon.replace('.links a'); // Requires a selector engine for IE 6-7
 				Cufon.replace('.twitter p.cufon'); // Requires a selector engine for IE 6-7
@@ -28,23 +27,20 @@
 		<body>
 			<div id="header">
 				<div class="top">
-				
 					<div class="top-content">
 						
 						<ul>
-							<li class="selected"><a href="#">Home</a></li>
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">Portfolio</a></li>
-							<li><a href="#">Blog</a></li>
-							<li class="last"><a href="#">Contact</a></li>
+							<li id="home" class="selected"><a href="#">Home</a></li>
+							<li id="about"><a href="#">About Us</a></li>
+							<li id="services"><a href="#">Services</a></li>
+							<li id="portfolio"><a href="#">Portfolio</a></li>
+							<li id="blog"><a href="#">Blog</a></li>
+							<li id="contact"><a href="#">Contact</a></li>
 						</ul>
 
 						<div class="block">
 							
-							<div class="feed">
-								<p><a href="#">Grab our feeds</a></p>
-							</div><!-- .feed -->
+							<p><a href="#">Grab our feeds</a></p>
 							
 							<form id="search">
 	            	<input type="text" name="" class="search_input"  value="Search..." name="s" id="s" onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}"/>
