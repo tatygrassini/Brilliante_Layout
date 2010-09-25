@@ -162,7 +162,6 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 			background: url(img/nav.gif) -279px -42px no-repeat;
 		}
 
-
 .block {
 	float: right;
 	height: 71px;
@@ -181,11 +180,7 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 	height: 21px;
 	margin-top: 25px;
 }
-	
-	
 
-				
-	
 #search {
 	position: absolute;
 	top: 0;
