@@ -1,12 +1,3 @@
-/* ----------------- PSD Colors ---------------- 
-
-Dark Blue = #1a1e27
-Grey = #ededed
-Grey Text = #646464
-
-
-*/
-
 /* ----------------- Resets ----------------  */
 
 * { margin: 0; padding: 0; outline: 0; }
@@ -22,7 +13,7 @@ html {
 }
 
 body {  
-  font: 15px/25px Arial, sans-serif;
+  font: 15px/23px Arial, sans-serif;
   color: #1a1e27;
 }
 
@@ -40,11 +31,13 @@ h3 a {
 h4 {
 	color: #646464;
 	font-size: 20px;
+	margin-bottom: -5px;
 }
 
 .author em {
-	font-size: 15px;
+	font: italic 15px Georgia, serif;
 	color: #646464;
+	margin-top: -3px;
 }
 
 .cat-date a, .readMore a {
@@ -94,7 +87,7 @@ h2.notext-footer { height: 38px; }
 h2.txt-latest { background-image: url(img/txt-latest-from-blog.gif) }
 h2.txt-author { background-image: url(img/txt-about-author.gif) }
 h2.txt-sponsors { background-image: url(img/txt-sponsors.gif) }
-h2.txt-categories { background-image: url(img/txt-categories.gif) }
+h2.txt-categories { background-image: url(img/txt-categories.gif); margin-bottom: 16px; }
 
 h2.txt-latest,
 h2.txt-author,
@@ -150,6 +143,7 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 
 .block {
 	float: right;
+	height: 71px;
 }
 
 .feed {
@@ -158,26 +152,21 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 	line-height: 71px;
 }
 
-.block .feed p {
+.feed p {
 	display: inline;
+	letter-spacing: -0.5px;
 }
-
-.feed a img {
-}
-
-	.feed p {
-		letter-spacing: -0.5px;
-	}
 	
 	
-											/*TODO: fix the rss icon*/
+				/*TODO: fix the rss icon*/
 											
-	.feed a {
-		text-decoration: none;
-	  color: #fff;
-		background: url(img/rss.gif) no-repeat right top transparent;
-		padding-right: 34px;
-	}
+				.feed a {
+					text-decoration: none;
+				  color: #fff;
+					background: url(img/rss.gif) no-repeat right top transparent;
+					padding-right: 34px;
+				}
+				
 	
 #search {
 	float: right;
@@ -313,7 +302,7 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 /* ----------------- Content ----------------  */
 
 .post {
-	margin-bottom: 25px;
+	margin-bottom: 46px; /* PSD 50px */
 }
 
 .post h3 a {
@@ -335,7 +324,6 @@ span.sep {
 }
 
 .post-teaser {
-	margin-bottom: 46px; /* PSD 50px */
 	padding: 0 0 0 161px;
 }
 
@@ -367,6 +355,24 @@ span.sep {
 
 
 /* ----------------- Sidebar ----------------  */
+
+
+.author img {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.sponsors {
+	height: 166px;
+}
+
+.sponsors img {
+	margin-right: 13px;
+}
+
+.sponsors img.last {
+	margin-right: 0;
+}
 
 .cat li {
 	list-style: none;
@@ -420,7 +426,7 @@ span.sep {
 	margin: 0;
 }
 
-.links a {
+.links li a {
 	text-decoration: none;
 	color: #ededed;
 	font-size: 15px;
