@@ -1,0 +1,8 @@
+.links, .flickr, .twitter {
+	display: inline;
+	margin-right: 40px;
+}
+
+.links li a {
+	color:red;
+}
