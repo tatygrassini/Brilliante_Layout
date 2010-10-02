@@ -1,8 +1,12 @@
-.links, .flickr, .twitter {
+.readMoreButton, 
+#search,
+.featured .img,
+.featured .thumbs a img,
+.featured .thumbs a img.last,
+.featured .desc h3 {
 	display: inline;
-	margin-right: 40px;
 }
 
-.links li a {
-	color:red;
+.search_input {
+	margin-top: 3px;
 }

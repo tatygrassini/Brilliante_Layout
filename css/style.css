@@ -259,6 +259,7 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 	width: 316px;
 	height: 208px;
 	padding: 21px 15px 19px;
+	overflow: hidden;
 }
 
 .featured .img, 
