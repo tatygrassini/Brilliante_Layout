@@ -207,15 +207,16 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 		}
 
 	.search_submit {
-		display: inline;
-		background: url(img/search-arrow.gif) no-repeat scroll 0 0 transparent;
+		background: url(img/search-arrow.gif) no-repeat scroll center top transparent;
 		width: 15px;
 		height: 17px;
 		font-size: 0;
 		text-indent: -9999px;
 		border: 0;
 		cursor: pointer;
-		padding-top: 7px;
+		position: absolute;
+		top: 12px;
+		right: 7px;
 		}
 
 
