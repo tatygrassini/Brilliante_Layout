@@ -351,13 +351,14 @@ span.sep {
 }
 
 .readMore {
+	position: relative;
 	border-top: 1px solid #bdbdbd;
 	line-height: 17px;
 	padding-top: 9px;
-	position: relative;
 }
 
 .readMoreButton {
+	position: absolute;
 	text-indent: -9999px;
 	background: url(img/readMoreButton.gif) no-repeat;
 	width: 110px;
@@ -365,7 +366,6 @@ span.sep {
 	float: right;
 	cursor: pointer;
 	border: none;
-	position: absolute;
 	right: 0;
 	top: 15px;
 }
