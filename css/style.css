@@ -114,7 +114,6 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 .top-content ul {
 	display: block;
 	float: left;
-	width: 340px;
 	height: 42px;
 	background: url(img/nav.gif) no-repeat 0 0;
 	margin-top: 29px;
@@ -123,44 +122,20 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 .top-content li {
 	list-style: none;
 	float: left;
-	text-indent: -9999px;
+	margin-right: 14px;
 }
-
-	#home { width: 43px; }
-	#about { width: 71px; }
-	#services { width: 61px; }
-	#portfolio { width: 65px; }
-	#blog { width: 39px; }
-	#contact { width: 61px; }
 	
 	.top-content li a {
 		display: block;
 		height: 42px;
+		color:white;
+		text-decoration:none;
+	}
+	
+	.top-content li a.selected, .top-content li a:hover {
+		background: url(img/nav-arrow.png) no-repeat bottom center;
 	}
 
-		#home a:hover, .top-content li.selected {
-			background: url(img/nav.gif) 0 -42px no-repeat;
-		}
-	
-		#about a:hover {
-			background: url(img/nav.gif) -43px -42px no-repeat;
-		}
-	
-		#services a:hover {
-			background: url(img/nav.gif) -114px -42px no-repeat;
-		}
-	
-		#portfolio a:hover {
-			background: url(img/nav.gif) -175px -42px no-repeat;
-		}
-		
-		#blog a:hover {
-			background: url(img/nav.gif) -240px -42px no-repeat;
-		}
-		
-		#contact a:hover {
-			background: url(img/nav.gif) -279px -42px no-repeat;
-		}
 
 .block {
 	float: right;
