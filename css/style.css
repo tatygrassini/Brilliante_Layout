@@ -26,12 +26,14 @@ h3 a {
 	color: #1a1e27;
 	font-size: 25px;
 	text-decoration: none;
+	font-weight: normal;
 }
 
 h4 {
 	color: #646464;
 	font-size: 20px;
 	margin-bottom: -5px;
+	font-weight: normal;
 }
 
 .author em {
@@ -100,6 +102,27 @@ h2.txt-links { background-image: url(img/txt-links.png) }
 h2.txt-flickr { background-image: url(img/txt-flickr.png) }
 h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 
+h2.cufon-h2 {
+	margin: 50px 0 25px;
+	font-size: 26px;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-weight: bold;
+}
+
+h2 span {
+	background-color: #1a1e27;
+	padding: 1px 4px;
+	text-align: center;
+}
+
+h2.cufon-h2-footer {
+	font-size: 22px;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-weight: bold;
+}
+
 
 
 /* ----------------- Top ----------------  */
@@ -123,6 +146,7 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 	list-style: none;
 	float: left;
 	margin-right: 14px;
+	line-height: 14px;
 }
 	
 	.top-content li a {
@@ -132,7 +156,7 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 		text-decoration:none;
 	}
 	
-	.top-content li a.selected, .top-content li a:hover {
+	.top-content li.selected, .top-content li a:hover {
 		background: url(img/nav-arrow.png) no-repeat bottom center;
 	}
 
@@ -259,6 +283,7 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 
 .featured .desc h3, .featured .desc p {
 	padding: 0 13px;
+	font-weight: normal;
 }
 
 .featured .desc h3 {
