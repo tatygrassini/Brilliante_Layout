@@ -112,7 +112,7 @@ h2.cufon-h2 {
 
 h2 span {
 	background-color: #1a1e27;
-	padding: 1px 4px;
+	padding: 1px 6px;
 	text-align: center;
 }
 
@@ -339,6 +339,8 @@ span.sep {
 .post img {
 	float: left;
 	margin: 0 11px 11px 0;
+	border: 1px solid #cacaca;
+	padding: 3px;
 }
 
 .post-teaser {
@@ -378,6 +380,8 @@ span.sep {
 .author img {
 	float: left;
 	margin: 0 10px 10px 0;
+	border: 1px solid #cacaca;
+	padding: 3px;
 }
 
 .sponsors {
@@ -453,6 +457,7 @@ span.sep {
 
 .flickr a img {
 	margin-right: 10px;
+	border: 3px solid #646464;
 }
 
 .twitter {
