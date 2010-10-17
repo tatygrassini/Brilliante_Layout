@@ -320,11 +320,15 @@ h2.cufon-h2-footer {
 /* ----------------- Content ----------------  */
 
 .post {
-	margin-bottom: 46px; /* PSD 50px */
+	margin-bottom: 40px; /* PSD 50px */
+}
+
+.post h3 {
+	text-transform: capitalize;
 }
 
 .post h3 a {
-	margin-top: 25px;
+	
 }
 
 span.sep {
@@ -336,40 +340,41 @@ span.sep {
 	margin-bottom: 10px;
 }
 
-.post img {
-	float: left;
+.post-teaser {
+	overflow: hidden;
+}
+
+.post-teaser img {
 	margin: 0 11px 11px 0;
 	border: 1px solid #cacaca;
 	padding: 3px;
+	float: left;
 }
 
-.post-teaser {
-	padding: 0 0 0 161px;
+.post-teaser .text{
+	padding-left: 160px;
 }
 
-.post-teaser p {
+.post-teaser .text p {
 	margin-bottom: 9px;
 	line-height: 23px;
 }
 
 .readMore {
-	position: relative;
 	border-top: 1px solid #bdbdbd;
 	line-height: 17px;
 	padding-top: 9px;
 }
 
 .readMoreButton {
-	position: absolute;
 	text-indent: -9999px;
 	background: url(img/readMoreButton.gif) no-repeat;
 	width: 110px;
 	height: 29px;
 	float: right;
 	cursor: pointer;
-	border: none;
-	right: 0;
-	top: 15px;
+	border: 0 none;
+	margin-top: -12px;
 }
 
 
