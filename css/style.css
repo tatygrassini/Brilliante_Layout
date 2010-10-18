@@ -83,20 +83,7 @@ h4 {
 
 /* ----------------- Txt ----------------  */
 
-h2.notext { height: 32px; margin-bottom: 25px; }
 h2.notext-footer { height: 38px; }
-
-h2.txt-latest { background-image: url(img/txt-latest-from-blog.gif) }
-h2.txt-author { background-image: url(img/txt-about-author.gif) }
-h2.txt-sponsors { background-image: url(img/txt-sponsors.gif) }
-h2.txt-categories { background-image: url(img/txt-categories.gif); margin-bottom: 16px; }
-
-h2.txt-latest,
-h2.txt-author,
-h2.txt-sponsors,
-h2.txt-categories {
-	margin-top: 50px;
-}
 
 h2.txt-links { background-image: url(img/txt-links.png) }
 h2.txt-flickr { background-image: url(img/txt-flickr.png) }
@@ -116,6 +103,8 @@ h2 span {
 	text-align: center;
 }
 
+
+/*   TODO check cufon kerning control or use another bold font type from the font-family   */
 h2.cufon-h2-footer {
 	font-size: 22px;
 	color: #ffffff;
@@ -367,14 +356,14 @@ span.sep {
 }
 
 .readMoreButton {
-	text-indent: -9999px;
+	/* text-indent done in markup with notext class */
 	background: url(img/readMoreButton.gif) no-repeat;
 	width: 110px;
 	height: 29px;
 	float: right;
 	cursor: pointer;
 	border: 0 none;
-	margin-top: -12px;
+	margin-top: -15px;
 }
 
 

@@ -3,7 +3,9 @@
 .featured .img,
 .featured .thumbs a img,
 .featured .thumbs a img.last,
-.featured .desc h3 {
+.featured .desc h3,
+.top-content ul li a,
+.sponsors img {
 	display: inline;
 }
 
@@ -13,4 +15,24 @@
 
 .readMoreButton {
 	right: 190px;
+}
+
+h2 span {
+	padding: 3px 6px 1px;
+}
+
+.readMoreButton {
+	margin-top: -35px;
+}
+
+.cat li a {
+	line-height: 40px;
+}
+
+.links, .flickr, .twitter {
+	margin-right: 52px;
+}
+
+.twitter {
+	margin-right: 0;
 }
