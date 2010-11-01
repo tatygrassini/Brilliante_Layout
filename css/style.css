@@ -127,26 +127,33 @@ h2.cufon-h2-footer {
 	display: block;
 	float: left;
 	height: 42px;
-	background: url(img/nav.gif) no-repeat 0 0;
 	margin-top: 29px;
 }
 
 .top-content li {
+	margin: 0 7px;
+	line-height: 14px;
+	height: 42px;
 	list-style: none;
 	float: left;
-	margin-right: 14px;
-	line-height: 14px;
+	height: 42px;
+	display: inline;
 }
-	
-	.top-content li a {
-		display: block;
-		height: 42px;
-		color:white;
-		text-decoration:none;
+
+	.top-content li.first {
+		margin-left: 0;
 	}
 	
-	.top-content li.selected, .top-content li a:hover {
-		background: url(img/nav-arrow.png) no-repeat bottom center;
+	.top-content li a {
+		color: white;
+		text-decoration: none;
+		height: 42px;
+		display: block;
+		cursor: pointer;
+	}
+	
+	.top-content li.selected, .top-content li:hover {
+		background: url(img/nav-arrow.gif) no-repeat scroll center bottom transparent;
 	}
 
 

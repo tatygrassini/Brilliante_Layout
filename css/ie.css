@@ -4,7 +4,7 @@
 .featured .thumbs a img,
 .featured .thumbs a img.last,
 .featured .desc h3,
-.top-content ul li a,
+.top-content ul li,
 .sponsors img {
 	display: inline;
 }
@@ -35,4 +35,12 @@ h2 span {
 
 .twitter {
 	margin-right: 0;
+}
+
+.top-content li a {
+	display: inline-block;
+}
+
+.top-content li a:hover {
+	background: url(img/nav-arrow.gif) no-repeat scroll center bottom transparent;
 }
