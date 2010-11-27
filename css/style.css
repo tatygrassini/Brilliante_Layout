@@ -2,25 +2,39 @@
 
 * { margin: 0; padding: 0; outline: 0; }
 
-img {
-  border: 0;
-}
-
-html {
-	background-color: #ededed;
-	width: 100%;
-	height: 100%;
-}
-
 body {  
   font: 15px/23px Arial, sans-serif;
   color: #1a1e27;
+  background-color: #ededed;
 }
 
-.notext, .notext-footer { font-size: 0; line-height: 0; text-indent: -4000px; background-repeat: no-repeat; }
+img { border: 0; }
+
+.notext, .notext-footer { font-size: 0; line-height: 0; text-indent: -9999px; background-repeat: no-repeat; }
 
 
 /* ----------------- Fonts ----------------  */
+
+h2.cufon-h2 {
+	margin: 50px 0 25px;
+	font-size: 26px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+h2 span {
+	background-color: #1a1e27;
+	padding: 1px 6px;
+	text-align: center;
+}
+
+h2.cufon-h2-footer {
+	font-size: 22px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: bold;
+}
 
 h3 a {
 	color: #1a1e27;
@@ -51,7 +65,19 @@ h4 {
 
 /* ----------------- Layout ----------------  */
 
-.top-content, .logo, .featured, #content, .footer-content, #bottom {
+.top {
+  background: url(img/top-bg.gif) repeat-x 0 0 transparent;
+  color: #fff;
+  position: relative;
+  height: 71px;
+}
+
+.top-content, 
+.logo, 
+.featured, 
+#content, 
+.footer-content, 
+#bottom {
 	margin: 0 auto;
 	width: 950px;
 }
@@ -79,49 +105,7 @@ h4 {
 }
 
 
-
-
-/* ----------------- Txt ----------------  */
-
-h2.notext-footer { height: 38px; }
-
-h2.txt-links { background-image: url(img/txt-links.png) }
-h2.txt-flickr { background-image: url(img/txt-flickr.png) }
-h2.txt-twitter { background-image: url(img/txt-twitter.png) }
-
-h2.cufon-h2 {
-	margin: 50px 0 25px;
-	font-size: 26px;
-	color: #ffffff;
-	text-transform: uppercase;
-	text-weight: bold;
-}
-
-h2 span {
-	background-color: #1a1e27;
-	padding: 1px 6px;
-	text-align: center;
-}
-
-
-/*   TODO check cufon kerning control or use another bold font type from the font-family   */
-h2.cufon-h2-footer {
-	font-size: 22px;
-	color: #ffffff;
-	text-transform: uppercase;
-	text-weight: bold;
-}
-
-
-
 /* ----------------- Top ----------------  */
-
-.top {
-  background: url(img/top-bg.gif) repeat-x 0 0 transparent;
-  color: #fff;
-  position: relative;
-  height: 71px;
-}
 
 .top-content ul {
 	display: block;
@@ -152,68 +136,66 @@ h2.cufon-h2-footer {
 		cursor: pointer;
 	}
 	
-	.top-content li.selected, .top-content li:hover {
+	.top-content li.selected, .top-content li a:hover {
 		background: url(img/nav-arrow.gif) no-repeat scroll center bottom transparent;
 	}
 
-
-.block {
-	float: right;
-	height: 71px;
-	position: relative;
-}
-
-.block a {
-	position: absolute;
-	right: 221px;
-	display: block;
-	height: 71px;
-	line-height: 71px;
-	text-indent: -9999px;
-	background: url(img/feed.gif) no-repeat 0 0 transparent;
-	width: 127px;
-	height: 21px;
-	margin-top: 25px;
-}
-
-#search {
-	position: absolute;
-	top: 0;
-	right: 0;
-	float: right;
-	width: 169px;
-	background: url(img/search-bg.gif) no-repeat 0 0 transparent;
-	height: 41px;
-	padding-left: 35px;
-	margin-top: 14px;
-	margin-left: 17px;
-}
-
-	.search_input {
-		background: none repeat scroll 0 0 transparent;
-		border: 0 none;
-		color: #1a1e27;
-		display: inline;
-		font: italic 15px Arial, sans-serif;
-		height: 24px;
-		margin-top: 7px;
-		text-transform: lowercase;
-		width: 144px;
+		.block {
+			float: right;
+			height: 71px;
+			position: relative;
 		}
-
-	.search_submit {
-		background: url(img/search-arrow.gif) no-repeat scroll center top transparent;
-		width: 15px;
-		height: 17px;
-		font-size: 0;
-		text-indent: -9999px;
-		border: 0;
-		cursor: pointer;
-		position: absolute;
-		top: 12px;
-		right: 7px;
+		
+		.block a {
+			position: absolute;
+			right: 221px;
+			display: block;
+			height: 71px;
+			line-height: 71px;
+			text-indent: -9999px;
+			background: url(img/feed.gif) no-repeat 0 0 transparent;
+			width: 127px;
+			height: 21px;
+			margin-top: 25px;
 		}
-
+		
+		#search {
+			position: absolute;
+			top: 0;
+			right: 0;
+			float: right;
+			width: 169px;
+			background: url(img/search-bg.gif) no-repeat 0 0 transparent;
+			height: 41px;
+			padding-left: 35px;
+			margin-top: 14px;
+			margin-left: 17px;
+		}
+		
+			.search_input {
+				background: none repeat scroll 0 0 transparent;
+				border: 0 none;
+				color: #1a1e27;
+				display: inline;
+				font: italic 15px Arial, sans-serif;
+				height: 24px;
+				margin-top: 7px;
+				text-transform: lowercase;
+				width: 144px;
+				}
+		
+			.search_submit {
+				background: url(img/search-arrow.gif) no-repeat scroll center top transparent;
+				width: 15px;
+				height: 17px;
+				font-size: 0;
+				text-indent: -9999px;
+				border: 0;
+				cursor: pointer;
+				position: absolute;
+				top: 12px;
+				right: 7px;
+				}
 
 
 /* ----------------- Logo ----------------  */
@@ -237,12 +219,11 @@ h2.cufon-h2-footer {
 }
 
 
-
-
 /* ----------------- Featured ----------------  */
 
 .featured {
 	height: 248px;
+	overflow: hidden;
 }
 
 .featured .img {
@@ -291,7 +272,6 @@ h2.cufon-h2-footer {
 	line-height: 23px;
 }
 
-
 .featured .button a {
 	position: absolute;
 	left: 1px;
@@ -312,23 +292,14 @@ h2.cufon-h2-footer {
 }
 
 
-
 /* ----------------- Content ----------------  */
 
 .post {
 	margin-bottom: 40px; /* PSD 50px */
 }
 
-.post h3 {
-	text-transform: capitalize;
-}
-
-.post h3 a {
-	
-}
-
 span.sep {
-	text-indent: -4000px; /* not working with any text there, why? */
+	text-indent: -9999px; /* not working with any text there, why? */
 	background: url(img/sep.gif) no-repeat center top;
 }
 
@@ -363,7 +334,6 @@ span.sep {
 }
 
 .readMoreButton {
-	/* text-indent done in markup with notext class */
 	background: url(img/readMoreButton.gif) no-repeat;
 	width: 110px;
 	height: 29px;
@@ -374,9 +344,7 @@ span.sep {
 }
 
 
-
 /* ----------------- Sidebar ----------------  */
-
 
 .author img {
 	float: left;
@@ -415,10 +383,13 @@ span.sep {
 }
 
 
-
-
-
 /* ----------------- Footer ----------------  */
+
+h2.notext-footer { height: 38px; }
+
+h2.txt-links { background-image: url(img/txt-links.png) }
+h2.txt-flickr { background-image: url(img/txt-flickr.png) }
+h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 
 #footer {
 	overflow: hidden;
@@ -465,7 +436,6 @@ span.sep {
 	background: url(img/twitter.png) no-repeat scroll 100% bottom transparent;
 }
 
-
 .twitter p, .twitter a {
 	color: #ededed;
 }
@@ -507,7 +477,6 @@ span.sep {
 	text-decoration:none;
 	color: #646464;
 }
-
 
 #bottom p {
 	float:right;

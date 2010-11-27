@@ -9,20 +9,21 @@
 	display: inline;
 }
 
+.top-content li a {
+	display: inline-block;
+}
+
 .search_input {
 	padding-top: 3px;
 }
 
 .readMoreButton {
 	right: 190px;
+	margin-top: -35px;
 }
 
 h2 span {
 	padding: 3px 6px 1px;
-}
-
-.readMoreButton {
-	margin-top: -35px;
 }
 
 .cat li a {
@@ -35,12 +36,4 @@ h2 span {
 
 .twitter {
 	margin-right: 0;
-}
-
-.top-content li a {
-	display: inline-block;
-}
-
-.top-content li a:hover {
-	background: url(img/nav-arrow.gif) no-repeat scroll center bottom transparent;
 }
