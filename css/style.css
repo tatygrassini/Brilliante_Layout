@@ -69,7 +69,8 @@ h4 {
   background: url(img/top-bg.gif) repeat-x 0 0 transparent;
   color: #fff;
   position: relative;
-  height: 71px;
+  height: 70px;
+	border-bottom: 1px solid #ffffff;
 }
 
 .top-content, 
