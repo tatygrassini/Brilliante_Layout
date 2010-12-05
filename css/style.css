@@ -70,11 +70,10 @@ h4 {
   color: #fff;
   position: relative;
   height: 70px;
-	border-bottom: 1px solid #fff;
 }
 
 .top-content, 
-.logo, 
+.logo-content, 
 .featured, 
 #content, 
 .footer-content, 
@@ -101,8 +100,12 @@ h4 {
 	background: #1a1e27 url(img/footer-bg.jpg) repeat-x 0 0;
 }
 
-#footer, #bottom {
+.logo, #footer {
 	border-top: 1px solid #fff;
+}
+
+#footer {
+	border-bottom: 1px solid #fff;
 }
 
 
@@ -201,17 +204,17 @@ h4 {
 
 /* ----------------- Logo ----------------  */
 
-.logo {
-	height: 148px;
+.logo-content {
+	height: 147px;
 	overflow: hidden;
 }
 
-.logo img {
+.logo-content img {
 	margin: 62px 22px auto 42px;
 	float: left;
 }
 
-.logo p {
+.logo-content p {
 	margin-top: 67px;
 	width: 229px;
 	float: left;
@@ -395,7 +398,6 @@ h2.txt-twitter { background-image: url(img/txt-twitter.png) }
 #footer {
 	overflow: hidden;
 	height: 288px;
-	border-top: 1px solid #fff;
 }
 
 .footer-content {

@@ -13,14 +13,6 @@
 	display: inline-block;
 }
 
-.top-content li.selected {
-	background: url(img/nav-arrow.gif) no-repeat scroll center 32px transparent;
-}
-
-.top-content li a:hover {
-	background: url(img/nav-arrow.gif) no-repeat scroll center 30px transparent;
-}
-
 .search_input {
 	padding-top: 3px;
 }
