@@ -66,14 +66,14 @@ h4 {
 /* ----------------- Layout ----------------  */
 
 .top {
-  background-color: #1a1e27;
+  background: transparent url(img/top-bg.gif) repeat-x;
   color: #fff;
   position: relative;
-  height: 70px;
+  height: 71px;
 }
 
 .top-content, 
-.logo-content, 
+.logo, 
 .featured, 
 #content, 
 .footer-content, 
@@ -100,11 +100,8 @@ h4 {
 	background: #1a1e27 url(img/footer-bg.jpg) repeat-x 0 0;
 }
 
-.logo, #footer {
-	border-top: 1px solid #fff;
-}
-
 #footer {
+	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
 }
 
@@ -204,17 +201,17 @@ h4 {
 
 /* ----------------- Logo ----------------  */
 
-.logo-content {
-	height: 147px;
+.logo {
+	height: 148px;
 	overflow: hidden;
 }
 
-.logo-content img {
+.logo img {
 	margin: 62px 22px auto 42px;
 	float: left;
 }
 
-.logo-content p {
+.logo p {
 	margin-top: 67px;
 	width: 229px;
 	float: left;
