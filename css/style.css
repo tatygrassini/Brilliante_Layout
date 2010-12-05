@@ -66,11 +66,11 @@ h4 {
 /* ----------------- Layout ----------------  */
 
 .top {
-  background: url(img/top-bg.gif) repeat-x 0 0 transparent;
+  background-color: #1a1e27;
   color: #fff;
   position: relative;
   height: 70px;
-	border-bottom: 1px solid #ffffff;
+	border-bottom: 1px solid #fff;
 }
 
 .top-content, 
