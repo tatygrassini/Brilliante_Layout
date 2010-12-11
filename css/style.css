@@ -67,7 +67,7 @@ span.sep { background: url(img/sep.gif) no-repeat center top; text-indent: -9999
 /* ----------------- Sidebar ----------------  */
 .author img { border: 1px solid #cacaca; float: left; margin: 0 10px 10px 0; padding: 3px; }
 .sponsors { height: 166px; }
-	.sponsors img { margin-right: 13px; }
+	.sponsors img { margin-right: 13px; border: 1px solid #fff;}
 		.sponsors img.last { margin-right: 0; }
 .cat li { list-style: none; }
 	.cat li a { background: url(img/cat-arrow.gif) no-repeat left center transparent; color: #1a1e27; font-size: 16px; line-height: 42px; padding-left: 23px; text-decoration: none; }
