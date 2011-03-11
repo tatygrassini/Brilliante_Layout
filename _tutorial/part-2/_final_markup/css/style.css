@@ -1,0 +1,99 @@
+/* ----------------- Resets ---------------- */
+*{margin:0;outline:0;padding:0;}
+body{background-color:#ededed;color:#1a1e27;font:15px/23px Arial,sans-serif;}
+img{border:0;}
+.notext,.notext-footer{background-repeat:no-repeat;font-size:0;line-height:0;text-indent:-9999px;}
+/* ----------------- Fonts ---------------- */
+h2.cufon-h2{color:#ffffff;font-size:26px;font-weight:bold;margin:50px 0 25px;text-transform:uppercase;}
+h2 span{background-color:#1a1e27;padding:1px 6px;text-align:center;}
+h3 a{color:#1a1e27;font-size:25px;font-weight:normal;text-decoration:none;}
+h4{color:#646464;font-size:20px;font-weight:normal;margin-bottom:-5px;}
+.author em{color:#646464;font:italic 15px Georgia,serif;margin-top:-3px;}
+.cat-date a,.readMore a{color:#646464;font:italic 14px/20px Georgia,serif;text-decoration:none;}
+/* ----------------- Layout ---------------- */
+.top{background:transparent url(img/top-bg.gif) repeat-x;color:#fff;height:71px;position:relative;}
+.top-content,
+.logo,
+.featured,
+#content,
+.footer-content,
+#bottom{margin:0 auto;width:950px;}
+.main{float:left;width:550px;}
+.sidebar{float:right;width:350px;}
+#content,.featured,#footer,#bottom{clear:both;}
+#footer{background:#1a1e27 url(img/footer-bg.jpg) repeat-x 0 0;border-bottom:1px solid #fff;border-top:1px solid #fff;}
+/* ----------------- Top ---------------- */
+.top-content ul{float:left;height:42px;margin-top:29px;}
+.top-content li{display:inline;float:left;height:42px;height:42px;line-height:14px;list-style:none;margin:0 7px;}
+.top-content li.first{margin-left:0;}
+.top-content li a{color:white;cursor:pointer;display:block;height:42px;text-decoration:none;}
+.top-content li.selected,.top-content li a:hover{background:url(img/nav-arrow.gif) no-repeat scroll center bottom transparent;}
+.block{float:right;height:71px;position:relative;}
+.block a{background:url(img/feed.gif) no-repeat 0 0 transparent;display:block;height:21px;height:71px;line-height:71px;margin-top:25px;position:absolute;right:221px;text-indent:-9999px;width:127px;}
+#search{background:url(img/search-bg.gif) no-repeat 0 0 transparent;float:right;height:41px;margin-left:17px;margin-top:14px;padding-left:35px;position:absolute;right:0;top:0;width:169px;}
+.search_input{background:none repeat scroll 0 0 transparent;border:0 none;color:#1a1e27;display:inline;font:italic 15px Arial,sans-serif;height:24px;margin-top:7px;text-transform:lowercase;width:144px;}
+.search_submit{background:url(img/search-arrow.gif) no-repeat scroll center top transparent;border:0;cursor:pointer;font-size:0;height:17px;position:absolute;right:7px;text-indent:-9999px;top:12px;width:15px;}
+/* ----------------- Logo ---------------- */
+.logo{height:148px;overflow:hidden;}
+.logo img{float:left;margin:62px 22px auto 42px;}
+.logo p{color:#646464;float:left;font:italic 15px/17px Georgia,serif;margin-top:67px;width:229px;}
+/* ----------------- Featured ---------------- */
+.featured{height:248px;overflow:hidden;}
+.featured .img{margin-left:1px;position:relative;}
+.featured .desc{background-color:#1d1f25;height:208px;overflow:hidden;padding:21px 15px 19px;width:316px;}
+.featured .img,
+.featured .desc{float:left;}
+.featured .thumbs{border-top:1px solid #393939;height:61px;padding:20px 13px 19px;}
+.featured .thumbs a img{margin-right:31px;}
+.featured .thumbs a img.last{margin-right:0;}
+.featured .desc h3,.featured .desc p{font-weight:normal;padding:0 13px;}
+.featured .desc h3{margin-bottom:7px;}
+.featured .desc p{line-height:23px;margin-bottom:18px;}
+.featured .button a{background:url(img/hireUsButton.gif) no-repeat 0 0 transparent;bottom:20px;display:block;height:37px;left:1px;position:absolute;text-indent:-9999px;width:107px;}
+.desc h3{font-size:30px;}
+.desc h3,.desc p{color:#ededed;}
+/* ----------------- Content ---------------- */
+.post{margin-bottom:40px;}
+span.sep{background:url(img/sep.gif) no-repeat center top;text-indent:-9999px;}
+.cat-date{margin-bottom:10px;}
+.post-teaser{overflow:hidden;}
+.post-teaser img{border:1px solid #cacaca;float:left;margin:0 11px 11px 0;padding:3px;}
+.post-teaser .text{padding-left:160px;}
+.post-teaser .text p{line-height:23px;margin-bottom:9px;}
+.readMore{border-top:1px solid #bdbdbd;line-height:17px;padding-top:9px;}
+.readMoreButton{background:url(img/readMoreButton.gif) no-repeat;border:0 none;cursor:pointer;float:right;height:29px;margin-top:-15px;width:110px;}
+/* ----------------- Sidebar ---------------- */
+.author img{border:1px solid #cacaca;float:left;margin:0 10px 10px 0;padding:3px;}
+.sponsors img{margin-right:13px;border:1px solid #fff;}
+.sponsors img.last{margin-right:0;}
+.cat li{list-style:none;}
+.cat li a{background:url(img/cat-arrow.gif) no-repeat left center transparent;color:#1a1e27;font-size:16px;line-height:42px;padding-left:23px;text-decoration:none;}
+.cat li a:hover{text-decoration:underline;}
+/* ----------------- Footer ---------------- */
+h2.notext-footer{height:38px;}
+h2.txt-links{background-image:url(img/txt-links.png)}
+h2.txt-flickr{background-image:url(img/txt-flickr.png)}
+h2.txt-twitter{background-image:url(img/txt-twitter.png)}
+#footer{height:288px;overflow:hidden;}
+.footer-content{padding-top:28px;}
+.footer-content h2{margin-bottom:17px;}
+.links,.flickr,.twitter{float:left;margin-right:53px;width:281px;}
+.twitter{margin-right:0;}
+.links li{margin:0;padding:0;}
+.links li a{color:#ededed;font-size:15px;line-height:29px;text-decoration:none;}
+.links li a:hover{border-bottom:1px solid #ededed;}
+/*Works like 'text-decoration:underline' for Cufon*/
+.flickr a img{border:3px solid #646464;margin-right:10px;}
+.twitter{background:url(img/twitter.png) no-repeat scroll 100% bottom transparent;}
+.twitter p,.twitter a{color:#ededed;}
+.twitter a{text-decoration:none;}
+.twitter h4 a{color:#818181;font-size:20px;}
+.twitter em{font:italic 15px Georgia,serif;}
+/* ----------------- Bottom ---------------- */
+#bottom{height:70px;}
+#bottom ul{float:left;}
+#bottom li{float:left;list-style:none;}
+#bottom li a{color:#1a1e27;text-decoration:none;}
+#bottom li.selected a,#bottom li a:hover,#bottom p a{color:#646464;text-decoration:none;}
+#bottom p{float:right;}
+#bottom ul,#bottom p{line-height:70px;}

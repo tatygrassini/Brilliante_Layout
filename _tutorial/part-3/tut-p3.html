@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset=utf-8 />
+			<title>Brilliante Layout tutorial, part 3</title>
+			<style type="text/css">
+			body {
+				padding: 10px;
+				width: 800px;
+				margin: 0 auto;
+				font-family: Helvetica, Verdana, sans-serif;
+				font-size: 16px;
+			}
+
+			span.step {
+				text-transform: uppercase;
+				font-weight: bold;
+				display: block;
+				margin-top: 30px;
+				color: #333;
+			}
+
+			a {
+				color: #09f;
+			}
+			pre {
+				background-color: #333;
+				color: #fff;
+				padding: 5px;
+				overflow: scroll;
+			}
+
+
+			pre, code {
+				font-family: Monaco, Courier New, serif;
+				font-size: 12px;
+			}
+
+			img {
+				border: 0 none;
+				margin-bottom: 10px;
+			}
+
+			p.important {
+				background-color: #ddd;
+				padding: 10px;
+				-moz-border-radius: 5px;
+				-wenkit-border-radius: 5px;
+				border-radius: 5px;
+				font-style: italic;
+			}
+
+			abbr {
+				border-bottom: .1em dotted;
+
+			}
+
+			</style>
+		</head>
+		<body>
+			<h2>Brilliante Layout tutorial, part 3</h2>
+
+			<h3>Injecting HTML5 and CSS3 Into out Website</h3>
+
+			<p>Almost at the end of second part, I recommended a couple of <a href="http://www.modernizr.com/">good</a> <a href="http://html5shiv.googlecode.com">javascript</a> <a href="http://selectivizr.com/">libraries</a> to make IE support HTML5 and CSS3 code, but at that point of the layout we had none to try 'em out. Well, that's exactly what I'm gonna do before starting the WordPress theme implementation. But first, let's get rid of the pending...</p>
+
+
+			<h3>Flickr and Twitter Live Feeds</h3>
+			
+			<p>Open the <strong>index.html</strong> file and change the Flickr code in the footer from this:</p>
+
+			<pre>
+				&lt;div class=&quot;flickr&quot;&gt;
+					&lt;h2 class=&quot;notext-footer txt-flickr&quot;&gt;Watch us on flickr&lt;/h2&gt;
+
+					&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/flickr-th1.jpg&quot; width=&quot;74&quot; height=&quot;74&quot; alt=&quot;Flickr Thumbnail&quot; /&gt;&lt;/a&gt;
+					&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/flickr-th2.jpg&quot; width=&quot;74&quot; height=&quot;74&quot; alt=&quot;Flickr Thumbnail&quot; /&gt;&lt;/a&gt;
+					&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/flickr-th3.jpg&quot; width=&quot;74&quot; height=&quot;74&quot; alt=&quot;Flickr Thumbnail&quot; /&gt;&lt;/a&gt;
+					&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/flickr-th4.jpg&quot; width=&quot;74&quot; height=&quot;74&quot; alt=&quot;Flickr Thumbnail&quot; /&gt;&lt;/a&gt;
+					&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/flickr-th5.jpg&quot; width=&quot;74&quot; height=&quot;74&quot; alt=&quot;Flickr Thumbnail&quot; /&gt;&lt;/a&gt;
+					&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/flickr-th6.jpg&quot; width=&quot;74&quot; height=&quot;74&quot; alt=&quot;Flickr Thumbnail&quot; /&gt;&lt;/a&gt;
+				&lt;/div&gt;&lt;!-- .flickr --&gt;
+			</pre>
+
+			<p>To this:</p>
+
+			<pre>
+				&lt;div class=&quot;flickr&quot;&gt;
+
+				&lt;/div&gt;&lt;!-- .flickr --&gt;
+			</pre>
+			
+			<p>We eliminate the heading, all the fake Flickr thumbnails and let javascript fill it with its magic.</p>
+
+			<p>Delete all the thumbnails in the image folder. They're **dispensable now.</p>
+			<p>I tweaked <a href="http://www.richardshepherd.com/how-to-use-jquery-with-a-json-flickr-feed-to-display-photos/">Richard Shepherd</a>'s jQuery <a href="http://www.richardshepherd.com/flickr.html">script</a> (loading Flickr images in JSON format) to our needs.</p>
+			
+			<pre>
+				// Flickr Feed
+
+				// Don&#x27;t execute any code until the DOM is ready!
+				$(document).ready(function(){					
+
+					// Our very special jQuery JSON fucntion call to Flickr, gets details of the most recent 20 images			   
+					$.getJSON(&quot;http://api.flickr.com/services/feeds/groups_pool.gne?id=998875@N22&amp;lang=en-us&amp;format=json&amp;jsoncallback=?&quot;, displayImages);
+
+					function displayImages(data) {																																   
+						// Randomly choose where to start. A random number between 0 and the number of photos we grabbed (20) minus 9 (we are displaying 9 photos).
+						var iStart = Math.floor(Math.random());	
+
+						// Reset our counter to 0
+						var iCount = 0;								
+
+						// Start putting together the HTML string
+						var htmlString = &quot;&lt;ul&gt;&quot;;					
+
+						// Now start cycling through our array of Flickr photo details
+						$.each(data.items, function(i,item){
+
+							// Let&#x27;s only display 9 photos (a 3x3 grid), starting from a random point in the feed					
+							if (iCount &gt; iStart &amp;&amp; iCount &lt; (iStart + 7)) {
+
+								// I only want the ickle square thumbnails
+								var sourceSquare = (item.media.m).replace(&quot;_m.jpg&quot;, &quot;_s.jpg&quot;);		
+
+								// Here&#x27;s where we piece together the HTML
+								htmlString += &#x27;&lt;li&gt;&lt;a href=&quot;&#x27; + item.link + &#x27;&quot; target=&quot;_blank&quot;&gt;&#x27;;
+								htmlString += &#x27;&lt;img src=&quot;&#x27; + sourceSquare + &#x27;&quot; alt=&quot;&#x27; + item.title + &#x27;&quot; title=&quot;&#x27; + item.title + &#x27;&quot;/&gt;&#x27;;
+								htmlString += &#x27;&lt;/a&gt;&lt;/li&gt;&#x27;;
+							}
+							// Increase our counter by 1
+							iCount++;
+						});		
+
+					// Pop our HTML in the #images DIV	
+					$(&#x27;.flickr&#x27;).html(&quot;&lt;h2 class=&#x27;notext-footer txt-flickr&#x27;&gt;Watch us on flickr&lt;/h2&gt;&quot; + htmlString + &quot;&lt;/ul&gt;&quot;);
+
+					// Close down the JSON function call
+					}
+
+				// The end of our jQuery function	
+				});
+			</pre>
+
+			<p>I hardcoded the h2 tag right in the script and change the "math" numbers to display only 6 thumbnails. To display your own Flickr feed you simple change the <code>$.getJSON</code> URL. Here's a handy online tool to get your Flickr ID. EXPLAIN MORE THE CODE.</p>
+			
+			
+			
+			CSS
+			replace this
+			
+			.flickr a img {
+			border: 3px solid #646464;
+			margin-right: 10px;
+			}
+			
+			with thi
+			
+			.flickr li {
+			float: left;
+			}
+			.flickr img {
+			border: 3px solid #646464;
+			margin: 0 10px 10px 0;
+			height: 74px;
+			width: 74px;
+			overflow: hidden;
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</body>
+	</html>

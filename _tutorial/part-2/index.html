@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Brilliante Layout - coding a blog PSD file into HTML and CSS</title>
+
+<style type="text/css">
+body {
+	padding: 10px;
+	width: 800px;
+	margin: 0 auto;
+	font-family: Helvetica, Verdana, sans-serif;
+	font-size: 16px;
+}
+
+span.step {
+	text-transform: uppercase;
+	font-weight: bold;
+	display: block;
+	margin-top: 30px;
+	color: #333;
+}
+
+a {
+	color: #09f;
+}
+pre {
+	background-color: #333;
+	color: #fff;
+	padding: 5px;
+	overflow: scroll;
+}
+
+
+pre, code {
+	font-family: Monaco, Courier New, serif;
+	font-size: 12px;
+}
+
+img {
+	border: 0 none;
+	margin-bottom: 10px;
+}
+
+p.important {
+	background-color: #ddd;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	-wenkit-border-radius: 5px;
+	border-radius: 5px;
+	font-style: italic;
+}
+
+abbr {
+	border-bottom: .1em dotted;
+
+}
+
+</style>
+</head>
+<body>
+
+<img src="img/tutorial_presentation.png" width="640" height="480" alt="Brilliante Layout - coding a blog PSD file into HTML and CSS">
+
+<h4>In this tutorial, we'll be revisiting the Brillante blog design, covering the PSD slicing, HTML/CSS coding, custom fonts embedding and some handy cool tips to improve your website performance.</h4>
+
+<h2>Brilliante Layout - coding a blog PSD file</h2>
+
+<p>This is Part 2 of 3 for the Photoshop blog design called <a href="http://spyrestudios.com/design-the-brilliante-website-layout-in-photoshop/">Brilliante</a>, 
+	by our not less brilliant and gifted designer <a href="http://www.mkhaled.com/">Mahmoud Khaled Deiab</a>.</p>
+
+<p>In this second part, I'm gonna walk you through the PSD to HTML/CSS 
+	coding process. Third part will be about creating a WordPress theme.</p>
+
+<h3>Let's begin!</h3>
+
+<span class="step">Step 1</span>
+
+<p><a href="http://spyrestudios.com/wp-content/plugins/download-monitor/download.php?id=13">Download</a> the Photoshop file and take a look to the 4 main sections: header, content, footer and bottom.</p>
+
+<img src="img/1.png" width="306" height="512" alt="Layout 4 main sections">
+
+<span class="step">Step 2</span>
+<p>Let's create a folder for our Brilliante Layout with the following 
+	file structure:</p>
+
+<img src="img/2.png" width="315" height="201" alt="File structure">
+
+<p>Note that we'll include all the images in a "img" folder 
+	<em>inside</em> the "css" folder.</p>
+
+<span class="step">Step 3</span>
+
+<p>In the <strong>index.html</strong> file let's type our basic layout 
+	with the main divs.</p>
+
+<pre>
+	&lt;!DOCTYPE html&gt;
+		&lt;html&gt;
+			&lt;head&gt;
+				&lt;meta charset=utf-8 /&gt;
+				&lt;title&gt;Brillante&lt;/title&gt;
+				&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; href=&quot;css/style.css&quot; /&gt;
+			&lt;/head&gt;
+			&lt;body&gt;
+				&lt;div id=&quot;header&quot;&gt;
+				&lt;/div&gt;&lt;!-- #header --&gt;
+	
+				&lt;div id=&quot;content&quot;&gt;
+				&lt;/div&gt;&lt;!-- #content --&gt;
+	
+				&lt;div id=&quot;footer&quot;&gt;
+				&lt;/div&gt;&lt;!-- #footer --&gt;
+	
+				&lt;div id=&quot;bottom&quot;&gt;
+				&lt;/div&gt;&lt;!-- #bottom --&gt;
+			&lt;/body&gt;
+		&lt;/html&gt;
+</pre>
+
+<span class="step">Step 4</span>
+
+<p>Open the PSD file and, with the Rectangular Marquee Tool, select the header top background, 
+including the thin white line at the bottom.</p>
+
+<img src="img/3.png" alt="Header top background selection" width="378" height="667"/>
+
+<h3>About Photoshop slicing and exporting images</h3>
+
+<p>The slicing process I use the most is not by using the Slice Tool, 
+but the Marquee Tool instead. I find it to be quicker and effective considering the way I write code.</p>
+
+<p>These are the steps:</p>
+			
+<ol style="list-style-type:upper-alpha;">
+	
+	<li>With the <strong>Marquee Tool</strong>, draw the slice selection you want to export. 
+	The more zoom you have the better. I recommend to zoom-in enough to the "pixel-point" to 
+	avoid anti-alising and getting the sharpest exported image you may get.</li>
+
+	<li>Then, <strong>Edit > Copy Merged</strong> - <em>Command+Shift+C</em> (<em>Control-Shift+C</em> 
+	if you're on a PC). This way, you make sure you select exactly the image you see, no matter how many 
+	layers this is made with.</li>
+
+	<li><strong>File > New</strong>. Note that Photoshop will create a new file with exactly 
+	the same height and width as your selection.</li>
+
+	<img src="img/4.png" alt="Photoshop created a new file with the dimensions saved in our clipboard" width="670" height="413"/>
+
+	<li><strong>Edit > Paste</strong>. A new layer will be created with the image.</li>
+
+	<li><strong>File > Save for Web and Devices</strong>. You have many options here. 
+	We're gonna focus on image format and size. My preferences are: JPEG for plain photos, banners 
+	and (not so often) logos. GIF for little icons, separating lines, ornaments. 
+	And PNG for high quality images with transparent backgrounds, such as custom font-face titles, 
+	slogans, big icons.</li>
+
+	<img src="img/5.png" alt="Photoshop saving options" width="1024" height="756"/>
+
+	<li><strong>Save</strong>. Try to be simple and obvious here. Always name your images 
+	thinking about your CSS.</li>
+</ol>
+		
+<span class="step">Step 5</span>
+<p>Open your <strong>style.css</strong> file and start filling it with the reset properties.</p>
+			
+<pre>
+	/* ----------------- Resets ----------------  */
+
+	* { margin: 0; padding: 0; outline: 0; }
+	
+	body {  
+	  font: 15px/23px Arial, sans-serif;
+	  color: #1a1e27;
+	  background-color: #ededed;
+	}
+	
+	img { border: 0; }
+	
+	.notext, .notext-footer { font-size: 0; line-height: 0; text-indent: -9999px; background-repeat: no-repeat; }
+</pre>
+
+<p>The "notext" classes will be used later in this tutorial.</p>
+
+<span class="step">Step 6</span>
+
+<p>In Photoshop, select and export the navigation arrow for the selected and hover states.</p>
+
+<img src="img/5a.png" width="585" height="538" alt="Selecting the navigation arrow">
+
+<h3>Grid-Fixed and Fluid sections in the same layout</h3>
+
+<p>Brilliante design is made over a 24-grid system. 
+	The page content is exactly 950px wide. But, the 2 dark-blue areas are wider. 
+	No matter how wide your viewport is, the blue areas behave like a 100% fluid 
+	layout, with the content fixed inside.</p>
+	
+<p>Take for example, the <code>&lt;header&gt;</code> div. Inside, we have the "top" div, and inside we have 
+the "top-content" div. As you might be guessing, the "top" will be all along your browser with the dark-blue
+background, and the "top-content" will be centered and with a fixed width of 950px.</p>
+
+<img src="img/6.png" alt="Full width and fixed width sections" width="700" height="600"/>
+
+<span class="step">Step 7</span>
+
+<p>So here's the CSS code for the layout.</p>
+
+<pre>
+	/* ----------------- Layout ----------------  */
+
+	.top {
+	  background: transparent url(img/top-bg.gif) repeat-x;
+	  color: #fff;
+	  position: relative;
+	  height: 71px;
+	}
+
+	.top-content, 
+	.logo, 
+	.featured, 
+	#content, 
+	.footer-content, 
+	#bottom {
+		margin: 0 auto;
+		width: 950px;
+	}
+
+	.main {
+		width: 550px;
+		float: left;
+	}
+
+	.sidebar {
+		width: 350px;
+		float: right;
+	}
+
+	#content, .featured, #footer, #bottom {
+		clear: both;
+	}
+
+	#footer {
+		background: #1a1e27 url(img/footer-bg.jpg) repeat-x 0 0; 
+		border-bottom: 1px solid #fff; 
+		border-top: 1px solid #fff;
+	}
+</pre>
+
+<h3>Important!</h3>
+
+<p class="important">Sharp-eye readers might ask: "Why the top area needs a background image when we could achieve the same with CSS?" As we clearly did with the footer.
+	Answer is: IE. My first try was CSS for the top area background and the white border, but IE was not rendering the hover state as I want it to.</p>
+	
+<img src="img/6a.png" width="174" height="103" alt="IE6 bug on navigation hover state">
+
+<p>As you can see, when hovering over, IE cuts the arrow with a dark blue line. So I replaced the CSS code with a background image and then all browsers agreed. ;)</p>
+		
+<h3>Top Content</h3>
+
+<p>Inside the <code>&lt;header&gt;</code> tag, the top content area has the main navigation, RSS feed and the search field.</p>
+
+<p><strong>Main nav</strong>: the links here have the <strong>Frutiger font</strong>. 
+	We could use CSS sprites for this special 
+	font, or rendering with one of the font-linking services out there, 
+	or using <strong>Cuf&oacute;n</strong>. I'll stick to this last option, since the CSS sprites technique 
+	won't be practical for the future WordPress theme implementation.</p>
+
+<h3>So, what's Cuf&oacute;n?</h3> 
+
+<p>By definition, it's a fast text replacement with canvas and VML - no Flash or images required.
+	If you want to learn more about Cuf&oacute;n, check <a href="https://github.com/sorccu/cufon/wiki/About">here</a>.</p>
+
+<span class="step">Step 8</span>
+
+<p>First, you download the <strong>Cuf&oacute;n YUI</strong> from 
+	<a href="http://cufon.shoqolate.com/js/cufon-yui.js?v=1.09i">here</a> and save it to your "js" folder. 
+	Download the font (or free similar ones) from <a href="http://www.searchfreefonts.com/font/frutiger-45-light.htm">here</a>. 
+	Then, go to the <a href="http://cufon.shoqolate.com/generate/">Cuf&oacute;n Generator</a> and browse for your local font file with the following options...</p>
+
+<img src="img/7.png" width="436" height="447" alt="Cufon - browse for your font types">
+
+<br />
+
+<img src="img/8.png" alt="Cufon - selecting options" width="395" height="444"/>
+
+<p>Finally, click the <strong>Let's Do This!</strong> button and download your font file.</p>
+
+<img src="img/9.png" alt="Cufon - Let's Do This! button" width="602" height="226"/>
+
+<p>Rename the file with the font name <strong>frutiger.font.js</strong> and drop it 
+	to your "js" folder. Open your <strong>index.html</strong> file and include 
+	the following lines of code before the <code>&lt;/head&gt;</code> tag.</p>
+
+<pre>
+	&lt;script src=&quot;js/cufon-yui.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;js/frutiger.font.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;js/func.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+</pre>
+
+<p>This is the correct order for the script tags: first the Cuf&oacute;n YUI, 
+	the font file next, and your <strong>func.js</strong> file at the end. Create this last file, 
+	we'll need it later.</p>
+	
+<span class="step">Step 9</span>
+
+<p>Right after the opening div for "header" type this:</p>
+
+<pre>
+	&lt;div class=&quot;top&quot;&gt;
+	&lt;div class=&quot;top-content&quot;&gt;
+		
+		&lt;ul&gt;
+			&lt;li class=&quot;first selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		
+	&lt;/div&gt;&lt;!-- .top-content --&gt;
+	&lt;/div&gt;&lt;!-- .top --&gt;
+</pre>
+
+<p>As we saw earlier, we'll be needing "inner" sections in the markup (in this case, "top-content") to accomplish the centered <strong>950px</strong> wide content <em>within</em> the "fluid" background all along the viewport.</p>
+
+<span class="step">Step 10</span>
+
+<p>Let's code the CSS for this section.</p>
+
+<pre>
+	/* ----------------- Top ----------------  */
+
+	.top-content ul {
+		float: left;
+		height: 42px;
+		margin-top: 29px;
+	}
+
+	.top-content li {
+		margin: 0 7px;
+		line-height: 14px;
+		height: 42px;
+		list-style: none;
+		float: left;
+		height: 42px;
+		display: inline;
+	}
+
+		.top-content li.first {
+			margin-left: 0;
+		}
+
+		.top-content li a {
+			color: white;
+			text-decoration: none;
+			height: 42px;
+			display: block;
+			cursor: pointer;
+		}
+
+		.top-content li.selected, .top-content li a:hover {
+			background: url(img/nav-arrow.gif) no-repeat scroll center bottom transparent;
+		}
+</pre>
+
+<p>Here we floated our unordered list to the left, gave margins to the items, except the left margin on the first one, and applied the arrow image for the selected and hover state.</p>
+
+<p ="important">Note we don't need to type <code>url(../img/image.gif)</code> with the dots before 
+	the image folder, 'cause we already structured our images folder <em>inside</em> the css folder.</p>
+
+<span class="step">Step 11</span>
+
+<p>Open the <strong>func.js</strong> file to style the links with Cuf&oacute;n.</p>
+
+<pre>
+	Cufon.replace(&#x27;.top-content a&#x27;);
+</pre>
+
+<p>Here's what the website should look like so far:</p>
+
+<img src="img/10.png" width="1133" height="415" alt="Brilliante Layout browser testing">
+
+<p><strong>RSS feed</strong>: select the RSS icon and the text like this:</p>
+
+<img src="img/11.png" width="921" height="197" alt="Photoshop - selecting the RSS feed">
+
+<span class="step">Step 12</span>
+
+<p>Repeat the Photoshop steps we learnt in step 3 to export our images. We'll name it <strong>feed.gif</strong>.</p>
+
+<p>The same for the <strong>search input field</strong> and <strong>submit button</strong> area.</p>
+
+<img src="img/13.png" alt="Photoshop - selecting the search input field background" width="1063" height="460"/>
+
+<p>First, we'll export the search background and name it <strong>search-bg.gif</strong>. 
+	Before doing this, be sure to disable the submit button/arrow like this.</p>
+
+<img src="img/12.png" alt="Photoshop - submit button/arrow layer disabled" width="204" height="186"/>
+
+<p>Then, enable it back and select and export it with the name <strong>search-arrow.gif</strong>.</p>
+
+<img src="img/14.png" alt="Photoshop - selecting the search arrow" width="589" height="475"/>
+
+<span class="step">Step 13</span>
+
+<p>Now, after creating the navigation, we'll need to create another inner section for both the RSS and search sections. Back to the <strong>index.html</strong> file we'll type the code for the inner block section after the navigation "ul" closing tag.</p>
+
+<pre>
+	&lt;div class=&quot;block&quot;&gt;
+
+		&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Grab our feeds&lt;/a&gt;&lt;/p&gt;
+
+		&lt;form id=&quot;search&quot;&gt;
+			&lt;input type=&quot;text&quot; name=&quot;&quot; class=&quot;search_input&quot;  value=&quot;Search...&quot; name=&quot;s&quot; id=&quot;s&quot; onfocus=&quot;if (this.value == &#x27;Search...&#x27;) {this.value = &#x27;&#x27;;}&quot; onblur=&quot;if (this.value == &#x27;&#x27;) {this.value = &#x27;Search...&#x27;;}&quot;/&gt;
+			&lt;input type=&quot;submit&quot; name=&quot;&quot; class=&quot;search_submit&quot; value=&quot;Go&quot; /&gt;
+		&lt;/form&gt;
+
+	&lt;/div&gt;&lt;!-- .block --&gt;
+</pre>
+
+<p>The javascript code you see inline is for the simple "onfocus" event - you know, when you click on the word "Search" in the input field, the field clears itself. If we click outside, the word shows again.</p>
+
+<span class="step">Step 14</span>
+
+<p>In the CSS, we float the "block" div to the right and position its descendent elements with the absolute property.</p>
+
+<pre>
+	.block {
+		float: right;
+		height: 71px;
+		position: relative;
+	}
+
+	.block a {
+		position: absolute;
+		right: 221px;
+		display: block;
+		height: 71px;
+		line-height: 71px;
+		text-indent: -9999px;
+		background: url(img/feed.gif) no-repeat 0 0 transparent;
+		width: 127px;
+		height: 21px;
+		margin-top: 25px;
+	}
+
+	#search {
+		position: absolute;
+		top: 0;
+		right: 0;
+		float: right;
+		width: 169px;
+		background: url(img/search-bg.gif) no-repeat 0 0 transparent;
+		height: 41px;
+		padding-left: 35px;
+		margin-top: 14px;
+		margin-left: 17px;
+	}
+
+		.search_input {
+			background: none repeat scroll 0 0 transparent;
+			border: 0 none;
+			color: #1a1e27;
+			display: inline;
+			font: italic 15px Arial, sans-serif;
+			height: 24px;
+			margin-top: 7px;
+			text-transform: lowercase;
+			width: 144px;
+			}
+
+		.search_submit {
+			background: url(img/search-arrow.gif) no-repeat scroll center top transparent;
+			width: 15px;
+			height: 17px;
+			font-size: 0;
+			text-indent: -9999px;
+			border: 0;
+			cursor: pointer;
+			position: absolute;
+			top: 12px;
+			right: 7px;
+			}
+</pre>		
+
+<p>This is what we have so far:</p>
+
+<img src="img/15.png" width="1126" height="372" alt="Brilliante Layout browser testing">
+
+<h3>Logo</h3>
+
+<span class="step">Step 15</span>
+
+<p>Export the logo image, selecting the separation lines on the right.</p>
+
+<img src="img/16.png" alt="Photoshop - selecting the logo" width="761" height="169"/>
+
+<span class="step">Step 16</span>
+
+<p>Still inside the "header" we type:</p>
+
+<pre>
+	&lt;div class=&quot;logo&quot;&gt;
+		&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/logo.jpg&quot; width=&quot;196&quot; height=&quot;42&quot; alt=&quot;Brillante - A Brilliant Website Design&quot; /&gt;&lt;/a&gt;
+			&lt;p&gt;A very short description about the website goes here. And that's it!&lt;/p&gt;
+	&lt;/div&gt;&lt;!-- .logo --&gt;
+</pre>		
+
+<span class="step">Step 17</span>
+
+<p>Style the logo area.</p>
+
+<pre>
+	/* ----------------- Logo ----------------  */
+
+	.logo {
+		height: 148px;
+		overflow: hidden;
+	}
+
+	.logo img {
+		margin: 62px 22px auto 42px;
+		float: left;
+	}
+
+	.logo p {
+		margin-top: 67px;
+		width: 229px;
+		float: left;
+		font: italic 15px/17px Georgia, serif;
+		color: #646464;
+	}
+</pre>
+
+<span class="step">Step 18</span>
+
+<p>Last div inside header is for the featured content. In Photoshop, we'll select the elements, first, by selecting the layer, and then, doing <em>Cmd+Click</em> (<em>Ctrl+Click</em> on the PC) on it to obtain the selection as shown in the screenshots. This way you'll go faster with the image exporting process. Disabled the "Hire Us" text and background, select and export the banner with pencils <strong>featured.jpg</strong>. Enable back the button and export it as <strong>hireUsButton.gif</strong>. Finally, select and export the thumbnails (<strong>th1.jpg</strong>, <strong>th2.jpg</strong>, <strong>th3.jpg</strong>), just the pictures without the borders.</p>
+
+<img src="img/17.png" alt="Photoshop - selecting the proper layer with Command/Control+Click" width="615" height="238"/>
+
+<br />
+
+<img src="img/18.png" alt="Photoshop - selecting the proper layer with Command/Control+Click" width="480" height="158"/>
+
+<br />
+
+<img src="img/18b.png" alt="Photoshop - selecting the proper layer with Command/Control+Click" width="415" height="244"/>
+
+
+<span class="step">Step 19</span>
+
+<p>In our <strong>index.html</strong> file we type the code for the featured area, after the logo div.</p>
+
+<pre>
+	&lt;div class=&quot;featured&quot;&gt;
+		&lt;div class=&quot;img&quot;&gt;
+			&lt;img src=&quot;css/img/featured.jpg&quot; width=&quot;600&quot; height=&quot;248&quot; alt=&quot;&quot; /&gt;
+			&lt;p class=&quot;button&quot;&gt;&lt;a href=&quot;#&quot;&gt;Hire us&lt;/a&gt;&lt;/p&gt;
+		&lt;/div&gt;&lt;!-- .img --&gt;
+
+		&lt;div class=&quot;desc&quot;&gt;
+			&lt;h3&gt;It&rsquo;s Brilliant!&lt;/h3&gt;
+			&lt;p&gt;Brilliante, Lorem ipsum dolor sit amet, con-&lt;br /&gt;sectetur adipisicing elit, sf sed dos eiusmod lorem ipsum dolot sit amto. It is brillaint!&lt;/p&gt;
+			&lt;div class=&quot;thumbs&quot;&gt;
+				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/th1.jpg&quot; width=&quot;73&quot; height=&quot;61&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/th2.jpg&quot; width=&quot;73&quot; height=&quot;61&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;last&quot; src=&quot;css/img/th3.jpg&quot; width=&quot;73&quot; height=&quot;61&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+			&lt;/div&gt;&lt;!-- .thumbs --&gt;
+		&lt;/div&gt;&lt;!-- .desc --&gt;
+	&lt;/div&gt;&lt;!-- .featured --&gt;
+</pre>		
+
+<span class="step">Step 20</span>
+
+<p>The CSS for the featured content.</p>
+
+<pre>
+	/* ----------------- Featured ----------------  */
+
+	.featured {
+		height: 248px;
+		overflow: hidden;
+	}
+
+	.featured .img {
+		position: relative;
+		margin-left: 1px;
+	}
+
+	.featured .desc {
+		background-color: #1d1f25;
+		width: 316px;
+		height: 208px;
+		padding: 21px 15px 19px;
+		overflow: hidden;
+	}
+
+	.featured .img, 
+	.featured .desc {
+		float: left;
+	}
+
+	.featured .thumbs {
+		padding: 20px 13px 19px;
+		border-top: 1px solid #393939;
+		height: 61px;
+	}
+
+	.featured .thumbs a img {
+		margin-right: 31px;
+	}
+
+	.featured .thumbs a img.last {
+		margin-right: 0;
+	}
+
+	.featured .desc h3, .featured .desc p {
+		padding: 0 13px;
+		font-weight: normal;
+	}
+
+	.featured .desc h3 {
+		margin-bottom: 7px; /*PSD 18px*/
+	}
+
+	.featured .desc p {
+		margin-bottom: 18px; /*PSD 25px*/
+		line-height: 23px;
+	}
+
+	.featured .button a {
+		position: absolute;
+		left: 1px;
+		bottom: 20px;
+		background: url(img/hireUsButton.gif) no-repeat 0 0 transparent;
+		display: block;
+		text-indent: -9999px;
+		width: 107px;
+		height: 37px;
+	}
+
+	.desc h3 {
+		font-size: 30px;
+	}
+
+	.desc h3, .desc p {
+		color: #ededed;
+	}
+
+</pre>
+
+<p>We're coding this banner section with a fixed height, assuming it will have a javascript fading effect, showing different big images when we click on the thumbnails. The text there have the same <code>overflow:hidden</code> to limit the number of lines in the paragraph, avoiding extra content messing with the layout.</p>
+
+<p class="important">Note the "PSD" comments in the code. They're just little reminders from the measuring process in Photoshop. In both, the Photoshop ruler and <a href="https://addons.mozilla.org/en-US/firefox/addon/60/">Firefox Web Developer</a> ruler there are little discrepancies when measuring and positioning elements in the browser.(Pixel-perfect geeks stuff.) </p>
+
+<span class="step">Step 21</span>
+
+<p>The title "It's Brilliant!" here is using the Frutiger font. So we'll include the <strong>h3 tag</strong> in the func.js.</p>
+
+<pre>
+	Cufon.replace('h3');
+</pre>
+
+<p>The webpage at this point:</p>
+
+<img src="img/19.png" width="1285" height="665" alt="Brilliante Layout browser testing">
+
+<h3>Content: Main</h3>
+
+<span class="step">Step 22</span>
+
+<p>We'll start coding the content area, focusing on the main section with the blog posts. We need to export the posts images without the borders (<strong>post-img1.jpg</strong>, <strong>post-img2.jpg</strong>, <strong>post-img3.jpg</strong>) and the separation lines <strong>sep.gif</strong> you see in between the Categories and the Date. Remember to zoom-in deeply enough to select both lines accurately. And the Read More button <strong>readMoreButton.gif</strong>.</p>
+
+<img src="img/20.png" alt="Photoshop - selecting the proper layer with Command/Control+Click" width="515" height="269"/>
+
+<br />
+
+<img src="img/21.png" alt="Photoshop - selecting the separation lines" width="751" height="623"/>
+
+<br />
+
+<img src="img/22.png" alt="Photoshop - selecting the proper layer with Command/Control+Click" width="584" height="217"/>
+
+<span class="step">Step 23</span>
+
+<p>Here's the html code for the main section, inside the content div.</p>
+
+<pre>
+		&lt;div class=&quot;main&quot;&gt;
+		&lt;h2 class=&quot;cufon-h2&quot;&gt;&lt;span&gt;Latest from the blog&lt;/span&gt;&lt;/h2&gt;
+
+			&lt;div class=&quot;post&quot;&gt;
+				&lt;h3&gt;&lt;a href=&quot;#&quot;&gt;An Example of a Post Goes Here.&lt;/a&gt;&lt;/h3&gt;
+
+				&lt;div class=&quot;cat-date&quot;&gt;
+					&lt;span class=&quot;posted&quot;&gt;Posted in: &lt;/span&gt;
+						&lt;em&gt;&lt;a href=&quot;#&quot;&gt;Category One&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Category Two&lt;/a&gt;&lt;/em&gt;
+					&lt;span class=&quot;sep&quot;&gt;&amp;nbsp;&lt;/span&gt;
+					&lt;span class=&quot;date&quot;&gt;Date: 
+						&lt;em&gt;&lt;a href=&quot;#&quot;&gt;08 April 2010&lt;/a&gt;&lt;/em&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;&lt;!-- .cat-date --&gt;
+
+				&lt;div class=&quot;post-teaser&quot;&gt;
+					&lt;img src=&quot;css/img/post-img1.jpg&quot; width=&quot;142&quot; height=&quot;140&quot; alt=&quot;&quot; /&gt;
+
+					&lt;div class=&quot;text&quot;&gt;
+						&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sf sed dos eiusmod tempor incididunt ut labore et dolorea ab  magna aliqua. Utlo enim ad minim veniam, quis nostrudaw exercitation ullamco laboris nisi ut aliquip ex ea commodo!&lt;/p&gt;
+
+						&lt;div class=&quot;readMore&quot;&gt;
+							&lt;span&gt;Author: &lt;/span&gt;
+								&lt;em&gt;&lt;a href=&quot;#&quot;&gt;Mahmoud Khaled&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
+							&lt;span&gt;Reaction: &lt;/span&gt;
+								&lt;em&gt;&lt;a href=&quot;#&quot;&gt;10 comments&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;5 Pingback&lt;/a&gt;&lt;/em&gt;
+							&lt;input type=&quot;submit&quot; name=&quot;&quot; class=&quot;readMoreButton notext&quot; value=&quot;Read More&quot; /&gt;
+						&lt;/div&gt;&lt;!-- .readMore --&gt;
+					&lt;/div&gt;&lt;!-- .text --&gt;
+				&lt;/div&gt;&lt;!-- .post-teaser --&gt;
+
+			&lt;/div&gt;&lt;!-- .post --&gt;
+
+			&lt;div class=&quot;post&quot;&gt;
+				&lt;h3&gt;&lt;a href=&quot;#&quot;&gt;Another Post from the Blog Goes Here!&lt;/a&gt;&lt;/h3&gt;
+
+				&lt;div class=&quot;cat-date&quot;&gt;
+					&lt;span class=&quot;posted&quot;&gt;Posted in: &lt;/span&gt;
+						&lt;em&gt;&lt;a href=&quot;#&quot;&gt;Category One&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Category Two&lt;/a&gt;&lt;/em&gt;
+					&lt;span class=&quot;sep&quot;&gt;&amp;nbsp;&lt;/span&gt;
+					&lt;span class=&quot;date&quot;&gt;Date: 
+						&lt;em&gt;&lt;a href=&quot;#&quot;&gt;10 April 2010&lt;/a&gt;&lt;/em&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;&lt;!-- .cat-date --&gt;
+
+				&lt;div class=&quot;post-teaser&quot;&gt;
+					&lt;img src=&quot;css/img/post-img2.jpg&quot; width=&quot;142&quot; height=&quot;140&quot; alt=&quot;&quot; /&gt;
+
+					&lt;div class=&quot;text&quot;&gt;
+						&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sf sed dos eiusmod tempor incididunt ut labore et dolorea ab  magna aliqua. Utlo enim ad minim veniam, quis nostrudaw exercitation ullamco laboris nisi ut aliquip ex ea commodo!&lt;/p&gt;
+
+						&lt;div class=&quot;readMore&quot;&gt;
+							&lt;span&gt;Author: &lt;/span&gt;
+								&lt;em&gt;&lt;a href=&quot;#&quot;&gt;Mahmoud Khaled&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
+							&lt;span&gt;Reaction: &lt;/span&gt;
+								&lt;em&gt;&lt;a href=&quot;#&quot;&gt;3 comments&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;10 Pingback&lt;/a&gt;&lt;/em&gt;
+							&lt;input type=&quot;submit&quot; name=&quot;&quot; class=&quot;readMoreButton notext&quot; value=&quot;Read More&quot; /&gt;
+						&lt;/div&gt;&lt;!-- .readMore --&gt;
+					&lt;/div&gt;&lt;!-- .text --&gt;
+				&lt;/div&gt;&lt;!-- .post-teaser --&gt;
+
+			&lt;/div&gt;&lt;!-- .post --&gt;
+
+			&lt;div class=&quot;post&quot;&gt;
+				&lt;h3&gt;&lt;a href=&quot;#&quot;&gt;It&#x27;s Brilliant. Yes, It Is!&lt;/a&gt;&lt;/h3&gt;
+
+				&lt;div class=&quot;cat-date&quot;&gt;
+					&lt;span class=&quot;posted&quot;&gt;Posted in: &lt;/span&gt;
+						&lt;em&gt;&lt;a href=&quot;#&quot;&gt;Category One&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Category Two&lt;/a&gt;&lt;/em&gt;
+					&lt;span class=&quot;sep&quot;&gt;&amp;nbsp;&lt;/span&gt;
+					&lt;span class=&quot;date&quot;&gt;Date: 
+						&lt;em&gt;&lt;a href=&quot;#&quot;&gt;12 April 2010&lt;/a&gt;&lt;/em&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;&lt;!-- .cat-date --&gt;
+
+				&lt;div class=&quot;post-teaser&quot;&gt;
+					&lt;img src=&quot;css/img/post-img1.jpg&quot; width=&quot;142&quot; height=&quot;140&quot; alt=&quot;&quot; /&gt;
+
+					&lt;div class=&quot;text&quot;&gt;
+						&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sf sed dos eiusmod tempor incididunt ut labore et dolorea ab  magna aliqua. Utlo enim ad minim veniam, quis nostrudaw exercitation ullamco laboris nisi ut aliquip ex ea commodo!&lt;/p&gt;
+
+						&lt;div class=&quot;readMore&quot;&gt;
+							&lt;span&gt;Author: &lt;/span&gt;
+								&lt;em&gt;&lt;a href=&quot;#&quot;&gt;Mahmoud Khaled&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
+							&lt;span&gt;Reaction: &lt;/span&gt;
+								&lt;em&gt;&lt;a href=&quot;#&quot;&gt;No comments&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;2 Pingback&lt;/a&gt;&lt;/em&gt;
+							&lt;input type=&quot;submit&quot; name=&quot;&quot; class=&quot;readMoreButton notext&quot; value=&quot;Read More&quot; /&gt;
+						&lt;/div&gt;&lt;!-- .readMore --&gt;
+					&lt;/div&gt;&lt;!-- .text --&gt;
+				&lt;/div&gt;&lt;!-- .post-teaser --&gt;
+
+			&lt;/div&gt;&lt;!-- .post --&gt;
+	&lt;/div&gt;&lt;!-- .main --&gt;
+</pre>
+
+<p>Each blog post here will have a h3 title, a metadata section for categories and date, the post excerpt and a Read More section with the author, number of comments and a button linking to the full single post.</p>
+
+<p>As you see, we applied the "notext" class we defined in the CSS Resets for the Read More button.</p>
+
+<span class="step">Step 24</span>
+
+<pre>
+	/* ----------------- Content ----------------  */
+
+	.post {
+		margin-bottom: 40px;
+	}
+
+	span.sep {
+		text-indent: -9999px;
+		background: url(img/sep.gif) no-repeat center top;
+	}
+
+	.cat-date {
+		margin-bottom: 10px;
+	}
+
+	.post-teaser {
+		overflow: hidden;
+	}
+
+	.post-teaser img {
+		margin: 0 11px 11px 0;
+		border: 1px solid #cacaca;
+		padding: 3px;
+		float: left;
+	}
+
+	.post-teaser .text{
+		padding-left: 160px;
+	}
+
+	.post-teaser .text p {
+		margin-bottom: 9px;
+		line-height: 23px;
+	}
+
+	.readMore {
+		border-top: 1px solid #bdbdbd;
+		line-height: 17px;
+		padding-top: 9px;
+	}
+
+	.readMoreButton {
+		background: url(img/readMoreButton.gif) no-repeat;
+		width: 110px;
+		height: 29px;
+		float: right;
+		cursor: pointer;
+		border: 0 none;
+		margin-top: -15px;
+	}
+</pre>		
+
+<p>Note we did the post images borders with CSS, that's why we ignored them when exporting the images.</p>
+
+<p>Again, we have to think about the future WordPress theme impelementation for the h2 titles. So we assign a class <code>h2 class="cufon-h2"</code> for the Cuf&oacute;n titles with the dark blue background. And the <code>&lt;span&gt;</code> tag to avoid the default block background. In other words, we give the heading a "span" just to color the text background, not its whole width. This way, the titles will be rendered dynamically via CMS.</p>
+	
+
+<span class="step">Step 25</span>
+
+<p>The <strong>func.js</strong> file will need one more line.</p>
+
+<pre>
+	Cufon.replace('h2');
+</pre>
+
+<span class="step">Step 26</span>
+
+<p>It's time to style our main fonts.</p>
+
+<pre>
+	/* ----------------- Fonts ----------------  */
+
+	h2.cufon-h2 {
+		margin: 50px 0 25px;
+		font-size: 26px;
+		color: #ffffff;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	h2 span {
+		background-color: #1a1e27;
+		padding: 1px 6px;
+		text-align: center;
+	}
+
+	h3 a {
+		color: #1a1e27;
+		font-size: 25px;
+		text-decoration: none;
+		font-weight: normal;
+	}
+
+	h4 {
+		color: #646464;
+		font-size: 20px;
+		margin-bottom: -5px;
+		font-weight: normal;
+	}
+
+	.author em {
+		font: italic 15px Georgia, serif;
+		color: #646464;
+		margin-top: -3px;
+	}
+
+	.cat-date a, .readMore a {
+		font: italic 14px/20px Georgia, serif;
+		color: #646464;
+		text-decoration: none;
+	}
+</pre>
+
+<h3>Content: Sidebar</h3>
+
+<span class="step">Step 27</span>
+
+<p>Export the author's photo (<strong>author.jpg</strong>), the dummy-banners (<strong>advertiseHere.gif</strong>) and the categories arrow/bullet (<strong>cat-arrow.gif</strong>).</p>
+
+<img src="img/22b.png" alt="Photoshop - selecting the proper layer with Command/Control+Click" width="514" height="316"/>
+
+<br />
+
+<img src="img/22c.png" alt="Photoshop - selecting the proper layer with Command/Control+Click" width="760" height="552"/>
+
+<br />
+
+<img src="img/22d.png" alt="Photoshop - contracting selection 1px to avoid border" width="804" height="715"/>
+
+<br />
+
+<p class="important">Note we had to modified the <strong>Advertise Here picture selection</strong>, because it has 1px border around, and we'll just use CSS to do this. In Photoshop: Menu <strong>Select > Modify > Contract > 1px</strong>.</p>
+
+<span class="step">Step 28</span>
+
+<p>Right after the main div, we type the <strong>sidebar html</strong> code.</p>
+
+<pre>
+	&lt;div class=&quot;sidebar&quot;&gt;
+
+		&lt;div class=&quot;author&quot;&gt;
+			&lt;h2 class=&quot;cufon-h2&quot;&gt;&lt;span&gt;About the author&lt;/span&gt;&lt;/h2&gt;
+			
+			&lt;img src=&quot;css/img/author.jpg&quot; width=&quot;99&quot; height=&quot;99&quot; alt=&quot;&quot; /&gt;
+			&lt;h4&gt;Mahmoud Khaled&lt;/h4&gt;
+			&lt;p&gt;&lt;em&gt;Web &amp; Graphics Designer&lt;/em&gt;&lt;/p&gt;
+			&lt;p&gt;Sectetur adipisicing elit, sf sed dos eiusmod tempor incididunt utto po Web and graphics designer!&lt;/p&gt;
+		&lt;/div&gt;&lt;!-- .author --&gt;
+
+		&lt;div class=&quot;sponsors&quot;&gt;
+			&lt;h2 class=&quot;cufon-h2&quot;&gt;&lt;span&gt;Sponsors&lt;/span&gt;&lt;/h2&gt;
+			
+			&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/advertiseHere.gif&quot; width=&quot;164&quot; height=&quot;164&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+			&lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;last&quot; src=&quot;css/img/advertiseHere.gif&quot; width=&quot;164&quot; height=&quot;164&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+		&lt;/div&gt;&lt;!-- .sponsors --&gt;
+		
+		&lt;h2 class=&quot;cufon-h2&quot;&gt;&lt;span&gt;Categories&lt;/span&gt;&lt;/h2&gt;
+		
+		&lt;ul class=&quot;cat&quot;&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Category Number One&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Photoshop Designs&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Identity Branding &amp; Logo Design&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Giveaways, and Freebies&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Inspiration&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Category Goes Here&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;&lt;!-- .sidebar --&gt;
+</pre>
+
+<span class="step">Step 29</span>
+
+<p>The <em>author's name</em> and the <em>category links</em> have the Frutiger font. Let's include both in the <strong>func.js</strong> file.</p>
+
+<pre>
+	Cufon.replace('h4');
+	Cufon.replace('.cat a');
+</pre>
+
+<span class="step">Step 30</span>
+
+<p>Here, we style the picture borders with CSS one more time.</p>
+
+<pre>
+	/* ----------------- Sidebar ----------------  */
+
+	.author img {
+		float: left;
+		margin: 0 10px 10px 0;
+		border: 1px solid #cacaca;
+		padding: 3px;
+	}
+
+	.sponsors img {
+		margin-right: 13px;
+	}
+
+	.sponsors img.last {
+		margin-right: 0;
+	}
+
+	.cat li {
+		list-style: none;
+	}
+
+	.cat li a {
+		text-decoration: none;
+		color: #1a1e27;
+		background: url(img/cat-arrow.gif) no-repeat left center transparent;
+		padding-left: 23px;
+		font-size: 16px;
+		line-height: 42px;
+	}
+
+	.cat li a:hover {
+		text-decoration: underline;
+	}
+</pre>		
+
+<p>This is how our awesome webpage look like so far:</p>
+
+<img src="img/23.png" alt="Brilliante Layout browser testing" width="1145" height="1050"/>
+
+<h3>Footer</h3>
+
+<p>We won't apply Cuf&oacute;n in the footer headings. Here we'll use the <strong>text-replacement technique</strong>, using images for the titles and hiding the heading text with CSS.</p>
+
+<span class="step">Step 31</span>
+
+<p>In Photoshop, disable the footer background layer, so there's nothing behind the titles, just transparency, and select one by one, as pixel-perfect as you can, including the border lines at the bottom. Export them in PNG format (<strong>txt-links.png</strong>, <strong>txt-flickr.png</strong>, <strong>txt-twitter.png</strong>).</p>
+
+<img src="img/24.png" alt="Photoshop - selecting footer heading with transparent background" width="1111" height="200"/>
+
+<span class="step">Step 32</span>
+
+<p>Select the footer background like this, just the blue area (there's a subtle linear gradient). Export it as JPEG (<strong>footer-bg.jpg</strong>).</p>
+
+<img src="img/25.png" width="658" height="617" alt="Photoshop - selecting footer background">
+
+<br />
+
+<img src="img/26.png" width="780" height="600" alt="Photoshop - selecting footer background">
+
+<span class="step">Step 33</span>
+
+<p>And finally, the Twitter bird. Select it with <em>Command+Click</em> on the layer image (<em>Control+Click</em> on a PC). This way, you'll have the bird icon selected like this...</p>
+
+<img src="img/27.png" alt="2Photoshop - selecting Twitter icon" width="736" height="429"/>
+
+<span class="step">Step 34</span>
+
+<p>We need the footer background showing all along the browser width, that's why we create the footer-content div inside the footer.</p>
+
+<pre>
+	&lt;div id=&quot;footer&quot;&gt;
+	&lt;div class=&quot;footer-content&quot;&gt;
+
+		&lt;div class=&quot;links&quot;&gt;
+			&lt;h2 class=&quot;notext-footer txt-links&quot;&gt;Links worth spreading&lt;/h2&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link Number One Goes Here&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link Number Two Should Go Here&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another Link would Go Here&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;And Maybe Yet Another One&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Awakening Website Design&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mahmoud&rsquo;s Design Blog And Portfolio&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+
+		&lt;/div&gt;&lt;!-- .links --&gt;
+
+		&lt;div class=&quot;flickr&quot;&gt;
+			&lt;h2 class=&quot;notext-footer txt-flickr&quot;&gt;Watch us on flickr&lt;/h2&gt;
+
+			&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/flickr-th1.jpg&quot; width=&quot;74&quot; height=&quot;74&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+			&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/flickr-th2.jpg&quot; width=&quot;74&quot; height=&quot;74&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+			&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/flickr-th3.jpg&quot; width=&quot;74&quot; height=&quot;74&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+			&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/flickr-th4.jpg&quot; width=&quot;74&quot; height=&quot;74&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+			&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/flickr-th5.jpg&quot; width=&quot;74&quot; height=&quot;74&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+			&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;css/img/flickr-th6.jpg&quot; width=&quot;74&quot; height=&quot;74&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+		&lt;/div&gt;&lt;!-- .flickr --&gt;
+
+		&lt;div class=&quot;twitter&quot;&gt;
+			&lt;h2 class=&quot;notext-footer txt-twitter&quot;&gt;Tweet tweet!&lt;/h2&gt;
+
+			&lt;p&gt;&lt;em&gt;&#8220;Lorem ipsum dolor sitet ameto, is simply an example of a tweet. And probably some more blahs shoud actually go here which works as a tweet!&#8221;&lt;/em&gt;&lt;/p&gt;
+
+			&lt;p class=&quot;cufon&quot;&gt;10 hours ago. From &lt;a href=&quot;#&quot;&gt;TweetDeck&lt;/a&gt;&lt;br /&gt;
+			In reply to &lt;a href=&quot;#&quot;&gt;@MahmoudKhaled&lt;/a&gt;&lt;/p&gt;
+
+			&lt;h4&gt;&lt;a href=&quot;#&quot;&gt;Follow us on Twitter!&lt;/a&gt;&lt;/h4&gt;
+		&lt;/div&gt;&lt;!-- .twitter --&gt;
+		&lt;/div&gt;&lt;!-- .footer-content --&gt;
+	&lt;/div&gt;&lt;!-- #footer --&gt;
+</pre>		
+
+<span class="step">Step 35</span>
+
+<p>Here's the h2 tag <strong>class notext-footer</strong> (we included this one at the very beginning on the CSS Resets), 'cause there's no need for the Cuf&oacute;n magic this time. Followed by new special classes for each title (txt-links, txt-flickr, txt-twitter).</p>
+
+<pre>
+	/* ----------------- Footer ----------------  */
+
+	h2.notext-footer { height: 38px; }
+
+	h2.txt-links { background-image: url(img/txt-links.png) }
+	h2.txt-flickr { background-image: url(img/txt-flickr.png) }
+	h2.txt-twitter { background-image: url(img/txt-twitter.png) }
+
+	#footer {
+		overflow: hidden;
+		height: 288px;
+	}
+
+	.footer-content {
+		padding-top: 28px;
+	}
+
+	.footer-content h2 {
+		margin-bottom: 17px; /*PSD 22px*/
+	}
+
+	.links, .flickr, .twitter {
+		float: left;
+		width: 281px;
+		margin-right: 53px;
+	}
+
+	.twitter {
+		margin-right: 0;
+	}
+
+	.links li {
+		padding: 0;
+		margin: 0;
+	}
+
+	.links li a {
+		text-decoration: none;
+		color: #ededed;
+		font-size: 15px;
+		line-height: 29px;
+	}
+
+	.flickr a img {
+		margin-right: 10px;
+		border: 3px solid #646464;
+	}
+
+	.twitter {
+		background: url(img/twitter.png) no-repeat scroll 100% bottom transparent;
+	}
+
+	.twitter p, .twitter a {
+		color: #ededed;
+	}
+
+	.twitter a {
+		text-decoration: none;
+	}
+
+	.twitter h4 a {
+		color: #818181;
+		font-size: 20px;
+	}
+
+	.twitter em {
+		font: italic 15px Georgia, serif;
+	}
+</pre>
+
+<span class="step">Step 36</span>
+
+<p>Well, there's two more elements using Cuf&oacute;n here: the links and the Twitter text. <strong>Func.js</strong>:</p>
+
+<pre>
+	Cufon.replace(&#x27;.links a&#x27;);
+	Cufon.replace(&#x27;.twitter p.cufon&#x27;);
+</pre>
+
+<p>We could group all the <code>Cufon.replace</code> tags into one, like this:</p>
+
+<pre>
+	Cufon.replace('h3, h4, .cat li a, .links li a, .twitter p.cufon, .top-content li');
+	Cufon.replace('h2');
+</pre>
+
+<p class="important">Note I'm extracting the "h2" tag from the group 'cause it would mess everything on IE. :-(</p>
+
+<p>The webpage so far.</p>
+
+<img src="img/28.png" width="1293" height="900" alt="Brilliante Layout browser testing">
+
+<h3>Bottom</h3>
+
+<span class="step">Step 37</span>
+
+<p>Finally, the bottom area. There's no need for nested divs this time, 'cause no special background is showing.</p>
+
+<pre>
+	&lt;div id=&quot;bottom&quot;&gt;
+		&lt;ul&gt;
+			&lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&amp;nbsp;|&amp;nbsp;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About Us&lt;/a&gt;&amp;nbsp;|&amp;nbsp;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;&amp;nbsp;|&amp;nbsp;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Portfolio&lt;/a&gt;&amp;nbsp;|&amp;nbsp;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blog&lt;/a&gt;&amp;nbsp;|&amp;nbsp;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+
+		&lt;p&gt;Copyright 2010 - &lt;a href=&quot;#&quot;&gt;Brilliante&lt;/a&gt; - All rights reserved&lt;/p&gt;
+	&lt;/div&gt;&lt;!-- #bottom --&gt;
+</pre>
+
+<span class="step">Step 38</span>
+
+<p>And its CSS.</p>
+
+<pre>
+	/* ----------------- Bottom ----------------  */
+
+	#bottom {
+		height: 70px;
+	}
+
+	#bottom ul {
+		float:left;
+	}
+
+	#bottom li {
+		float:left;
+		list-style:none;
+	}
+
+	#bottom li a {
+		text-decoration:none;
+		color: #1a1e27;
+	}
+
+	#bottom li.selected a, #bottom li a:hover, #bottom p a {
+		text-decoration:none;
+		color: #646464;
+	}
+
+	#bottom p {
+		float:right;
+	}
+
+	#bottom ul, #bottom p {
+		line-height: 70px;
+	}
+</pre>
+
+<p>We use the line height equal to the div height to center the elements vertically.</p>
+
+<p>Here's our final website showing in a decent browser. ;)</p>
+
+<img src="img/29.png" alt="Brilliante Layout browser testing" width="1145" height="1050"/>
+
+
+<h3>IE CSS</h3>
+
+<p>Before jumpt into CSS fixing for Internet Explorer, there's a little piece of code we need to add to our markup. This will help to prevent some IE speed and rendering issues with Cuf&oacute;n.</p>
+
+<span class="step">Step 39</span>
+
+<p>Include this before the <code>&lt;/body&gt;</code> tag.</p>
+
+<pre>
+	&lt;script type=&quot;text/javascript&quot;&gt; Cufon.now(); &lt;/script&gt;
+</pre>
+
+<span class="step">Step 40</span>
+
+<p>Create the <strong>ie.css</strong> file inside your css folder, then call it from your markup with a conditional comment, right after the <strong>style.css</strong> line.</p>
+
+<pre>
+	&lt;!--[if lte IE 6]&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; href=&quot;css/ie.css&quot; /&gt; &lt;![endif]--&gt;
+</pre>
+
+<p>You might be familiar with this one. This line here is adding some extra css rules only if the browser is Internet Explorer 6 or below.</p>
+
+<p>There's a good article <a href="http://www.quirksmode.org/css/condcom.html">here</a> about conditional comment rules for your css files. Or if you wish to go really deep into css debugging, read about the <a href="http://www.webdevout.net/css-hacks#in_css">In-CSS hacks</a> technique.</p>
+
+<p>We didn't use HTML5 tags for this website (except for the Doctype, of course), but if you wish to ensure IE compatibility with HTML5 elements, I suggest you to read about these two awesome javascript frameworks: <a href="http://www.modernizr.com/">Modernizr</a> and <a href="http://html5shiv.googlecode.com">HTML5 Shiv</a>.</p>
+
+<span class="step">Step 41</span>
+
+<p>In our <strong>ie.css</strong> file, we group all the divs with margins on both sides, left and right, to prevent the (in)famous <a href="http://www.positioniseverything.net/explorer/doubled-margin.html">IE double-margin bug</a>.</p>
+
+<pre>
+	.readMoreButton, 
+	#search,
+	.featured .img,
+	.featured .thumbs a img,
+	.featured .thumbs a img.last,
+	.featured .desc h3,
+	.top-content ul li,
+	.sponsors img {
+		display: inline;
+	}
+</pre>
+
+<span class="step">Step 42</span>
+
+<p>First IE bug you see is on the top navigation links, aligned vertically. If you give them the CSS property "inline-block" they would show like we mean to, horizontal aligned.</p>
+
+<img src="img/30.png" alt="IE6 bug - navigation links vertically aligned" width="348" height="405"/>
+
+<pre>
+	.top-content li a {
+		display: inline-block;
+	}
+</pre>
+
+<span class="step">Step 43</span>
+
+<p>We push down the search field a couple of pixels, 'cause it was a little too high.</p>
+
+<pre>
+	.search_input {
+		padding-top: 3px;
+	}
+</pre>
+
+<span class="step">Step 44</span>
+
+<p>The Read More button was way too much on the right side, even trespassing on the sidebar, so we give it some more room from the right till it falls back in the blog post position, and pull it higher with negative margin-top.</p>
+
+<pre>
+	.readMoreButton {
+		right: 190px;
+		margin-top: -35px;
+	}
+</pre>
+
+<span class="step">Step 45</span>
+
+<p>We fix the padding for the h2 headings with the dark blue background.</p>
+
+<pre>
+	h2 span {
+		padding: 3px 6px 1px;
+	}
+</pre>
+
+<span class="step">Step 46</span>
+
+<p>Stretch the line-height for the category links on the sidebar.</p>
+
+<pre>
+	.cat li a {
+		line-height: 40px;
+	}
+</pre>
+
+<span class="step">Step 47</span>
+
+<p>Reduce the right margin for the three columns on the footer in 1px.</p>
+
+<pre>
+	.links, .flickr, .twitter {
+		margin-right: 52px;
+	}
+</pre>
+
+<p>And that's it! It wasn't that painful, was it?</p>
+
+<h3>IE PNG Fix</h3>
+
+<p>If you do some research about how to fix the PNG-images bug on IE, you'll see there's a ton of options. Here's how our PNG footer headings look on
+	Internet Explorer:</p>
+
+<img src="img/31.png" width="868" height="410" alt="IE6 bug - PNG images">
+
+<span class="step">Step 48</span>
+
+<p>We'll use the "BelatedPNG" hack. Download the <a href="http://www.dillerdesign.com/experiment/DD_belatedPNG/#download">belatedPNG.js</a> file to your js folder and include this conditional comment in your <strong>index.html</strong>, before the Cuf&oacute;n scripts. So both the conditional comments for IE css and PNG will be there together, just for the sake of simplicity.</p>
+
+<pre>
+	&lt;!--[if IE 6]&gt;
+	&lt;script src=&quot;js/belatedPNG.js&quot;&gt;&lt;/script&gt;
+	&lt;script&gt;
+		DD_belatedPNG.fix(&#x27;*&#x27;);
+	&lt;/script&gt;
+	&lt;![endif]--&gt;
+</pre>
+
+<h3>Cuf&oacute;n and the link selectors issue on IE</h3>
+
+<p>If you check the webpage on a Windows machine at this very point, you'll note something's missing with the links styling: top navigation links,
+sidebar category links and footer links and Twitter paragraph. Oh yeah, we already include this rules on our <strong>func.js</strong> file and
+the design looks amazing on Firefox, Safari, Chrome, etc.</p>
+
+<p>Obviously Cuf&oacute;n and IE aren't very good friends. No, they don't hang out or have a beer together, when you try to apply custom font types on "a" tags for links. To be completely honest,
+I googled for this, and I found that including a Javascript framework (as jQuery) to our design helps IE to render link tags as we meant to. 
+We're not using jQuery in our website to create beautiful animations or effects, just to make IE a little smarter.</p>
+
+<span class="step">Step 49</span>
+
+<p>We only need to include the jQuery library from the Google <abbr title="Content Delivery Network">CDN</abbr> in our mark-up <em>before</em> the Cuf&oacute;n scripts.</p>
+
+<pre>
+	&lt;!-- jQuery makes Cufon rendering links properly on IE --&gt;
+	&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;js/jquery-1.4.4.min.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+</pre>
+
+<p>I downloaded the jQuery file in the js folder and added it in the last line here (as fallback), just in case I want to work with this website offline.</p>
+
+<p>Here's how the website should look on IE6 now.</p>
+
+<img src="img/32.png" width="1159" height="933" alt="IE6 browser testing">
+
+<h3>Cross-Browser Testing</h3>
+
+<p>I recommend you to test your websites in different browsers and platforms. A cool online tool for this is <a href="http://browsershots.org/">BrowserShots</a>. In this case, you should deploy your website somewhere and paste the URL in the text field. Check or uncheck the different Browser/Platforms combinations to see the website screenshots.</p>
+
+<img src="img/32b.png" width="1047" height="624" alt="BrowserShots - selecting platforms/browsers">
+
+<br />
+
+<img src="img/32c.png" width="896" height="798" alt="BrowserShots - screenshots thumbnails">
+
+<h3>Validate Your Code</h3>
+
+<p>Normally, I start with the Photoshop slicing and exporting, then the whole HTML and finally the CSS. It's a good practice to validate your code when you finish any of them. In this tutorial I walked you through working with markup and presentational layers at once, and we didn't have the chance, yet.</p>
+
+<span class="step">Step 50</span>
+
+<p>So, go to <a href="http://validator.w3.org/">W3C</a> and validate your HTML...</p>
+
+<img src="img/32d.png" width="753" height="462" alt="HTML validation">
+
+<p>...and your <a href="http://jigsaw.w3.org/css-validator/validator.html.en">CSS</a>.</p>
+
+<img src="img/32e.png" width="720" height="493" alt="CSS validation">
+
+<h3>Compress Your CSS and order the properties</h3>
+
+<span class="step">Step 51</span>
+
+<p>Once your website is on production, working on a server, you would like to save some HTTP requests by minifying your CSS files. Here's another handy <a href="http://www.styleneat.com/">online tool</a> for this.</p>
+
+<img src="img/33.png" width="469" height="514" alt="Styleneat - selecting options">
+
+<br />
+
+<img src="img/33a.png" width="729" height="607" alt="Styleneat - minified CSS">
+
+
+<h3>Minify your Javascript files</h3>
+
+<span class="step">Step 52</span>
+
+<p>In our case, there's no need for this, 'cause all our javascript files are already compressed, but, if you wish to add some custom js flavors to the design, well, here you have two more online tools:</p>
+
+<p><a href="http://jscompress.com/">JavaScript Compressor</a></p>
+
+<p><a href="http://www.minifyjavascript.com/">Online Javascript Compression Tool</a></p>
+
+
+<span class="step">Step 53</span>
+
+<h3>Don't forget the "alt" tags</h3
+	
+<p>Yeah, almost forgot about it. Doing some quick revision, I found we didn't comment our alt tags in the images, except for the logo. I leave this to your own taste. Have in mind that completing the <code>alt</code> tags is a good <abbr title="Search Engine Optimization">SEO</abbr>  practice.</p>
+	
+	
+<h3>Create the FavIcon</h3>
+
+<span class="step">Step 54</span>
+
+<p>Last, but not least, we'll use <a href="http://www.html-kit.com/favicon/">html-kit</a> 
+	to produce our "favicon". We need a square image to upload, in this case I cropped the
+	"featured.jpg" image with Photoshop.
+</p>
+
+<img src="img/34c.png" width="372" height="451" alt="Favicon generation - uploading custom image">
+
+<br />
+
+<img src="img/34b.png" width="394" height="159" alt="Favicon generation - .ico files ready to download">
+
+<p>Save the generated image (.ico file) in the website root, and include
+	the following piece of code in the header, right before the css lines.
+</p>
+
+<pre>
+	&lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot;&gt;
+</pre>
+
+<p>Here's how your favicon should look on a couple of browsers:</p>
+
+
+<img src="img/35.png" width="309" height="370" alt="Favicon testing on different browsers">
+
+<p class="important">Be sure to deploy your website somewhere, favicons won't show
+on your local machine.</p>
+
+<h3>Fork this project on Github!</h3>
+
+<p>If you liked this project and want to experiment with its last version to date, or if you discover <em>and fix</em> any other cross-browser bug, please let me know in the comments. Or, if you do version control with Git in your Mac or PC for development, you may also download or fork <a href="https://github.com/tatygrassini/Brilliante_Layout">this project</a> on Github.</p>
+
+<h3>Thanks!</h3>
+
+Wow! That was a lot of reading, wasn't it? Well guys, thank you and hope you enjoyed this tut. See you all in the 3rd part for the WordPress theme development. Bye.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
