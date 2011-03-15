@@ -43,6 +43,21 @@ function displayImages(data) {
 // The end of our jQuery function	
 });
 
+// -- twitterjs ------------------------------- 
+
+getTwitters('twitter', { 
+			  id: 'tatygrassini', // Here's where you type your Twitter ID
+			  count: 1, 
+			  enableLinks: true, 
+			  ignoreReplies: true, 
+			  clearContents: true,
+
+			  template: '<p><em>&ldquo;%text%&rdquo;</em></p> <p class="cufon"><a href="http://twitter.com/%user_screen_name%/statuses/%id%/">%time%</a> <br />From&nbsp;%source%</p> <h4><a href="http://twitter.com/%user_screen_name%/">Follow us on Twitter!</a></h4>',
+
+				callback: function() {
+		          Cufon.replace('p.cufon, h4'); // This hack helps styling Twitter texts with Cufón
+		        }
+			});
 
 
 

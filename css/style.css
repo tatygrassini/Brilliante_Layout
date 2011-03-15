@@ -364,10 +364,14 @@ width: 74px;
 overflow: hidden;
 }
 .twitter {
-background: url(img/twitter.png) no-repeat scroll 100% bottom transparent;
+background: url(img/twitter.png) no-repeat scroll right bottom transparent;
+height: 225px;
 }
 .twitter p,.twitter a {
 color: #ededed;
+}
+.twitter p.cufon {
+text-transform: capitalize;
 }
 .twitter a {
 text-decoration: none;
