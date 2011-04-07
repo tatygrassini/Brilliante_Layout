@@ -65,22 +65,16 @@
 				<div class="featured">					
 					<div class="img">
 	            <div id="slider" class="nivoSlider">
-	                <img src="css/img/featured-1.jpg" alt="" />
-	                <img src="css/img/featured-2.jpg" alt="" />
-	                <img src="css/img/featured-3.jpg" alt="" />
+	                <img src="css/img/feat1.jpg" alt="" />
+	                <img src="css/img/feat2.jpg" alt="" />
+	                <img src="css/img/feat3.jpg" alt="" />
 	            </div>
 							<p class="button"><a href="#">Hire us</a></p>
-	        </div>
+	        </div><!--.img-->
 
-					<div class="desc">
 						<h3>It’s Brilliant!</h3>
 						<p>Brilliante, Lorem ipsum dolor sit amet, con-<br />sectetur adipisicing elit, sf sed dos eiusmod lorem ipsum dolot sit amto. It is brillaint!</p>
-						<div class="thumbs">
-							<a href="#"><img src="css/img/th1.jpg" width="73" height="61" alt="Thumbnail Number One" /></a>
-							<a href="#"><img src="css/img/th2.jpg" width="73" height="61" alt="Thumbnail Number Two" /></a>
-							<a href="#"><img class="last" src="css/img/th3.jpg" width="73" height="61" alt="Thumbnail Number Three" /></a>
-						</div><!-- .thumbs -->
-					</div><!-- .desc -->
+
 				</div><!-- .featured -->
 			</div><!-- #header -->
 			
@@ -262,7 +256,9 @@
 			<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
 	    <script type="text/javascript">
 		    $(window).load(function() {
-		        $('.img #slider').nivoSlider();
+		        $('.img #slider').nivoSlider({
+		        	controlNavThumbs:true
+		        });
 		    });
 	    </script>
 		</body>

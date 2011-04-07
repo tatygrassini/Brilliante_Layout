@@ -185,58 +185,47 @@ width: 229px;
 .featured {
 height: 248px;
 overflow: hidden;
-}
-.featured .img {
-margin-left: 1px;
 position: relative;
-}
-.featured .desc {
 background-color: #1d1f25;
-height: 208px;
-overflow: hidden;
-padding: 21px 15px 19px;
-width: 316px;
 }
-.featured .img,
-.featured .desc {
+/* IMPORTANT: this is the img class, NOT the img tag*/
+.featured .img {
 float: left;
 }
-.featured .thumbs {
-border-top: 1px solid #393939;
-height: 61px;
-padding: 20px 13px 19px;
-}
-.featured .thumbs a img {
+#slider .nivo-controlNav img {
 margin-right: 31px;
 }
-.featured .thumbs a img.last {
+#slider .nivo-controlNav img.last {
 margin-right: 0;
 }
-.featured .desc h3,.featured .desc p {
+.featured h3,.featured p {
 font-weight: normal;
-padding: 0 13px;
 }
-.featured .desc h3 {
+.featured h3 {
+margin-top: 25px;
 margin-bottom: 7px;
+padding-left: 620px;
 }
-.featured .desc p {
+.featured p {
 line-height: 23px;
-margin-bottom: 18px;
+margin: 0 14px 18px 614px;
+padding: 0 7px 10px;
+border-bottom: 1px solid #393939;
 }
 .featured .button a {
 background: url(img/hireUsButton.gif) no-repeat 0 0 transparent;
 bottom: 20px;
 display: block;
 height: 37px;
-left: 1px;
+left: 0;
 position: absolute;
 text-indent: -9999px;
 width: 107px;
 }
-.desc h3 {
+.featured h3 {
 font-size: 30px;
 }
-.desc h3,.desc p {
+.featured h3,.featured p {
 color: #ededed;
 }
 /* ----------------- Content ---------------- */
@@ -410,12 +399,13 @@ line-height: 70px;
 }
 /* ----------------- The Nivo Slider styles ---------------- */
 .img {
-  width:600px;
   height:248px;
+  background-color: #1D1F25;
+	width:600px;
 }
 #slider {
 	position:relative;
-  width:600px;
+  width:950px;
   height:248px;
 	background:url(img/nivo-slider/loading.gif) no-repeat 50% 50%;
 }
@@ -427,26 +417,6 @@ line-height: 70px;
 }
 #slider a {
 	border:0;
-	display:block;
-}
-
-.nivo-controlNav {
-	position:absolute;
-	left:260px;
-	bottom:-42px;
-}
-.nivo-controlNav a {
-	display:block;
-	width:22px;
-	height:22px;
-	background:url(img/nivo-slider/bullets.png) no-repeat;
-	text-indent:-9999px;
-	border:0;
-	margin-right:3px;
-	float:left;
-}
-.nivo-controlNav a.active {
-	background-position:0 -22px;
 }
 
 .nivo-directionNav a {
@@ -459,7 +429,7 @@ line-height: 70px;
 }
 a.nivo-nextNav {
 	background-position:-30px 0;
-	right:15px;
+	right:365px;
 }
 a.nivo-prevNav {
 	left:15px;
@@ -549,4 +519,20 @@ a.nivo-prevNav {
 }
 .nivo-controlNav a.active {
 	font-weight:bold;
+}
+
+
+
+
+
+
+#slider .nivo-controlNav {
+	position:absolute;
+	bottom:20px;
+	right: 0;
+}
+#slider .nivo-controlNav img {
+	display: inline-block; /* Unhide the thumbnails */
+	position:relative;
+	border: 1px solid	#fff;
 }
