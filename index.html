@@ -22,20 +22,14 @@
 			
 				<script src="js/head.min.js" type="text/javascript" charset="utf-8"></script>
 				<script type="text/javascript" charset="utf-8">
-
 					head.js("http://code.jquery.com/jquery-latest.js",
 									"js/cufon-yui.js",
 									"js/frutiger.font.js",
+									"js/slides.min.jquery.js",
 									"http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js",
-									"js/func.js",
-									"js/jquery.nivo.slider.pack.js",
-									function() {
-							        $('.img #slider').nivoSlider({
-							        	controlNavThumbs:true
-							        });
-							    });
+									"js/func.js"
+									)
 				</script>
-			
 		</head>
 		<body>
 			<div id="header">
@@ -70,20 +64,45 @@
 						<p>A very short description about the website goes here. And that’s it!</p>
 				</div><!-- .logo -->
 
-				<div class="featured">					
-					<div class="img">
-	            <div id="slider" class="nivoSlider">
-	                <img src="css/img/feat1.jpg" alt="" />
-	                <img src="css/img/feat2.jpg" alt="" />
-	                <img src="css/img/feat3.jpg" alt="" />
-	            </div>
-							<p class="button"><a href="#">Hire us</a></p>
-	        </div><!--.img-->
 
-						<h3>It’s Brilliant!</h3>
-						<p>Brilliante, Lorem ipsum dolor sit amet, con-<br />sectetur adipisicing elit, sf sed dos eiusmod lorem ipsum dolot sit amto. It is brillaint!</p>
 
+
+
+
+
+
+
+				<div class="featured">
+					<div id="products">
+	            <div class="slides_container">
+                <a href="#"><img src="css/img/feat1.jpg" width="600" height="248" target="_blank" alt="" /></a>
+								<a href="#"><img src="css/img/feat2.jpg" width="600" height="248" target="_blank" alt="" /></a>
+								<a href="#"><img src="css/img/feat3.jpg" width="600" height="248" target="_blank" alt="" /></a>
+	            </div><!-- .slides_container -->
+							<!-- <p class="button"><a href="#">Hire us</a></p> -->
+							
+							<ul class="pagination">
+								<li><a href="#"><img src="css/img/feat1_thumb.jpg" width="71" alt=""></a></li>
+								<li><a href="#"><img src="css/img/feat2_thumb.jpg" width="71" alt=""></a></li>
+								<li><a href="#"><img src="css/img/feat3_thumb.jpg" width="71" alt=""></a></li>
+							</ul><!--.pagination-->
+
+
+							<!--						<h3>It’s Brilliant!</h3>
+													<p>Brilliante, Lorem ipsum dolor sit amet, con-<br />sectetur adipisicing elit, sf sed dos eiusmod lorem ipsum dolot sit amto. It is brillaint!</p>-->
+						
+						
+					</div><!-- products -->
 				</div><!-- .featured -->
+				
+				
+				
+				
+				
+				
+				
+				
+				
 			</div><!-- #header -->
 			
 			<div id="content">

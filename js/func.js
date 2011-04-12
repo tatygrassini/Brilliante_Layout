@@ -4,7 +4,22 @@ Cufon.replace('h3, h4, .twitter p.cufon, .top-content li');
 Cufon.replace('.cat li a, .links li a', {hover: 'true', textDecoration:'underline'});
 Cufon.replace('h2');
 
+// -- slidejs ------------------------------- 
 
+			$(function(){
+				$('#products').slides({
+					preload: true,
+					preloadImage: 'css/img/loading.gif',
+					effect: 'slide, fade',
+					crossfade: true,
+					slideSpeed: 350,
+					fadeSpeed: 500,
+					generateNextPrev: false,
+					generatePagination: false
+				});
+			});
+			
+			
 // -- Flickr Feed ----------------------------- 
 
 // Don't execute any code until the DOM is ready!
@@ -58,6 +73,9 @@ getTwitters('twitter', {
 		          Cufon.replace('p.cufon, h4'); // This hack helps styling Twitter texts with Cufón
 		        }
 			});
+			
+			
+
 
 
 
