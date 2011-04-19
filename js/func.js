@@ -73,12 +73,3 @@ getTwitters('twitter', {
 		          Cufon.replace('p.cufon, h4'); // This hack helps styling Twitter texts with Cufón
 		        }
 			});
-			
-			
-
-
-
-
-
-
-
