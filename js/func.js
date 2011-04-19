@@ -7,7 +7,7 @@ Cufon.replace('h2');
 // -- slidejs ------------------------------- 
 
 			$(function(){
-				$('#products').slides({
+				$('#slider').slides({
 					preload: true,
 					preloadImage: 'css/img/loading.gif',
 					effect: 'slide, fade',

@@ -183,43 +183,17 @@ width: 229px;
 }
 /* ----------------- Featured ---------------- */
 .featured {
-height: 248px;
+height: 251px;
 width: 950px;
 overflow: hidden;
 position: relative;
 background-color: #1d1f25;
-z-index:0;
 }
-#products {
-	height: 248px;
-	width: 950px;
+#slider {
+height: 251px;
+width: 950px;
 }
-.featured h3,.featured p {
-font-weight: normal;
-color: #ededed;
-}
-.featured h3 {
-margin-top: 25px;
-margin-bottom: 7px;
-padding-left: 620px;
-font-size: 30px;
-}
-.featured p {
-line-height: 23px;
-margin: 0 14px 18px 614px;
-padding: 0 7px 10px;
-border-bottom: 1px solid #393939;
-}
-.featured .button a {
-background: url(img/hireUsButton.gif) no-repeat 0 0 transparent;
-bottom: 20px;
-display: block;
-height: 37px;
-left: 0;
-position: absolute;
-text-indent: -9999px;
-width: 107px;
-}
+
 .slides_container {
 	width:600px;
 	overflow:hidden;
@@ -229,40 +203,59 @@ width: 107px;
 }
 .slides_container a {
 	width:600px;
-	height:248px;
+	height:251px;
 	display:block;
 }
-#slides .slide {
-	width:600px;
-	height:248px;
-	display:block;
+.description {
+	margin-right: 15px;
+	margin-left: 615px;
 }
-.pagination img {
-margin-right: 31px;
+.featured h3,.featured p {
+font-weight: normal;
+color: #ededed;
 }
-.pagination img.last {
-margin-right: 0;
+.featured h3 {
+font-size: 30px;
+padding: 21px 14px 0;
+margin-bottom: 7px;
 }
-.pagination {
+.featured p {
+border-bottom: 1px solid #393939;
+padding: 0 14px 16px;
+
+}
+.featured .button a {
+background: url(img/hireUsButton.gif) no-repeat 0 0 transparent;
+bottom: 20px;
+display: block;
+height: 37px;
+left: 0;
+border: 0;
 position: absolute;
-right: 0;
-top: 160px;
+text-indent: -9999px;
+width: 107px;
+z-index: 100; /*Making sure the Hire Us button stays at the very top layer, over the animation*/
+}
+
+
+.pagination {
+position:absolute;
+bottom: 20px;
+left: 629px;
 }
 .pagination li {
 	float:left;
-	margin:2px 4px;
+	margin-right: 38px;
 	list-style:none;
+}
+.pagination li.last {
+	margin-right: 0;
 }
 .pagination li a {
 	display:block;
 	width:71px;
 	height:59px;
-	margin:1px;
-	background:#f9f9f9;
-}
-.pagination li.current a {
-	border:1px solid #7f7f7f;
-	margin:0;
+	border: 1px solid #ededed;
 }
 /* ----------------- Content ---------------- */
 .post {
@@ -433,27 +426,3 @@ float: right;
 #bottom ul,#bottom p {
 line-height: 70px;
 }
-
-
-
-
-
-
-
-
-.slides_container {
-	width:600px;
-	height:248px;
-	overflow:hidden;
-	display:none;
-}
-.pagination {
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-.pagination li {
-	list-style:none;
-	display: inline-block;
-
-
