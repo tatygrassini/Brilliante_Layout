@@ -10,7 +10,8 @@ Cufon.replace('h2');
 				$('#slider').slides({
 					preload: true,
 					preloadImage: 'css/img/loading.gif',
-					effect: 'slide, fade',
+					play: 5000,
+					effect: 'fade',
 					crossfade: true,
 					slideSpeed: 350,
 					fadeSpeed: 500,

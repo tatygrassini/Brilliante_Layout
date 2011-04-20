@@ -51,6 +51,7 @@ h4{color:#646464;font-size:20px;font-weight:normal;margin-bottom:-5px;}
 .pagination li{float:left;margin-right:38px;list-style:none;}
 .pagination li.last{margin-right:0;}
 .pagination li a{display:block;width:71px;height:59px;border:1px solid #ededed;}
+.pagination li.current{-webkit-box-shadow:0px 0px 11px #ededed;-moz-box-shadow:0px 0px 11px #ededed;box-shadow:0px 0px 11px #ededed;-webkit-transition:all 4500ms ease-in;-moz-transition:all 4500ms ease-in;transition:all 4500ms ease-in;}
 /* ----------------- Content ---------------- */
 .post{margin-bottom:40px;}
 span.sep{background:url(img/sep.gif) no-repeat center top;text-indent:-9999px;}
