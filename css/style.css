@@ -62,7 +62,6 @@ span.sep{background:url(img/sep.gif) no-repeat center top;text-indent:-9999px;}
 .post-teaser .text p{line-height:23px;margin-bottom:9px;}
 .readMore{border-top:1px solid #bdbdbd;line-height:17px;padding-top:9px;}
 .readMoreButton{overflow:hidden;color:#ffffff;text-transform:uppercase;font-weight:bold;font-size:15px;border:0 none;cursor:pointer;float:right;height:29px;margin-top:-15px;width:110px;background-color:#818181;background-image:-webkit-gradient(linear,0% 0%,0% 75%,from(#656565),to(#818181));background-image:-moz-linear-gradient(100% 100% 90deg,#656565,#818181);background-image:linear-gradient(top,#656565,#818181);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#656565',EndColorStr='#818181');/* IE6–IE9 */}
-
 /* ----------------- Sidebar ---------------- */
 .author img{border:1px solid #cacaca;float:left;margin:0 10px 10px 0;padding:3px;}
 .sponsors img{margin-right:13px;border:1px solid #fff;}
