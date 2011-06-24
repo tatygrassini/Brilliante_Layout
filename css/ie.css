@@ -7,3 +7,4 @@ h2 span{padding:3px 6px 1px;}
 .cat li a{line-height:40px;}
 .links,.flickr,.twitter{margin-right:51px;}
 .twitter{margin-right:0;}
+article, aside, canvas, figure, figure img, figcaption, hgroup,footer, header, nav, section, audio, video {display: block;}
