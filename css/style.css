@@ -19,7 +19,7 @@ h4{color:#646464;font-size:20px;font-weight:normal;margin-bottom:-5px;}
 .footer-content,
 #bottom{margin:0 auto;width:950px;}
 .main{float:left;width:550px;}
-.sidebar{float:right;width:350px;}
+aside{float:right;width:350px;}
 #content,.featured,footer,#bottom{clear:both;}
 footer{border-bottom:1px solid #fff;border-top:1px solid #fff;}
 /* ----------------- Top ---------------- */
