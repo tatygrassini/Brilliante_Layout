@@ -10,6 +10,7 @@
 			
 				<!--[if lte IE 9]>
 					<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+					
 					<link rel="stylesheet" media="screen" href="css/ie.css" />
 				<![endif]-->
 			
@@ -259,6 +260,7 @@
 				<script>
 					DD_belatedPNG.fix('*');
 				</script>
+				
 				<![endif]-->
 	
 			<script> Cufon.now(); </script>
