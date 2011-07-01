@@ -25,7 +25,7 @@ Cufon.replace('h2');
 // -- Flickr Feed ----------------------------- 
 
 // Don't execute any code until the DOM is ready!
-$(document).ready(function(){					
+$(function(){					
 
 	// Our very special jQuery JSON fucntion call to Flickr, gets details of the most recent 20 images			   
 	$.getJSON("http://api.flickr.com/services/feeds/groups_pool.gne?id=34778850@N00&lang=en-us&format=json&jsoncallback=?", displayImages);
