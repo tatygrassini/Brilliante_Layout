@@ -132,7 +132,7 @@ article, aside, canvas, figure, figure img, figcaption, hgroup,footer, header, n
 // -- Cufon ----------------------------------- 
 Cufon.replace('h3, h4 a, .footer-content .time-meta, .footer-content .from-meta, .top-content li');Cufon.replace('span.bio-title',{hover:'true',textDecoration:'underline'});Cufon.replace('h2');Cufon.replace('aside li a:not(.recentcomments a,aside li a.rsswidget)');Cufon.replace('#wp-calendar caption');Cufon.replace('tbody');Cufon.replace('.footer-content li a:not(.footer-content ul li span.entry-content a)');Cufon.replace('.blogroll a)');
 // -- slidejs -------------------------------
-				$(function(){$('#slider').slides({preload:true,preloadImage:'http://brillante-layout.com/wp-content/themes/brilliante_layout/css/img/loading.gif',play:5000,effect:'fade',crossfade:true,slideSpeed:350,fadeSpeed:500,generateNextPrev:false,generatePagination:false})});
+				$(function(){$('#slider').slides({preload:true,preloadImage:'img/loading.gif',play:5000,effect:'fade',crossfade:true,slideSpeed:350,fadeSpeed:500,generateNextPrev:false,generatePagination:false})});
 // -- Flickr Feed ----------------------------- 
 				$(function(){$.getJSON("http://api.flickr.com/services/feeds/groups_pool.gne?id=34778850@N00&lang=en-us&format=json&jsoncallback=?",displayImages);function displayImages(data){var htmlString="";$.each(data.items,function(i,item){var sourceSquare=(item.media.m).replace("_m.jpg","_s.jpg");htmlString+='<li><a href="'+item.link+'" target="_blank">';htmlString+='<img title="'+item.title+'" src="'+sourceSquare;htmlString+='" alt="';htmlString+=item.title+'" />';htmlString+='</a></li>';if(i==5)return false});$('.flickr ul').html(htmlString)}});
 // -- twitterjs ------------------------------- 
