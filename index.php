@@ -1,100 +1,46 @@
 <?php get_header(); ?>
-			
 			<div id="content">
 				<div class="main">
-					<h2 class="cufon-h2"><span>Latest from the blog</span></h2>
+					<h2><span>Latest from the blog</span></h2>
+					
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
 						<div class="post">
-							<h3><a href="#">An example of a post goes here.</a></h3>
+							<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h3>
 							
 							<div class="cat-date">
-								<span class="posted">Posted in: </span>
-									<em><a href="#">Category One</a>, <a href="#">Category Two</a></em>
+								<span class="posted">Posted in: </span><em><a href="#"><?php the_category(', ') ?></a></em></span>
 								<span class="sep">&nbsp;</span>
-								<span class="date">Date: 
-									<em><a href="#">08 April 2010</a></em>
-								</span>
+								<span class="date">Date: <em><a href="#"><?php the_time('d F Y') ?></a></em></span>
 							</div><!-- .cat-date -->
 							
 							<div class="post-teaser">
-								<img src="css/img/post-img1.jpg" width="142" height="140" alt="Post Image One" />
+								<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
 								
 								<div class="text">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sf sed dos eiusmod tempor incididunt ut labore et dolorea ab  magna aliqua. Utlo enim ad minim veniam, quis nostrudaw exercitation ullamco laboris nisi ut aliquip ex ea commodo!</p>
-								
+									<?php the_content('<span class="more-link" alt="Read More" title="Read More">Read More</span>'); ?>
+									
 									<div class="readMore">
-										<span>Author: </span>
-											<em><a href="#">Mahmoud Khaled</a></em><br />
-										<span>Reaction: </span>
-											<em><a href="#">10 comments</a>, <a href="#">5 Pingback</a></em>
-										<input type="submit" name="" class="readMoreButton" value="Read More" />
+										<span>Author: </span><em><?php the_author_posts_link(); ?></em><br />
+										<span>Reaction: </span><em><a href="<?php comments_link(); ?>"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></em>
 									</div><!-- .readMore -->
 								</div><!-- .text -->
 							</div><!-- .post-teaser -->
-							
 						</div><!-- .post -->
+						<?php endwhile;
+												
+						  else : ?>
+												
+						  <p>Page not found.</p>
 						
-						<div class="post">
-							<h3><a href="#">Another post from the blog goes here!</a></h3>
-							
-							<div class="cat-date">
-								<span class="posted">Posted in: </span>
-									<em><a href="#">Category One</a>, <a href="#">Category Two</a></em>
-								<span class="sep">&nbsp;</span>
-								<span class="date">Date: 
-									<em><a href="#">10 April 2010</a></em>
-								</span>
-							</div><!-- .cat-date -->
-							
-							<div class="post-teaser">
-								<img src="css/img/post-img2.jpg" width="142" height="140" alt="Post Image Two" />
-								
-								<div class="text">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sf sed dos eiusmod tempor incididunt ut labore et dolorea ab  magna aliqua. Utlo enim ad minim veniam, quis nostrudaw exercitation ullamco laboris nisi ut aliquip ex ea commodo!</p>
-								
-									<div class="readMore">
-										<span>Author: </span>
-											<em><a href="#">Mahmoud Khaled</a></em><br />
-										<span>Reaction: </span>
-											<em><a href="#">3 comments</a>, <a href="#">10 Pingback</a></em>
-										<input type="submit" name="" class="readMoreButton" value="Read More" />
-									</div><!-- .readMore -->
-								</div><!-- .text -->
-							</div><!-- .post-teaser -->
-							
-						</div><!-- .post -->
+						<?php endif; ?>
 						
-						<div class="post">
-							<h3><a href="#">It's brilliant. Yes, it is!</a></h3>
-							
-							<div class="cat-date">
-								<span class="posted">Posted in: </span>
-									<em><a href="#">Category One</a>, <a href="#">Category Two</a></em>
-								<span class="sep">&nbsp;</span>
-								<span class="date">Date: 
-									<em><a href="#">12 April 2010</a></em>
-								</span>
-							</div><!-- .cat-date -->
-							
-							<div class="post-teaser">
-								<img src="css/img/post-img3.jpg" width="142" height="140" alt="Post Image Three" />
-								
-								<div class="text">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sf sed dos eiusmod tempor incididunt ut labore et dolorea ab  magna aliqua. Utlo enim ad minim veniam, quis nostrudaw exercitation ullamco laboris nisi ut aliquip ex ea commodo!</p>
-								
-									<div class="readMore">
-										<span>Author: </span>
-											<em><a href="#">Mahmoud Khaled</a></em><br />
-										<span>Reaction: </span>
-											<em><a href="#">No comments</a>, <a href="#">2 Pingback</a></em>
-										<input type="submit" name="" class="readMoreButton" value="Read More" />
-									</div><!-- .readMore -->
-								</div><!-- .text -->
-							</div><!-- .post-teaser -->
-							
-						</div><!-- .post -->
-				</div><!-- .main -->
-				
+						<div class="navigation">
+							<div class="alignleft"><?php next_posts_link('&larr; Older Entries') ?></div>
+							<div class="alignright"><?php previous_posts_link('Newer Entries &rarr;') ?></div>
+						</div>
+				</div><!-- main -->
+			
 <?php get_sidebar(); ?>
 			
 <?php get_footer(); ?>

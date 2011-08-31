@@ -1,0 +1,1 @@
+http://jquery.malsup.com/cycle/pager7.html

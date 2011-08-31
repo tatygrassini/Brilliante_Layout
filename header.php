@@ -8,12 +8,13 @@
 		
 			<link rel="stylesheet" media="screen" href="<?php bloginfo('stylesheet_url')?>" />
 			
-				<!--[if lte IE 9]>
-					<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-					
-					<link rel="stylesheet" media="screen" href="<?php bloginfo('template_url')?>/css/ie.css" />
-				<![endif]-->
+			<!--[if lte IE 9]>
+				<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+				
+				<link rel="stylesheet" media="screen" href="<?php bloginfo('template_url')?>/css/ie.css" />
+			<![endif]-->
 			
+			<?php wp_head(); ?>
 		</head>
 
 		<?php echo is_single() || is_page() || is_search() ? "<body class='single'>" : "<body>"; ?>
@@ -24,11 +25,7 @@
 					<div class="top-content">
 						
 						<nav>
-							<ul>
-								<li class="page_item"><a href="<?php bloginfo('url'); ?>" title="Home">Home</a></li>
-
-								<?php wp_list_pages('depth=1&sort_column=menu_order&title_li=') ?> <!-- only shows parent pages and css prevents overflow -->
-							</ul>
+							<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 						</nav>
 
 						<div class="block">
@@ -52,7 +49,7 @@
 					<a href="<?php bloginfo('url'); ?>"><h1 class="notext"><?php bloginfo('name'); ?></h1></a>
 					<p><?php bloginfo ('description'); ?></p>
 				</div><!-- .logo -->
-
+				
 				<div class="featured">
 					<div id="slider">
 	            <div class="slides_container">
