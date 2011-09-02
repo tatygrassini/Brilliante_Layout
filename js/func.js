@@ -2,13 +2,13 @@
 
 Cufon.replace('h3, h4, .footer-content .time-meta, .footer-content .from-meta, .top-content li');
 Cufon.replace('span.bio-title', {hover: 'true', textDecoration:'underline'});
-Cufon.replace('h2');
-Cufon.replace('.footer-widget h2', {letterSpacing: '-0.5px'}); // Another shitty CSS hack
+Cufon.replace('h1, h2');
+Cufon.replace('.footer-widget h2', {letterSpacing: '-2px'}); // Another shitty CSS hack
 Cufon.replace('li.sidebar-widget a:not(.recentcomments a,li.sidebar-widget a.rsswidget)');
 Cufon.replace('#wp-calendar caption');
 Cufon.replace('tbody');
 Cufon.replace('.footer-content li a:not(.footer-content ul li span.entry-content a)');
-Cufon.replace('.blogroll a)');
+Cufon.replace('.blogroll a, .post-single li');
 
 // -- slidejs -------------------------------
 // CHANGE THE preloadImage VALUE TO YOUR ABSOLUTE THEME URL

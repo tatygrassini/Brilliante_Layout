@@ -58,26 +58,26 @@
 		<?php else : ?>
 
 			<div>
-				<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 				<label for="author">Name <?php if ($req) echo "(required)"; ?></label>
+				<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 			</div>
 
 			<div>
-				<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 				<label for="email">Mail (will not be published) <?php if ($req) echo "(required)"; ?></label>
+				<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 			</div>
 
 			<div>
-				<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 				<label for="url">Website</label>
+				<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 			</div>
 
 		<?php endif; ?>
 
-		<!--<p>You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
+		<!-- <small>You can use these tags: <br /><code><?php echo allowed_tags(); ?></code></small> -->
 
 		<div>
-			<textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea>
+			<textarea name="comment" id="comment" cols="58" rows="10" tabindex="4" style="resize: none;"></textarea>
 		</div>
 
 		<div>

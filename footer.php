@@ -4,7 +4,7 @@
 				<div class="footer-widget footer-first">
 					<?php if (dynamic_sidebar('footer-first')) : else : ?>
 					<!-- All this junk is rendered if not widget is selected on this area -->
-					<h2>Links Worth Spreading</h2>
+					<h2>Links</h2>
 					<ul>
 						<?php wp_list_bookmarks('title_li=&categorize=0&limit=6'); ?>
 					</ul>
@@ -53,12 +53,12 @@
 		</footer>
 		
 		<div id="bottom">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'link_before' => '&nbsp;|&nbsp;' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'link_before' => '&nbsp;|&nbsp;')); ?>
 			
 			<p>Copyright <?php echo date('Y'); ?> &minus; <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a> &minus; All rights reserved</p>
 		</div><!-- #bottom -->
 
-		
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script src="<?php bloginfo('template_url')?>/js/cufon-yui.js"></script>
 		<script src="<?php bloginfo('template_url')?>/js/frutiger.font.js"></script>
 		<script src="<?php bloginfo('template_url')?>/js/slides.min.jquery.js"></script>
