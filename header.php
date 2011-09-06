@@ -34,8 +34,8 @@
 							
 					<!-- TODO: WP searchform here -->
 							
-							<form id="search">
-	            	<input name="search" class="search_input"  placeholder="Search...">
+							<form id="search" action="<?php get_option('home') ?>" method="get">
+	            	<input name="s" id="s" class="search_input"  placeholder="Search...">
 	            	<input type="submit" class="search_submit" value="Go">
 	            </form>
 	
