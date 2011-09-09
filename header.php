@@ -9,7 +9,7 @@
 			<link rel="stylesheet" media="screen" href="<?php bloginfo('stylesheet_url')?>" />
 			
 			<!--[if lte IE 9]>
-				<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+				<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 				
 				<link rel="stylesheet" media="screen" href="<?php bloginfo('template_url')?>/css/ie.css" />
 			<![endif]-->
