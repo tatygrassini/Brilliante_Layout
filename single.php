@@ -2,7 +2,7 @@
 
 			<div id="content">
 				<div class="main">
-					<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><span><?php the_title(); ?></span></a></h2>
+					<h2 id="post-<?php the_ID(); ?>"><span><?php the_title(); ?></span></a></h2>
 					
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
