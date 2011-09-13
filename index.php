@@ -9,9 +9,9 @@
               <h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h3>
               
               <div class="cat-date">
-                <span class="posted">Posted in: </span><em><a href="#"><?php the_category(', ') ?></a></em></span>
+                <span class="posted">Posted in: </span><em><?php the_category(', ') ?></em></span>
                 <span class="sep">&nbsp;</span>
-                <span class="date">Date: <em><a href="#"><?php the_time('d F Y') ?></a></em></span>
+                <span class="date">Date: <em><?php the_time('d F Y') ?></em></span>
               </div><!-- .cat-date -->
               
               <div class="post-teaser">
@@ -35,9 +35,9 @@
             
             <?php endif; ?>
             
-            <div class="navigation">
-              <div class="alignleft"><?php next_posts_link('&larr; Older Entries') ?></div>
-              <div class="alignright"><?php previous_posts_link('Newer Entries &rarr;') ?></div>
+            <div class="nav-links">
+              <div class="next_posts_link"><?php next_posts_link('&larr; Older Entries') ?></div>
+              <div class="previous_posts_link"><?php previous_posts_link('Newer Entries &rarr;') ?></div>
             </div>
         </div><!-- main -->
       

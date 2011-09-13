@@ -20,9 +20,9 @@
 									</div><!-- .readMore -->
 									
 									<div class="cat-date">
-										<span class="posted">Posted in: </span><em><a href="#"><?php the_category(', ') ?></a></em></span>
+										<span class="posted">Posted in: </span><em><?php the_category(', ') ?></em></span>
 										<span class="sep">&nbsp;</span>
-										<span class="date">Date: <em><a href="#"><?php the_time('d F Y') ?></a></em></span>
+										<span class="date">Date: <em><?php the_time('d F Y') ?></em></span>
 									</div><!-- .cat-date -->
 								</div><!-- .text -->
 							</div><!-- .post-single -->

@@ -11,7 +11,7 @@ h2 span{background-color:#1a1e27;padding:1px 6px;text-align:center;}
 h3 a{color:#1a1e27;font-size:25px;font-weight:normal;text-decoration:none;}
 h4 a{color:#646464;font-size:20px;font-weight:normal;margin-bottom:-5px;text-decoration:none;}
 .author em{color:#646464;font:italic 15px Georgia,serif;margin-top:-3px;}
-a.post-edit-link,#respond a,.post-single a,ol.commentlist a,.cat-date a,.readMore a{color:#646464;font:italic 14px/20px Georgia,serif;text-decoration:none;}
+a.post-edit-link,#respond a,.post-single a,ol.commentlist a,.cat-date em,.cat-date a,.readMore a{color:#646464;font:italic 14px/20px Georgia,serif;text-decoration:none;}
 /* ----------------- Layout ---------------- */
 .top{background:transparent url(img/top-bg.gif) repeat-x;color:#fff;height:71px;position:relative;}
 .top-content,.logo,.featured,#content,.footer-content,#bottom{margin:0 auto;width:950px;overflow:hidden;}
@@ -61,6 +61,11 @@ a.more-link{position:absolute;right:0;bottom:14px;height:29px;width:110px;text-d
 a.more-link:hover{background-image:-webkit-gradient(linear,left top,left bottom,from(#818181,#656565),);background-image:-webkit-linear-gradient(top,#818181,#656565);background-image:-moz-linear-gradient(top,#818181,#656565);background-image:-o-linear-gradient(top,#818181,#656565);background-image:-ms-linear-gradient(top,#818181,#656565);background-image:linear-gradient(top,#818181,#656565);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#818181',EndColorStr='#656565');/* IE6–IE9 */}
 a.more-link span{overflow:hidden;color:#ffffff;text-transform:uppercase;font-weight:bold;font-size:15px;cursor:pointer;line-height:30px;padding:0 8px;border:0 none;}
 .readMore{border-top:1px solid #BDBDBD;padding-top:6px;}
+.nav-links{padding-bottom: 50px;}
+.nav-links a{color:#1A1E27;padding:5px;border:1px solid #1A1E27;}
+.nav-links a:hover{color:#ffffff;background-color:#1A1E27;padding:5px;border:1px solid #1A1E27;}
+.next_posts_link{float: left;}
+.previous_posts_link{float: right;}
 /* ----------------- Widgetized Sidebar ---------------- */
 /* Author Bio */
 .author img{border:1px solid #cacaca;float:left;margin:0 10px 10px 0;padding:3px;}
