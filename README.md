@@ -2,7 +2,7 @@
 
 ## Credits
 
-* [PSD file created by Mahmoud Khaled Deiab](http://spyrestudios.com/design-the-brilliante-website-layout-in-photoshop/)
+* [PSD file created by Mahmoud Khaled Deiab](http://twitter.com/mahmoudkhaled)
 
 * [Frutiger&reg; Font Family (54)](http://www.fonts.com/findfonts/detail.htm?productid=191443)
 
