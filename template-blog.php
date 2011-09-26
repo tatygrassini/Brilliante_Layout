@@ -1,8 +1,4 @@
-<?php 
-/*
-	Template Name: Blog
-*/
-?>
+<?php /* Template Name: Blog */ ?>
 <?php get_header(); ?>
 			<div id="content">
 				<div class="main">

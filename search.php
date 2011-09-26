@@ -34,7 +34,7 @@
 												
 						  else : ?>
 												
-						  <p>Page not found.</p>
+						  <h2><span>Page Not Found</span></h2>
 						
 						<?php endif; ?>
 						
