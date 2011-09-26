@@ -24,9 +24,9 @@ WordPress theme development (Content is in development)
 
 -[PSD file created by Mahmoud Khaled Deiab](http://spyrestudios.com/design-the-brilliante-website-layout-in-photoshop/)
 
--[Frutiger¬Æ Font Family (54)](http://www.fonts.com/findfonts/detail.htm?productid=191443)
+-[Frutiger&reg; Font Family (54)](http://www.fonts.com/findfonts/detail.htm?productid=191443)
 
--[Cuf√≥n](http://cufon.shoqolate.com/generate/)
+-[Cuf&oacute;n](http://cufon.shoqolate.com/generate/)
  
 -[jFlickrFeed](http://www.gethifi.com/blog/a-jquery-flickr-feed-plugin)
 
