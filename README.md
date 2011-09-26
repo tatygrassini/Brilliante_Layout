@@ -19,3 +19,15 @@
 ### Part III
 
 WordPress theme development (Content is in development)
+
+## Credits
+
+-[PSD file created by Mahmoud Khaled Deiab](http://spyrestudios.com/design-the-brilliante-website-layout-in-photoshop/)
+
+-[Frutiger¬Æ Font Family (54)](http://www.fonts.com/findfonts/detail.htm?productid=191443)
+
+-[Cuf√≥n](http://cufon.shoqolate.com/generate/)
+ 
+-[jFlickrFeed](http://www.gethifi.com/blog/a-jquery-flickr-feed-plugin)
+
+-[Tweeter Feed](http://www.pcpro.co.uk/blogs/2010/09/13/adding-your-twitter-feed-to-your-website-with-jquery/)
