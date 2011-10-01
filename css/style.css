@@ -18,6 +18,7 @@ a.post-edit-link,#respond a,.post-single a,ol.commentlist a,.cat-date em,.cat-da
 .main{float:left;width:550px;}
 aside{float:right;width:350px;}
 #content,.featured,footer,#bottom{clear:both;}
+#content{padding-bottom: 50px;}
 footer{border-bottom:1px solid #fff;border-top:1px solid #fff;}
 /* ----------------- Top ---------------- */
 .top-content ul{float:left;height:42px;margin-top:29px;}
@@ -61,7 +62,6 @@ a.more-link{position:absolute;right:0;bottom:14px;height:29px;width:110px;text-d
 a.more-link:hover{background-image:-webkit-gradient(linear,left top,left bottom,from(#818181,#656565),);background-image:-webkit-linear-gradient(top,#818181,#656565);background-image:-moz-linear-gradient(top,#818181,#656565);background-image:-o-linear-gradient(top,#818181,#656565);background-image:-ms-linear-gradient(top,#818181,#656565);background-image:linear-gradient(top,#818181,#656565);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#818181',EndColorStr='#656565');/* IE6–IE9 */}
 a.more-link span{overflow:hidden;color:#ffffff;text-transform:uppercase;font-weight:bold;font-size:15px;cursor:pointer;line-height:30px;padding:0 8px;border:0 none;}
 .readMore{border-top:1px solid #BDBDBD;padding-top:6px;}
-.nav-links{padding-bottom: 50px;}
 .nav-links a{color:#1A1E27;padding:5px;border:1px solid #1A1E27;}
 .nav-links a:hover{color:#ffffff;background-color:#1A1E27;padding:5px;border:1px solid #1A1E27;}
 .next_posts_link{float: left;}
@@ -114,7 +114,7 @@ footer{height:288px;overflow:hidden;background-color:#1A1E27;background-image:0 
 #bottom p{float:right;}
 #bottom ul,#bottom p{line-height:70px;}
 /* ----------------- Single ---------------- */
-.attachment-single-post-thumbnail,.wp-post-image,.post-single p img{border:1px solid #cacaca;display:block;margin-bottom:11px;padding:3px;}
+.attachment-single-post-thumbnail,.wp-post-image,.post-single img, .post-page-blog img{border:1px solid #cacaca;display:block;margin-bottom:11px;padding:3px;}
 .post{margin-bottom:40px;}
 span.sep{background:url(img/sep.gif) no-repeat center top;text-indent:-9999px;}
 .cat-date{margin-bottom:10px;}
@@ -208,3 +208,8 @@ img[class*=align],img[class*=wp-image-],#content .gallery .gallery-icon img{bord
 .post-single td{border-top:1px solid #DDD;padding:6px 10px 6px 0;}
 caption,th,td{font-weight:normal;text-align:left;}
 .post-single th{color:#666;font-size:10px;font-weight:500;letter-spacing:.1em;line-height:2.6em;text-transform:uppercase;}
+/* ----------------- Page Blog template ---------------- */
+.post-page-blog {display: block;clear:both;margin-bottom: 20px;}
+.post-page-blog img {float: left;margin-right: 10px;}
+.post-page-blog h3 {padding-top: 5px;}
+.post-page-blog p {color:#646464;text-transform: uppercase;font-size: 10px;}

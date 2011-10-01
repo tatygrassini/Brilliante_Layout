@@ -9,7 +9,11 @@
 						<div class="post">
 							
 							<div class="post-single">
-								<?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
+								<?php if(has_post_thumbnail()) { ?>
+									<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'single-post-thumbnail' ); ?></a>
+								<?php } else {
+									echo '<img src="'.get_bloginfo("template_url").'/css/img/no-img-542x220.gif" />';
+								} ?>
 								
 								<div class="text">
 									<?php the_content(); ?>

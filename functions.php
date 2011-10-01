@@ -1,5 +1,5 @@
 <?php
-// ----------------- Menues stolen from Twenty-Eleven theme --------------------
+// ----------------- Menus w/fallback for older WP versions --------------------
 //
 register_nav_menu( 'primary', __( 'Primary Menu', 'brilliante_layout' ) );
 // Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.

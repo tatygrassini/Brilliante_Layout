@@ -6,7 +6,7 @@
       
       <link rel="shortcut icon" href="favicon.ico" >
     
-      <link rel="stylesheet" media="screen" href="<?php bloginfo('stylesheet_url')?>" />
+      <link rel="stylesheet" media="screen" href="<?php bloginfo('template_url')?>/css/style.css" />
       
       <!--[if lte IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>

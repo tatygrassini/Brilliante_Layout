@@ -15,7 +15,11 @@
               </div><!-- .cat-date -->
               
               <div class="post-teaser">
-                <a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+                <?php if(has_post_thumbnail()) { ?>
+									<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+								<?php } else {
+									echo '<img src="'.get_bloginfo("template_url").'/css/img/no-img-140x140.gif" />';
+								} ?>
                 
                 <div class="text">
                   <?php the_content('<span class="more-link" alt="Read More" title="Read More">Read More</span>'); ?>
