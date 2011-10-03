@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+      </header>
 			<div id="content">
 				<div class="main">
 					<h2 id="post-<?php the_ID(); ?>"><span><?php the_title(); ?></span></a></h2>

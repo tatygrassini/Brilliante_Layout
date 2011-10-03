@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+<?php include (TEMPLATEPATH . '/inc/featured.php' ); ?>
+  
+</header>
       <div id="content">
         <div class="main">
           <h2><span>Latest from the blog</span></h2>
