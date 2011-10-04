@@ -30,6 +30,8 @@
 				<h2 class="pagetitle"><span>Blog Archives</span></h2>
 			
 			<?php } ?>
+			
+			<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 
 			<?php while (have_posts()) : the_post(); ?>
 			
@@ -40,6 +42,8 @@
 				</div><!-- .post -->
 				
 			<?php endwhile; ?>
+			
+			<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 			
 	<?php else : ?>
 

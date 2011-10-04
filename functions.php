@@ -63,19 +63,18 @@ if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
 }
 ?>
 <?php
-// ----------------- Ugly Admin Bar ---------------------------------------------
-//
-function mytheme_admin_bar_render() {
-        global $wp_admin_bar;
-        $wp_admin_bar->remove_menu('comments');
-        $wp_admin_bar->add_menu( array(
-        'parent' => 'new-content',
-        'id' => 'new_media',
-        'title' => __('Media'),
-        'href' => admin_url( 'media-new.php')
-    ) );
-}
-add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
+/**
+ * Remove code from the <head>
+ */
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'wlwmanifest_link');
+function hcwp_remove_version() {return '';}
+add_filter('the_generator', 'hcwp_remove_version');
+?>
+<?php
+// ----------------- Disable the admin bar in 3.1 -------------------------------
+//show_admin_bar( false );
 ?>
 <?php
 include 'lib/twitter-widget-pro.php';

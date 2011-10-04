@@ -1,7 +1,8 @@
 <?php get_header(); ?>
+
 <?php include (TEMPLATEPATH . '/inc/featured.php' ); ?>
-  
-</header>
+
+      </header>
       <div id="content">
         <div class="main">
           <h2><span>Latest from the blog</span></h2>
@@ -26,7 +27,7 @@
                 
                 <div class="text">
                   <?php the_content('<span class="more-link" alt="Read More" title="Read More">Read More</span>'); ?>
-                  
+                   <hr noshade="noshade"/>
                   <div class="readMore">
                     <span>Author: </span><em><?php the_author_posts_link(); ?></em><br />
                     <span>Reaction: </span><em><a href="<?php comments_link(); ?>"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></em>
@@ -42,10 +43,7 @@
             
             <?php endif; ?>
             
-            <div class="nav-links">
-              <div class="next_posts_link"><?php next_posts_link('&larr; Older Entries') ?></div>
-              <div class="previous_posts_link"><?php previous_posts_link('Newer Entries &rarr;') ?></div>
-            </div>
+						<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
         </div><!-- main -->
       
 <?php get_sidebar(); ?>

@@ -3,6 +3,8 @@
 body{background-color:#ededed;color:#1a1e27;font:15px/23px Arial,sans-serif;}
 img{border:0;}
 .notext,.notext-footer{background-repeat:no-repeat;font-size:0;line-height:0;text-indent:-9999px;}
+.alignleft{float:left;margin: 0 15px 5px 0;}
+.alignright{float:right;margin: 0 0 5px 15px;}
 /* ----------------- Fonts ---------------- */
 a{text-decoration:none;}
 h2{color:#ffffff;font-size:26px;font-weight:bold;margin:50px 0 25px;text-transform:uppercase;}
@@ -21,7 +23,7 @@ aside{float:right;width:350px;}
 #content{padding-bottom: 50px;}
 footer{border-bottom:1px solid #fff;border-top:1px solid #fff;}
 /* ----------------- Top ---------------- */
-.top-content ul{float:left;height:42px;margin-top:29px;}
+.top-content ul{float:left;height:42px;margin-top:29px;width: 580px;overflow: hidden;}
 .top-content li{display:inline;float:left;height:42px;line-height:14px;list-style:none;margin:0 7px;}
 .top-content li.first{margin-left:0;}
 .top-content li a{color:white;cursor:pointer;display:block;height:42px;text-decoration:none;}
@@ -57,11 +59,12 @@ span.sep{background:url(img/sep.gif) no-repeat center top;text-indent:-9999px;}
 .post-teaser{overflow:hidden;position:relative;}
 .post-teaser img{border:1px solid #cacaca;float:left;margin:0 11px 11px 0;padding:3px;}
 .post-teaser .text{padding-left:160px;}
-.post-teaser .text p{line-height:23px;margin-bottom:9px;}
+.post-teaser .text p{line-height:23px;margin-bottom: 8px;}
 a.more-link{position:absolute;right:0;bottom:14px;height:29px;width:110px;text-decoration:none;background-image:-webkit-gradient(linear,left top,left bottom,from(#656565,#818181),);background-image:-webkit-linear-gradient(top,#656565,#818181);background-image:-moz-linear-gradient(top,#656565,#818181);background-image:-o-linear-gradient(top,#656565,#818181);background-image:-ms-linear-gradient(top,#656565,#818181);background-image:linear-gradient(top,#656565,#818181);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#656565',EndColorStr='#818181');/* IE6–IE9 */}
 a.more-link:hover{background-image:-webkit-gradient(linear,left top,left bottom,from(#818181,#656565),);background-image:-webkit-linear-gradient(top,#818181,#656565);background-image:-moz-linear-gradient(top,#818181,#656565);background-image:-o-linear-gradient(top,#818181,#656565);background-image:-ms-linear-gradient(top,#818181,#656565);background-image:linear-gradient(top,#818181,#656565);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#818181',EndColorStr='#656565');/* IE6–IE9 */}
 a.more-link span{overflow:hidden;color:#ffffff;text-transform:uppercase;font-weight:bold;font-size:15px;cursor:pointer;line-height:30px;padding:0 8px;border:0 none;}
-.readMore{border-top:1px solid #BDBDBD;padding-top:6px;}
+.post hr{background-color:#cacaca;border:0;height:1px;margin: 0 auto;}
+.readMore{padding-top:6px;}
 .nav-links a{color:#1A1E27;padding:5px;border:1px solid #1A1E27;}
 .nav-links a:hover{color:#ffffff;background-color:#1A1E27;padding:5px;border:1px solid #1A1E27;}
 .next_posts_link{float: left;}
@@ -120,6 +123,7 @@ span.sep{background:url(img/sep.gif) no-repeat center top;text-indent:-9999px;}
 .cat-date{margin-bottom:10px;}
 .post-single{overflow:hidden;position:relative;}
 .post-single .text p{line-height:23px;margin-bottom:9px;}
+body.single .readMore {border-top: 1px solid #cacaca;}
 /* ----------------- Footer Widgets ---------------- */
 /* Generic Styles for the Footer */
 .footer-content h2{margin:-1px auto 9px;font:bold 22px/18px inherit;color:white;text-transform:uppercase;padding-bottom:10px;text-decoration:none;border-bottom:1px solid #393939;}
@@ -160,8 +164,8 @@ span.sep{background:url(img/sep.gif) no-repeat center top;text-indent:-9999px;}
 #respond input[type=text]{padding:4px 5px;margin:0 0 8px 0;-moz-box-shadow:1px 1px 1px rgba(0,0,0,0.1) inset;-webkit-box-shadow:1px 1px 1px rgba(0,0,0,0.1) inset;box-shadow:1px 1px 1px rgba(0,0,0,0.1) inset;background:#FEFEFE;background:rgba( 255,255,255,0.9 );border:1px solid #CDCDCD;white-space:nowrap;-moz-transition-duration:.3s;-webkit-transition-duration:.3s;height:18px !important;width:100% !important;}
 #respond input[type=submit]{font:bold 15px/29px Arial,sans-serif;color:#ffffff;text-transform:uppercase;cursor:pointer;padding:0 8px;border:0 none;height:29px;text-decoration:none;background-image:-webkit-gradient(linear,left top,left bottom,from(#656565,#818181),);background-image:-webkit-linear-gradient(top,#656565,#818181);background-image:-moz-linear-gradient(top,#656565,#818181);background-image:-o-linear-gradient(top,#656565,#818181);background-image:-ms-linear-gradient(top,#656565,#818181);background-image:linear-gradient(top,#656565,#818181);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#656565',EndColorStr='#818181');/* IE6–IE9 */}
 #respond input[type=submit]:hover{background-image:-webkit-gradient(linear,left top,left bottom,from(#818181,#656565),);background-image:-webkit-linear-gradient(top,#818181,#656565);background-image:-moz-linear-gradient(top,#818181,#656565);background-image:-o-linear-gradient(top,#818181,#656565);background-image:-ms-linear-gradient(top,#818181,#656565);background-image:linear-gradient(top,#818181,#656565);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#818181',EndColorStr='#656565');/* IE6–IE9 */}
-/* ----------------- Stolen from 2011 ---------------- */
-hr{background-color:#ccc;border:0;height:1px;margin:1.625em auto;}
+/* ----------------- HTML elements ---------------- */
+body.single hr{margin:1.625em auto;}
 /* Text elements */
 .post-single h1{font-size:30px;color:white;background-color:#1A1E27;text-transform:uppercase;padding:5px;line-height:30px;margin:35px 0 22px;}
 .post-single h2,#comments h2{font-size:28px;color:#1A1E27;text-transform:capitalize;margin:25px 0 12px;}
@@ -170,7 +174,7 @@ hr{background-color:#ccc;border:0;height:1px;margin:1.625em auto;}
 .post-single h5{font-size:16px;text-transform:uppercase;font-weight:normal;margin:5px 0;}
 .post-single h6{font-size:14px;text-transform:uppercase;margin:5px 0;}
 .post-single p{margin-bottom:1.625em;}
-.post-single ul,.post-single ol{margin:0 0 1.625em 2.5em;}
+.post-single ul,.post-single ol{margin:0 0 0.1em 2.5em;}
 .post-single ul{list-style:square;}
 .post-single ol{list-style-type:decimal;}
 .post-single ol ol{list-style:upper-alpha;}

@@ -21,13 +21,10 @@
 									
 									<div class="readMore">
 										<span>Author: </span><em><?php the_author_posts_link(); ?></em><br />
-										<span>Reaction: </span><em><a href="<?php comments_link(); ?>"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></em>
 									</div><!-- .readMore -->
 									
 									<div class="cat-date">
 										<span class="posted">Posted in: </span><em><?php the_category(', ') ?></em></span>
-										<span class="sep">&nbsp;</span>
-										<span class="date">Date: <em><?php the_time('d F Y') ?></em></span>
 									</div><!-- .cat-date -->
 								</div><!-- .text -->
 							</div><!-- .post-single -->
