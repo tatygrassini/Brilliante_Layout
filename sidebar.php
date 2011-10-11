@@ -2,8 +2,6 @@
 <ul class="sidebar">
 <?php if (dynamic_sidebar('sidebar')) : else : ?>
 
-<!-- All this stuff in here only shows up if you DON'T have any widgets active in this zone -->
-
 <li class="sidebar-widget">
 <div class="sidebar-widget">
 <h2><span>Author</span></h2>

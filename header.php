@@ -31,14 +31,11 @@
 
 <p><a href="<?php bloginfo('rss2_url'); ?>">Grab our feeds</a></p>
 
-<!-- TODO: WP searchform here -->
-
 <form id="search" action="<?php get_option('home') ?>" method="get">
-<input name="s" id="s" class="search_input"  placeholder="Search...">
+<input name="s" id="s" class="search_input" placeholder="Search...">
 <input type="submit" class="search_submit" value="Go">
 </form>
 
-<!-- TODO: eof WP searchform here -->
 </div><!-- .block -->
 
 </div><!-- .top-content -->

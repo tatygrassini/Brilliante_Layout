@@ -8,8 +8,6 @@ function brilliante_layout_page_menu_args( $args ) {
 	return $args;
 }
 add_filter( 'wp_page_menu_args', 'brilliante_layout_page_menu_args' );
-?>
-<?php
 // ----------------- Widget-Ready Sidebar ---------------------------------------
 //
 if ( function_exists('register_sidebar') )
@@ -21,8 +19,6 @@ if ( function_exists('register_sidebar') )
         'before_title' => '<h2 class="sidebar-widget"><span>',
         'after_title' => '</span></h2>',
     ));
-?>
-<?php
 // ----------------- Widget-Ready Footer ----------------------------------------
 //
 if ( function_exists('register_sidebar') )
@@ -34,26 +30,24 @@ if ( function_exists('register_sidebar') )
         'before_title' => '<h2>',
         'after_title' => '</h2>',
     ));
-	if ( function_exists('register_sidebar') )
-	    register_sidebar(array(
-					'name' => __( 'Footer Second', 'brilliante_layout' ),
-					'id' => 'footer-second',
-	        'before_widget' => '<div class="footer-widget">',
-	        'after_widget' => '</div>',
-	        'before_title' => '<h2>',
-	        'after_title' => '</h2>',
-	    ));
-		if ( function_exists('register_sidebar') )
-		    register_sidebar(array(
-						'name' => __( 'Footer Third', 'brilliante_layout' ),
-						'id' => 'footer-third',
-		        'before_widget' => '<div class="footer-widget">',
-		        'after_widget' => '</div>',
-		        'before_title' => '<h2>',
-		        'after_title' => '</h2>',
-		    ));
-?>
-<?php
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+				'name' => __( 'Footer Second', 'brilliante_layout' ),
+				'id' => 'footer-second',
+        'before_widget' => '<div class="footer-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+    ));
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+				'name' => __( 'Footer Third', 'brilliante_layout' ),
+				'id' => 'footer-third',
+        'before_widget' => '<div class="footer-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+    ));
 // ----------------- Post Featured Images support -------------------------------
 // Watch out for the array( 'post','slides' ) in here...
 if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
@@ -61,18 +55,13 @@ if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
 	set_post_thumbnail_size( 140, 140, true ); // Normal post thumbnails
 	add_image_size( 'single-post-thumbnail', 542,220, true ); // Single Post thumbnail size
 }
-?>
-<?php
-/**
- * Remove code from the <head>
- */
+// ----------------- Remove code from the <head> --------------------------------
+//
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'feed_links_extra', 3);
 remove_action('wp_head', 'wlwmanifest_link');
 function hcwp_remove_version() {return '';}
 add_filter('the_generator', 'hcwp_remove_version');
-?>
-<?php
 // ----------------- Disable the admin bar in 3.1 -------------------------------
 //show_admin_bar( false );
 ?>

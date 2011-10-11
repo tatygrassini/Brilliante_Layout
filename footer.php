@@ -3,7 +3,6 @@
 
 <div class="footer-widget footer-first">
 <?php if (dynamic_sidebar('footer-first')) : else : ?>
-<!-- All this junk is rendered if not widget is selected on this area -->
 <h2>Links</h2>
 <ul>
 <?php wp_list_bookmarks('title_li=&categorize=0&limit=6'); ?>
@@ -13,7 +12,6 @@
 
 <div class="footer-widget footer-second">
 <?php if (dynamic_sidebar('footer-second')) : else : ?>
-<!-- All this junk is rendered if not widget is selected on this area -->
 <h2>Watch us on flickr</h2>
 <ul class="flickr">
 <!-- Pulling data from Flickr API with JSON and jQuery -->
@@ -23,7 +21,6 @@
 
 <div class="footer-widget footer-third last">
 <?php if (dynamic_sidebar('footer-third')) : else : ?>
-<!-- All this junk is rendered if not widget is selected on this area -->
 <h2>Tweet tweet!</h2>
 <div id="twitter">
 
