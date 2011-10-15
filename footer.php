@@ -69,7 +69,7 @@ getTwitters('twitter',{id:'tatygrassini',count:1,enableLinks:true,ignoreReplies:
 
 <![endif]-->
 
-<script> Cufon.now(); </script>
+<script>Cufon.now();</script>
 <!-- Google Analytics and other scripts here -->
 <?php wp_footer() ?>
     

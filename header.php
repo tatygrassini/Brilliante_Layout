@@ -17,7 +17,7 @@
 <?php wp_head(); ?>
 </head>
 
-<?php echo is_single() || is_page() || is_search() ? "<body class='single'>" : "<body>"; ?>
+<?php echo is_single() || is_page() ? "<body class='single'>" : "<body>"; ?>
 
 <header>
 <div class="top">
