@@ -28,5 +28,5 @@
 
 ### Part III
 
-WordPress theme development (Content is in development)
+[HTML & CSS Blog Layout – Theme Implementation for WordPress](http://speckyboy.com/2012/01/11/html-css-blog-layout-%e2%80%93-theme-implementation-for-wordpress/)
 
