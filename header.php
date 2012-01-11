@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title><?php bloginfo('name'); ?></title>
+<title><?php wp_title('-', true, 'right'); ?><?php bloginfo('name'); ?></title>
 
 <link rel="shortcut icon" href="favicon.ico" >
 
@@ -17,7 +17,7 @@
 <?php wp_head(); ?>
 </head>
 
-<?php echo is_single() || is_page() ? "<body class='single'>" : "<body>"; ?>
+<body <?php body_class(); ?>>
 
 <header>
 <div class="top">

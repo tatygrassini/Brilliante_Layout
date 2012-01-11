@@ -2,7 +2,7 @@
 <div class="footer-content">
 
 <div class="footer-widget footer-first">
-<?php if (dynamic_sidebar('footer-first')) : else : ?>
+<?php if (dynamic_sidebar('footer1')) : else : ?>
 <h2>Links</h2>
 <ul>
 <?php wp_list_bookmarks('title_li=&categorize=0&limit=6'); ?>
@@ -11,7 +11,7 @@
 </div>
 
 <div class="footer-widget footer-second">
-<?php if (dynamic_sidebar('footer-second')) : else : ?>
+<?php if (dynamic_sidebar('footer2')) : else : ?>
 <h2>Watch us on flickr</h2>
 <ul class="flickr">
 <!-- Pulling data from Flickr API with JSON and jQuery -->
@@ -20,7 +20,7 @@
 </div>
 
 <div class="footer-widget footer-third last">
-<?php if (dynamic_sidebar('footer-third')) : else : ?>
+<?php if (dynamic_sidebar('footer3')) : else : ?>
 <h2>Tweet tweet!</h2>
 <div id="twitter">
 

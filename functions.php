@@ -19,30 +19,12 @@ if ( function_exists('register_sidebar') )
         'before_title' => '<h2 class="sidebar-widget"><span>',
         'after_title' => '</span></h2>',
     ));
-// ----------------- Widget-Ready Footer ----------------------------------------
+// ----------------- Widget-Ready Footers ----------------------------------------
 //
 if ( function_exists('register_sidebar') )
-    register_sidebar(array(
-				'name' => __( 'Footer First', 'brilliante_layout' ),
-				'id' => 'footer-first',
-        'before_widget' => '<div class="footer-widget">',
-        'after_widget' => '</div>',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
-    ));
-if ( function_exists('register_sidebar') )
-    register_sidebar(array(
-				'name' => __( 'Footer Second', 'brilliante_layout' ),
-				'id' => 'footer-second',
-        'before_widget' => '<div class="footer-widget">',
-        'after_widget' => '</div>',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
-    ));
-if ( function_exists('register_sidebar') )
-    register_sidebar(array(
-				'name' => __( 'Footer Third', 'brilliante_layout' ),
-				'id' => 'footer-third',
+    register_sidebars(3, array(
+				'name'=>'Footer%d',
+				'id' => 'footer %d',
         'before_widget' => '<div class="footer-widget">',
         'after_widget' => '</div>',
         'before_title' => '<h2>',
