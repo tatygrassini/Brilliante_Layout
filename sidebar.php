@@ -5,7 +5,7 @@
 <li class="sidebar-widget">
 <div class="sidebar-widget">
 <h2><span>Author</span></h2>
-<img class="avatar" width="99" height="99" alt="Mahmoud Khaled" src="http://1.gravatar.com/avatar/beb66a755ea479a2f10fc19c7c29c054?s=99&d=Gravatar+Logo&r=G">
+<img class="avatar" width="99" height="99" alt="Mahmoud Khaled" src="http://1.gravatar.com/avatar/beb66a755ea479a2f10fc19c7c29c054?s=99amp;d=Gravatar+Logo&amp;r=G">
 <h4>Mahmoud Khaled</h4>
 <p><em>Web &amp; Graphics Designer</em></p>
 <p>Sectetur adipisicing elit, sf sed dos eiusmod tempor incididunt utto po Web and graphics designer!</p>

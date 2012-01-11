@@ -44,6 +44,7 @@ remove_action('wp_head', 'feed_links_extra', 3);
 remove_action('wp_head', 'wlwmanifest_link');
 function hcwp_remove_version() {return '';}
 add_filter('the_generator', 'hcwp_remove_version');
+wp_deregister_script('jquery');
 // ----------------- Disable the admin bar in 3.1 -------------------------------
 //show_admin_bar( false );
 ?>
