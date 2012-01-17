@@ -37,14 +37,6 @@ if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
 	set_post_thumbnail_size( 140, 140, true ); // Normal post thumbnails
 	add_image_size( 'single-post-thumbnail', 542,220, true ); // Single Post thumbnail size
 }
-// ----------------- Remove code from the <head> --------------------------------
-//
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'feed_links_extra', 3);
-remove_action('wp_head', 'wlwmanifest_link');
-function hcwp_remove_version() {return '';}
-add_filter('the_generator', 'hcwp_remove_version');
-wp_deregister_script('jquery');
 // ----------------- Disable the admin bar in 3.1 -------------------------------
 //show_admin_bar( false );
 ?>
@@ -107,4 +99,18 @@ function brilliante_layout_settings()
 </form>
 </div>
 <?php }
+?>
+<?php
+// ----------------- Remove code from the <head> --------------------------------
+//
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'wlwmanifest_link');
+function hcwp_remove_version() {return '';}
+add_filter('the_generator', 'hcwp_remove_version');
+function enqueue_scripts() {
+  wp_deregister_script('jquery');
+  //wp_register_script('jquery', ("//code.jquery.com/jquery-latest.min.js"));
+ }
+add_action('wp_enqueue_scripts', 'enqueue_scripts'); // fixes updating to v3.3 error message in admin http://wordpress.org/support/topic/trouble-when-updating-to-33-or-331-warning-headers-already-sent
 ?>

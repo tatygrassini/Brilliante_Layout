@@ -8,7 +8,7 @@ Cufon.replace('li.sidebar-widget a:not(.recentcomments a,li.sidebar-widget a.rss
 Cufon.replace('#wp-calendar caption');
 Cufon.replace('tbody');
 Cufon.replace('.footer-content li a:not(.footer-content ul li span.entry-content a)');
-Cufon.replace('.blogroll a, .post-single li');
+Cufon.replace('.blogroll a, .post-single li, input[type="submit"].wpcf7-submit');
 
 // -- slidejs -------------------------------
 // CHANGE THE preloadImage VALUE TO YOUR ABSOLUTE THEME URL
