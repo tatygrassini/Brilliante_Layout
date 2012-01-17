@@ -55,12 +55,6 @@ getTwitters('twitter',{id:'tatygrassini',count:1,enableLinks:true,ignoreReplies:
 <p>Copyright <?php echo date('Y'); ?> &minus; <a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a> &minus; All rights reserved</p>
 </div><!-- #bottom -->
 
-<!-- Grabs minified jQuery, with a protocol relative URL; falls back to local if necessary -->
-<script src="//code.jquery.com/jquery-latest.min.js"></script>
-<script>window.jQuery || document.write('<script src="<?php bloginfo('template_url')?>/js/jquery-latest.min.js">\x3C/script>')</script>
-<script src="<?php bloginfo('template_url')?>/js/cufon-yui.js"></script>
-<script src="<?php bloginfo('template_url')?>/js/frutiger.font.js"></script>
-<script src="<?php bloginfo('template_url')?>/js/slides.min.jquery.js"></script>
 <script src="<?php bloginfo('template_url')?>/js/func.js"></script>
 
 <!--[if IE 6]>

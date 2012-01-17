@@ -14,6 +14,13 @@
 <link rel="stylesheet" media="screen" href="<?php bloginfo('template_url')?>/css/ie.css" />
 <![endif]-->
 
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-latest.min.js"><\/script>')</script>
+<script src="<?php bloginfo('template_url')?>/js/cufon-yui.js"></script>
+<script src="<?php bloginfo('template_url')?>/js/frutiger.font.js"></script>
+<script src="<?php bloginfo('template_url')?>/js/slides.min.jquery.js"></script>
+
 <?php wp_head(); ?>
 </head>
 
