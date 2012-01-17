@@ -109,6 +109,7 @@ remove_action('wp_head', 'wlwmanifest_link');
 function hcwp_remove_version() {return '';}
 add_filter('the_generator', 'hcwp_remove_version');
 
+// http://beneverard.co.uk/blog/wordpress-loading-jquery-correctly-version-2/
 function load_jquery() {
 	if (!is_admin())// only use this method is we're not in wp-admin
 	{
