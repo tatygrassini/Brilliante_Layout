@@ -20,6 +20,7 @@
 <script src="<?php bloginfo('template_url')?>/js/cufon-yui.js"></script>
 <script src="<?php bloginfo('template_url')?>/js/frutiger.font.js"></script>
 <script src="<?php bloginfo('template_url')?>/js/slides.min.jquery.js"></script>
+<script src="<?php bloginfo('template_url')?>/js/prefixfree.min.js"></script>
 
 <?php wp_head(); ?>
 </head>
