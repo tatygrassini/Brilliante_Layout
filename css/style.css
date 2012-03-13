@@ -61,6 +61,7 @@ aside li{list-style:none;}
 aside li>a{background:url(img/cat-arrow.gif) no-repeat left center transparent;color:#1a1e27;font-size:16px;line-height:42px;padding-left:23px;text-decoration:none;}
 aside li a:hover{text-decoration:underline;}
 li.sidebar-widget{margin-bottom:50px;}
+li.sidebar-widget li{line-height:42px;}
 h2.sidebar-widget,h2.sidebar-widget a.rsswidget{color:#fff;font-size:26px;font-weight:700;margin-bottom:25px;text-transform:uppercase;}
 li.recentcomments,aside > ul li .rsswidget{line-height:32px;}
 li.recentcomments a,li a.rsswidget{background:none;color:#646464;font:italic 14px Georgia,serif;text-decoration:underline;padding:0;}
