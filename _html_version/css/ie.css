@@ -1,9 +1,28 @@
-.readMoreButton,#search,.featured .img,.pagination a img,.pagination a img.last,.featured h3,.top-content ul li,.sponsors img {
+.readMoreButton,
+#search,
+.featured .img,
+.pagination a img,
+.pagination a img.last,
+.featured h3,
+.top-content ul li,
+.sponsors img {
 display:inline;
+}
+
+.top {
+  border-bottom: none;
 }
 
 .top-content li a {
 display:inline-block;
+}
+
+.top-content li.selected {
+background:url(img/nav-arrow.gif) no-repeat center 33px transparent;
+}
+.top-content li a:hover {
+background: none transparent;
+text-decoration: underline;
 }
 
 .search_input {
@@ -35,6 +54,3 @@ margin-right:51px;
 margin-right:0;
 }
 
-article,aside,canvas,figure,figure img,figcaption,hgroup,footer,header,nav,section,audio,video {
-display:block;
-}
