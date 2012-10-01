@@ -1,0 +1,6 @@
+// -- slidejs ---------------------------------
+$(function(){$('#slider').slides({preload:true,preloadImage:'img/loading.gif',play:5000,effect:'fade',crossfade:true,slideSpeed:350,fadeSpeed:500,generateNextPrev:false,generatePagination:false})});
+// -- Flickr Feed ----------------------------- 
+$(function(){$.getJSON("http://api.flickr.com/services/feeds/groups_pool.gne?id=36521985904@N01&lang=en-us&format=json&jsoncallback=?",displayImages);function displayImages(data){var htmlString="";$.each(data.items,function(i,item){var sourceSquare=(item.media.m).replace("_m.jpg","_s.jpg");htmlString+='<li><a href="'+item.link+'" target="_blank">';htmlString+='<img title="'+item.title+'" src="'+sourceSquare;htmlString+='" alt="';htmlString+=item.title+'" />';htmlString+='</a></li>';if(i==5)return false});$('.flickr ul').html(htmlString)}});
+// -- twitterjs ------------------------------- 
+getTwitters('twitter',{id:'tatygrassini',count:1,enableLinks:true,ignoreReplies:true,clearContents:true,template:'<p><em>&ldquo;%text%&rdquo;</em></p><p class="cufon"><a href="http://twitter.com/%user_screen_name%/statuses/%id%/">%time%</a><br />From&nbsp;%source%</p><h4><a href="http://twitter.com/%user_screen_name%/">Follow us on Twitter!</a></h4>',callback:function(){Cufon.replace('p.cufon, h4')}});
