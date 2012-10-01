@@ -4,9 +4,7 @@
 
 * [PSD file created by Mahmoud Khaled Deiab](http://twitter.com/mahmoudkhaled)
 
-* [Frutiger&reg; Font Family (54)](http://www.fonts.com/findfonts/detail.htm?productid=191443)
-
-* [Cuf&oacute;n](http://cufon.shoqolate.com/generate/)
+* [PT Sans (Google Fonts)](http://www.google.com/webfonts/specimen/PT+Sans)
  
 * [jFlickrFeed](http://www.gethifi.com/blog/a-jquery-flickr-feed-plugin)
 
