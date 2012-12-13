@@ -1,4 +1,4 @@
-<aside>
+<aside role="complementary">
 <ul class="sidebar">
 <?php if (dynamic_sidebar('sidebar')) : else : ?>
 

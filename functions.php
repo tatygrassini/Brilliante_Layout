@@ -109,14 +109,47 @@ remove_action('wp_head', 'wlwmanifest_link');
 function hcwp_remove_version() {return '';}
 add_filter('the_generator', 'hcwp_remove_version');
 
-// http://beneverard.co.uk/blog/wordpress-loading-jquery-correctly-version-2/
-function load_jquery() {
-	if (!is_admin())// only use this method is we're not in wp-admin
-	{
-		wp_deregister_script('jquery');// deregister the original version of jQuery
-		wp_register_script('jquery', '', FALSE, '1.7.1');// register it again, this time with no file path
-		wp_enqueue_script('jquery');// add it back into the queue
-	}
+
+
+
+// ----------------- jQuery from CDN --------------------------------
+//
+
+if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+function my_jquery_enqueue() {
+   wp_deregister_script('jquery');
+   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js", false, null);
+   wp_enqueue_script('jquery');
 }
-add_action('template_redirect', 'load_jquery');
+
+// ----------------- Register scripts --------------------------------
+//
+
+if ( ! function_exists( 'brillante_register_scripts' ) ) :
+
+function brillante_register_scripts() {
+	wp_register_script( 'slides', get_template_directory_uri() . '/js/slides.min.jquery.js', array( 'jquery' ), null );
+	wp_register_script( 'prefixfree', get_template_directory_uri() . '/js/prefixfree.min.js', array( 'jquery' ), null );
+	wp_register_script( 'func', get_template_directory_uri() . '/js/func.js', array( 'jquery' ), null );
+}
+endif;
+
+add_action( 'init', 'brillante_register_scripts' );
+
+// ----------------- Enqueue scripts --------------------------------
+//
+
+if ( ! function_exists( 'brillante_enqueue_scripts' ) ) :
+
+function brillante_enqueue_scripts() {
+	wp_enqueue_script( 'slides' );
+	wp_enqueue_script( 'prefixfree' );
+	wp_enqueue_script( 'func' );
+}
+endif;
+
+add_action( 'wp_enqueue_scripts', 'brillante_enqueue_scripts' );
+
+
+
 ?>

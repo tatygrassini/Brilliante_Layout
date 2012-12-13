@@ -4,7 +4,7 @@
 
 </header>
 <div id="content">
-<div class="main">
+<div class="main" role="main">
 <h2><span>Latest from the blog</span></h2>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

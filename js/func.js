@@ -1,15 +1,3 @@
-// -- Cufon ----------------------------------- 
-
-Cufon.replace('h3, h4, .footer-content .time-meta, .footer-content .from-meta, .top-content li');
-Cufon.replace('span.bio-title', {hover: 'true', textDecoration:'underline'});
-Cufon.replace('h1, h2');
-Cufon.replace('.footer-widget h2', {letterSpacing: '-2px'}); // Another shitty CSS hack
-Cufon.replace('li.sidebar-widget a:not(.recentcomments a,li.sidebar-widget a.rsswidget)');
-Cufon.replace('#wp-calendar caption');
-Cufon.replace('tbody');
-Cufon.replace('.footer-content li a:not(.footer-content ul li span.entry-content a)');
-Cufon.replace('.blogroll a, .post-single li, input[type="submit"].wpcf7-submit');
-
 // -- slidejs -------------------------------
 // CHANGE THE preloadImage VALUE TO YOUR ABSOLUTE THEME URL
 $(function(){$('#slider').slides({preload:true,preloadImage:'http://brillante-layout.com/wp-content/themes/brilliante_layout/css/img/loading.gif',play:5000,effect:'fade',crossfade:true,slideSpeed:350,fadeSpeed:500,generateNextPrev:false,generatePagination:false});});
